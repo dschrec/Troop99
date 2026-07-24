@@ -9,7 +9,7 @@ Complete guide for maintaining the Troop 99 Scouts website.
 The website lives in one GitHub repository. All changes go through GitHub, and then get pushed to the GoDaddy server where the live site runs.
 
 **Repository:** `github.com/dschrec/Troop99`
-**Live site:** `troop99.org` (and `newtownscouts.org`)
+**Live sites:** `T99Newtown.com` and `newtownscouts.org`
 
 **The files:**
 ```
@@ -45,7 +45,7 @@ Use the **Admin Panel** for simple updates — adding slides, events, or gallery
 
 Go to the admin panel URL:
 - **On your local computer:** `http://localhost:8899/admin/`
-- **On the live server:** `https://troop99.org/admin/`
+- **On the live server:** `https://T99Newtown.com/admin/`
 
 ### Step 2: Make Your Changes
 
@@ -210,7 +210,7 @@ rsync -av /home/shared/troop99/V5/ /home/shared/troop99/V4/
 ### Verify the Changes
 
 After deploying:
-1. Open `https://troop99.org/` in your browser
+1. Open `https://T99Newtown.com/` in your browser
 2. Refresh the page (Ctrl+F5 or Cmd+Shift+R to force refresh)
 3. Check that your changes appear correctly
 
