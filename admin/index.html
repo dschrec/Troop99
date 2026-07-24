@@ -350,7 +350,8 @@
     <main class="admin-main">
       <div class="admin-header">
         <h2 id="adminTitle">Dashboard</h2>
-        <div style="display: flex; gap: 0.5rem;">
+        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+          <button class="admin-export-btn" onclick="downloadDataJSON()">💾 Download data.json</button>
           <button class="admin-export-btn" onclick="exportData()">📥 Export All</button>
           <button class="admin-export-btn" onclick="document.getElementById('importInput').click()">📤 Import</button>
           <input type="file" id="importInput" accept=".json" style="display: none;" onchange="importData(event)">
@@ -808,6 +809,27 @@
     // ===== INIT =====
     updateStats();
     closeModal();
+  
+    // ===== DOWNLOAD DATA JSON =====
+    function downloadDataJSON() {
+      try {
+        const jsonStr = JSON.stringify(data, null, 2);
+        const blob = new Blob([jsonStr], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'data.json';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+        showToast('data.json downloaded! Replace the file in /data/ and commit to GitHub.');
+      } catch (e) {
+        console.error('Failed to download:', e);
+        showToast('Error downloading file', true);
+      }
+    }
+
   </script>
 </body>
 </html>

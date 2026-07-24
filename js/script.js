@@ -182,22 +182,32 @@ document.addEventListener('DOMContentLoaded', function() {
       if (progressBar) progressBar.style.width = '0%';
     }
     
-    // Load slides from inline JSON
-    try {
-      var rawData = document.getElementById('slideshowData').textContent;
-      var data = JSON.parse(rawData);
-      slidesData = data.slides;
-      buildSlides(slidesData);
-      startSlideshow();
-    } catch(err) {
-      console.warn('Failed to parse slideshow data:', err);
-      var fallback = [
+    // Load slides from data/data.json
+    fetch('data/data.json')
+      .then(function(response) { return response.json(); })
+      .then(function(jsonData) {
+        slidesData = jsonData.slides || [];
+        if (slidesData.length > 0) {
+          buildSlides(slidesData);
+          startSlideshow();
+        } else {
+          console.warn('No slides found in data.json');
+          buildSlides(getFallbackSlides());
+          startSlideshow();
+        }
+      })
+      .catch(function(err) {
+        console.warn('Failed to load data/data.json, using fallback:', err);
+        buildSlides(getFallbackSlides());
+        startSlideshow();
+      });
+
+    function getFallbackSlides() {
+      return [
         { eyebrow: 'NEWTON, PENNSYLVANIA', title: 'Every Adventure Starts Here', description: 'Join a troop where every young person finds their place.', image: 'images/summer-camp-hero.jpg', primaryCTA: { text: 'JOIN TROOP 99', link: 'join.html' }, secondaryCTA: { text: 'EXPLORE', link: 'activities.html' } },
         { eyebrow: 'COMMUNITY PRIDE', title: 'Serving Our Community', description: 'From Memorial Day Parade to MLK Service Project.', image: 'images/parade-hero.jpg', primaryCTA: { text: 'GET INVOLVED', link: 'activities.html' }, secondaryCTA: { text: 'LEARN MORE', link: 'about.html' } },
         { eyebrow: 'OUTDOOR ADVENTURE', title: 'Build Confidence Through Adventure', description: 'Summer camp, backpacking, rafting — real challenges that build real leaders.', image: 'images/rafting-hero.jpg', primaryCTA: { text: 'VIEW ACTIVITIES', link: 'activities.html' }, secondaryCTA: { text: 'JOIN TODAY', link: 'join.html' } }
       ];
-      buildSlides(fallback);
-      startSlideshow();
     }
   }
   

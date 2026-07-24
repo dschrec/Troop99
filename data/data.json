@@ -1,0 +1,92 @@
+{
+  "slides": [
+    {
+      "id": "1",
+      "image": "images/summer-camp-hero.jpg",
+      "eyebrow": "Welcome to Troop 99",
+      "title": "Adventure Awaits",
+      "description": "Building leaders through adventure, service, and friendship.",
+      "cta_text": "Join Us",
+      "cta_link": "join.html"
+    },
+    {
+      "id": "2",
+      "image": "images/valley-forge-hero.jpg",
+      "eyebrow": "Our Heritage",
+      "title": "65+ Years of Scouting",
+      "description": "A legacy of adventure in Newtown, PA.",
+      "cta_text": "Learn More",
+      "cta_link": "about.html"
+    },
+    {
+      "id": "3",
+      "image": "images/hero-morrell-smith.jpg",
+      "eyebrow": "Join Our Team",
+      "title": "Become a Volunteer",
+      "description": "Help shape the next generation of leaders.",
+      "cta_text": "Contact Us",
+      "cta_link": "contact.html"
+    }
+  ],
+  "events": [
+    {
+      "id": "1",
+      "title": "Troop Meeting",
+      "date": "Every Monday",
+      "description": "Monday evenings at 7:00 PM at American Legion Post 440, Newtown, PA"
+    },
+    {
+      "id": "2",
+      "title": "Summer Camp",
+      "date": "June-August",
+      "description": "Our annual summer camp adventure"
+    },
+    {
+      "id": "3",
+      "title": "Community Service",
+      "date": "TBA 2026",
+      "description": "Regular service projects throughout the year"
+    }
+  ],
+  "gallery": [
+    {
+      "id": "1",
+      "title": "Summer Camp",
+      "image": "images/summer-camp-hero.jpg",
+      "link": "https://www.scaryghost.net/Share/Scouts/2023T99/2026-OSR-Summer-Camp/n-8KHTTCd",
+      "large": true
+    },
+    {
+      "id": "2",
+      "title": "Whitewater Rafting",
+      "image": "images/rafting-hero.jpg",
+      "link": "https://www.scaryghost.net/Share/Scouts/2023T99/2026-Whitewater-Rafting/n-4KHTTCd"
+    },
+    {
+      "id": "3",
+      "title": "Memorial Day Parade",
+      "image": "images/parade-hero.jpg",
+      "link": "https://www.scaryghost.net/Share/Scouts/2023T99/2026-Memorial-Day-Parade/n-5KHTTCd"
+    },
+    {
+      "id": "4",
+      "title": "West Point",
+      "image": "images/west-point-hero.jpg",
+      "link": "https://www.scaryghost.net/Share/Scouts/2023T99/2026-April-West-Point-Camporee/n-GsqQFn"
+    },
+    {
+      "id": "5",
+      "title": "Valley Forge",
+      "image": "images/valley-forge-hero.jpg",
+      "link": "https://www.scaryghost.net/Share/Scouts/2023T99/2026-March-Valley-Forge-Campout/n-RNKPdV"
+    },
+    {
+      "id": "6",
+      "title": "MLK Service",
+      "image": "images/mlk-hero.jpg",
+      "link": "https://www.scaryghost.net/Share/Scouts/2023T99/2026-January-MLK-Service-Project/n-dhfZKv",
+      "tall": true
+    }
+  ],
+  "messages": []
+}
