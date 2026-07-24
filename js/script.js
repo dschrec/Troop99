@@ -204,7 +204,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function getFallbackSlides() {
       return [
-        { eyebrow: 'NEWTON, PENNSYLVANIA', title: 'Every Adventure Starts Here', description: 'Join a troop where every young person finds their place.', image: 'images/summer-camp-hero.jpg', primaryCTA: { text: 'JOIN TROOP 99', link: 'join.html' }, secondaryCTA: { text: 'EXPLORE', link: 'activities.html' } },
+        { eyebrow: 'NEWTOWN, PENNSYLVANIA', title: 'Every Adventure Starts Here', description: 'Join a troop where every young person finds their place.', image: 'images/summer-camp-hero.jpg', primaryCTA: { text: 'JOIN TROOP 99', link: 'join.html' }, secondaryCTA: { text: 'EXPLORE', link: 'activities.html' } },
         { eyebrow: 'COMMUNITY PRIDE', title: 'Serving Our Community', description: 'From Memorial Day Parade to MLK Service Project.', image: 'images/parade-hero.jpg', primaryCTA: { text: 'GET INVOLVED', link: 'activities.html' }, secondaryCTA: { text: 'LEARN MORE', link: 'about.html' } },
         { eyebrow: 'OUTDOOR ADVENTURE', title: 'Build Confidence Through Adventure', description: 'Summer camp, backpacking, rafting — real challenges that build real leaders.', image: 'images/rafting-hero.jpg', primaryCTA: { text: 'VIEW ACTIVITIES', link: 'activities.html' }, secondaryCTA: { text: 'JOIN TODAY', link: 'join.html' } }
       ];
