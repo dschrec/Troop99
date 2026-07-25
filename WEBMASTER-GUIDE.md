@@ -29,10 +29,18 @@ V5/                          ← Main site folder
 ├── data/
 │   └── data.json            ← Slides, events, gallery content
 └── images/                  ← All photos go here
-    ├── summer-camp-hero.jpg
-    ├── rafting-hero.jpg
-    ├── parade-hero.jpg
-    └── ...
+    ├── summer-camp-hero.jpg    ← Homepage hero / slider background
+    ├── valley-forge-hero.jpg   ← About page header
+    ├── hero-morrell-smith.jpg  ← Contact page header
+    ├── parade-hero.jpg         ← Placeholder for parade events
+    ├── rafting-hero.jpg        ← Placeholder for rafting events
+    ├── mlk-hero.jpg            ← Placeholder for service projects
+    ├── west-point-hero.jpg     ← Placeholder
+    ├── photo-parade.jpg        ← Older gallery placeholder
+    ├── photo-rafting.jpg       ← Older gallery placeholder
+    ├── photo-summer-camp.jpg   ← Older gallery placeholder
+    ├── about-morrell-smith.jpg ← Older gallery placeholder
+    └── (event photos)          ← 24 actual event photos for the gallery
 ```
 
 ---
@@ -316,14 +324,46 @@ The gallery shows photos with links to full albums on ScaryGhost.
 5. Save → Download data.json → Upload to GitHub
 
 ### Current Gallery Photos:
-| Photo | Event |
-|-------|-------|
-| `summer-camp-hero.jpg` | Summer Camp |
-| `rafting-hero.jpg` | Whitewater Rafting |
-| `parade-hero.jpg` | Memorial Day Parade |
-| `west-point-hero.jpg` | West Point Camporee |
-| `valley-forge-hero.jpg` | Valley Forge Campout |
-| `mlk-hero.jpg` | MLK Service Project |
+The gallery uses real event photos downloaded from ScaryGhost albums. Here are the 24 current photos (2025-2026 only):
+
+**2025 Events:**
+| Photo File | Event |
+|------------|-------|
+| `hunter-mountain-ski-trip.jpg` | Hunter Mountain Ski Trip |
+| `constitution-center-scout-day.jpg` | Constitution Center Scout Day |
+| `april-backpacking-trip---sunfish-pond.jpg` | April Backpacking Trip - Sunfish Pond |
+| `may-crossover---lake-towhee.jpg` | May Crossover - Lake Towhee |
+| `dexter-moore-eagle-project.jpg` | Dexter Moore Eagle Project |
+| `max-dumack-eagle-coh.jpg` | Max Dumack Eagle COH |
+| `t99-memorial-day-parade.jpg` | T99 Memorial Day Parade |
+| `june-seaside-heights-camp.jpg` | June Seaside Heights Camp |
+| `resica-falls-summer-camp.jpg` | Resica Falls Summer Camp |
+| `august-delaware-canoe-trip.jpg` | August Delaware Canoe Trip |
+| `bike-campout.jpg` | Bike Campout |
+| `six-flags-camporee.jpg` | Six Flags Camporee |
+| `november-festival---roosevelt.jpg` | November Festival - Roosevelt |
+| `games-campout---hidden-valley.jpg` | Games Campout - Hidden Valley |
+| `december-holiday-party.jpg` | December Holiday Party |
+| `newtown-holiday-parade.jpg` | Newtown Holiday Parade |
+
+**2026 Events:**
+| Photo File | Event |
+|------------|-------|
+| `klondike-derby---osr.jpg` | Klondike Derby - OSR |
+| `january-mlk-service-project.jpg` | January MLK Service Project |
+| `february-constitution-center.jpg` | February Constitution Center |
+| `march-valley-forge-campout.jpg` | March Valley Forge Campout |
+| `may-memorial-day-parade.jpg` | May Memorial Day Parade |
+| `may-whitewater-rafting.jpg` | May Whitewater Rafting |
+| `morrell-smith-ave-dedication.jpg` | Morrell-Smith Ave Dedication |
+| `july-osr-summer-camp.jpg` | July OSR Summer Camp |
+
+**Hero/placeholder images still in use:**
+- `summer-camp-hero.jpg` — Homepage slider background
+- `valley-forge-hero.jpg` — About page header
+- `hero-morrell-smith.jpg` — Contact page header
+- `mlk-hero.jpg` — Used for tall gallery items
+- `parade-hero.jpg` — Occasional placeholder for parade-related items
 
 ---
 
