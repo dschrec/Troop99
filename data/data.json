@@ -51,41 +51,201 @@
   "gallery": [
     {
       "id": "1",
-      "title": "Summer Camp",
-      "image": "images/summer-camp-hero.jpg",
-      "link": "https://www.scaryghost.net/Share/Scouts/2023T99/2026-OSR-Summer-Camp/n-8KHTTCd",
-      "large": true
+      "title": "Winter Camp - Winnebago",
+      "image": "",
+      "link": "https://www.scaryghost.net/Share/Scouts/2023T99/2024WintercampWinnebago/n-PZ4vwq"
     },
     {
       "id": "2",
-      "title": "Whitewater Rafting",
-      "image": "images/rafting-hero.jpg",
-      "link": "https://www.scaryghost.net/Share/Scouts/2023T99/2026-Whitewater-Rafting/n-4KHTTCd"
+      "title": "Newtown Memorial Day Parade",
+      "image": "",
+      "link": "https://www.scaryghost.net/Share/Scouts/2023T99/2024-Newtown-Memorial-Day-Parade/n-p7S29s"
     },
     {
       "id": "3",
-      "title": "Memorial Day Parade",
-      "image": "images/parade-hero.jpg",
-      "link": "https://www.scaryghost.net/Share/Scouts/2023T99/2026-Memorial-Day-Parade/n-5KHTTCd"
+      "title": "May 4th Crossover",
+      "image": "",
+      "link": "https://www.scaryghost.net/Share/Scouts/2023T99/2024-May-the-fourth-crossover-to/n-P2hCPg"
     },
     {
       "id": "4",
-      "title": "West Point",
-      "image": "images/west-point-hero.jpg",
-      "link": "https://www.scaryghost.net/Share/Scouts/2023T99/2026-April-West-Point-Camporee/n-GsqQFn"
+      "title": "June Canoe Trip",
+      "image": "",
+      "link": "https://www.scaryghost.net/Share/Scouts/2023T99/2024-June-Canoe-Trip/n-M95RTN"
     },
     {
       "id": "5",
-      "title": "Valley Forge",
-      "image": "images/valley-forge-hero.jpg",
-      "link": "https://www.scaryghost.net/Share/Scouts/2023T99/2026-March-Valley-Forge-Campout/n-RNKPdV"
+      "title": "OSR Week 4",
+      "image": "",
+      "link": "https://www.scaryghost.net/Share/Scouts/2023T99/2024-OSR-Week-4-/n-n8PZpt"
     },
     {
       "id": "6",
-      "title": "MLK Service",
-      "image": "images/mlk-hero.jpg",
-      "link": "https://www.scaryghost.net/Share/Scouts/2023T99/2026-January-MLK-Service-Project/n-dhfZKv",
-      "tall": true
+      "title": "September Bike Train",
+      "image": "",
+      "link": "https://www.scaryghost.net/Share/Scouts/2023T99/2024-September-bike-train/n-PhTJZr"
+    },
+    {
+      "id": "7",
+      "title": "October Six Flags Camporee",
+      "image": "",
+      "link": "https://www.scaryghost.net/Share/Scouts/2023T99/2024-October-Six-Flags-Camporee/n-3m4T2s"
+    },
+    {
+      "id": "8",
+      "title": "Feastival - Alpine",
+      "image": "",
+      "link": "https://www.scaryghost.net/Share/Scouts/2023T99/2024-Feastival-Alpine-/n-fdWkQC"
+    },
+    {
+      "id": "9",
+      "title": "December Games Campout - Hawk Mountain",
+      "image": "",
+      "link": "https://www.scaryghost.net/Share/Scouts/2023T99/2024-December-Games-Campout-Hawk/n-wqPQ7v"
+    },
+    {
+      "id": "10",
+      "title": "Hunter Mountain Ski Trip",
+      "image": "",
+      "link": "https://www.scaryghost.net/Share/Scouts/2023T99/2025-Hunter-Mountain-Ski-Trip/n-WbJ5p5"
+    },
+    {
+      "id": "11",
+      "title": "Constitution Center Scout Day",
+      "image": "",
+      "link": "https://www.scaryghost.net/Share/Scouts/2023T99/2025-Constitution-Center-Scout-Day/n-qZ5C4m"
+    },
+    {
+      "id": "12",
+      "title": "April Backpacking Trip - Sunfish Pond",
+      "image": "",
+      "link": "https://www.scaryghost.net/Share/Scouts/2023T99/2025-April-Backpacking-Trip-to-Sunfish-Pond/n-cr4VbH"
+    },
+    {
+      "id": "13",
+      "title": "May Crossover - Lake Towhee",
+      "image": "",
+      "link": "https://www.scaryghost.net/Share/Scouts/2023T99/2025-May-Crossover---Lake-Towhee/n-cg28Ft"
+    },
+    {
+      "id": "14",
+      "title": "Dexter Moore Eagle Project",
+      "image": "",
+      "link": "https://www.scaryghost.net/Share/Scouts/2023T99/2025-Dexter-Moore-Eagle-Project/n-jxCbkH"
+    },
+    {
+      "id": "15",
+      "title": "Max Dumack Eagle COH",
+      "image": "",
+      "link": "https://www.scaryghost.net/Share/Scouts/2023T99/2025-Max-Dumack-Eagle-COH/n-4MJZB8"
+    },
+    {
+      "id": "16",
+      "title": "T99 Memorial Day Parade",
+      "image": "",
+      "link": "https://www.scaryghost.net/Share/Scouts/2023T99/2025-T99-Memorial-Day-Parade/n-NJndvN"
+    },
+    {
+      "id": "17",
+      "title": "June Seaside Heights Camp",
+      "image": "",
+      "link": "https://www.scaryghost.net/Share/Scouts/2023T99/202506-June-Seaside-Heights-Camp/n-X7PH3g"
+    },
+    {
+      "id": "18",
+      "title": "Resica Falls Summer Camp",
+      "image": "",
+      "link": "https://www.scaryghost.net/Share/Scouts/2023T99/2025-T99-Resica-Falls-Summer-Cam/n-9JXkCH"
+    },
+    {
+      "id": "19",
+      "title": "August Delaware Canoe Trip",
+      "image": "",
+      "link": "https://www.scaryghost.net/Share/Scouts/2023T99/2025-August-Delaware-Canoe-Trip/n-DcWDHV"
+    },
+    {
+      "id": "20",
+      "title": "Bike Campout",
+      "image": "",
+      "link": "https://www.scaryghost.net/Share/Scouts/2023T99/2025-Bike-Campout/n-T2zQ26"
+    },
+    {
+      "id": "21",
+      "title": "Six Flags Camporee",
+      "image": "",
+      "link": "https://www.scaryghost.net/Share/Scouts/2023T99/2025-Six-Flags-Camporee/n-npk5mq"
+    },
+    {
+      "id": "22",
+      "title": "November Festival - Roosevelt",
+      "image": "",
+      "link": "https://www.scaryghost.net/Share/Scouts/2023T99/2025-November-Featival-Roosevelt/n-9SbTQ7"
+    },
+    {
+      "id": "23",
+      "title": "Games Campout - Hidden Valley",
+      "image": "",
+      "link": "https://www.scaryghost.net/Share/Scouts/2023T99/2025-Games-Campout-Hidden-Valley/n-FLLGx8"
+    },
+    {
+      "id": "24",
+      "title": "December Holiday Party",
+      "image": "",
+      "link": "https://www.scaryghost.net/Share/Scouts/2023T99/2025-December-Holiday-Party/n-9HcVPK"
+    },
+    {
+      "id": "25",
+      "title": "Newtown Holiday Parade",
+      "image": "",
+      "link": "https://www.scaryghost.net/Share/Scouts/2023T99/2025-December-Newtown-Holiday-Pa/n-5BGcDQ"
+    },
+    {
+      "id": "26",
+      "title": "Klondike Derby - OSR",
+      "image": "",
+      "link": "https://www.scaryghost.net/Share/Scouts/2023T99/2026-Klondike-Derby-OSR/n-HdcswF"
+    },
+    {
+      "id": "27",
+      "title": "January MLK Service Project",
+      "image": "",
+      "link": "https://www.scaryghost.net/Share/Scouts/2023T99/2026-January-MLK-Service-Project/n-dhfZKv"
+    },
+    {
+      "id": "28",
+      "title": "February Constitution Center",
+      "image": "",
+      "link": "https://www.scaryghost.net/Share/Scouts/2023T99/2026-February-Constitution-Cente/n-qz89j8"
+    },
+    {
+      "id": "29",
+      "title": "March Valley Forge Campout",
+      "image": "",
+      "link": "https://www.scaryghost.net/Share/Scouts/2023T99/2026-March-Valley-Forge-Campout/n-RNKPdV"
+    },
+    {
+      "id": "30",
+      "title": "May Memorial Day Parade",
+      "image": "",
+      "link": "https://www.scaryghost.net/Share/Scouts/2023T99/2026-May-Memorial-Day-Parade/n-znhgW4"
+    },
+    {
+      "id": "31",
+      "title": "May Whitewater Rafting",
+      "image": "",
+      "link": "https://www.scaryghost.net/Share/Scouts/2023T99/2026-May-Whitewater-Rafting--Leh/n-hSwW9F"
+    },
+    {
+      "id": "32",
+      "title": "Morrell-Smith Ave Dedication",
+      "image": "",
+      "link": "https://www.scaryghost.net/Share/Scouts/2023T99/2026-Morrell-Smith-Ave--Dedicati/n-wj3Njk"
+    },
+    {
+      "id": "33",
+      "title": "July OSR Summer Camp",
+      "image": "",
+      "link": "https://www.scaryghost.net/Share/Scouts/2023T99/2026-July-OSR-Summer-Camp/n-QsS4f5"
     }
   ],
   "messages": []
