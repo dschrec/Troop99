@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=202607241655">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: 'Inter', sans-serif; background: #0f0f1a; color: #e0d8c8; line-height: 1.6; }
@@ -212,6 +213,31 @@
 </head>
 <body>
 
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-mark">99</span>
+        <span class="logo-text">Troop 99 Newtown</span>
+      </a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="activities.html" class="nav-link">Activities</a></li>
+        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="calendar.html" class="nav-link">Calendar</a></li>
+        <li><a href="eagle-scouts.html" class="nav-link">Eagle Scouts</a></li>
+        <li><a href="eagle-roster.html" class="nav-link active">T99 Eagles</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="https://my.scouting.org/VES/OnlineReg/1.0.0/?tu=UF-MB-777taa0099" target="_blank" rel="noopener" class="nav-link nav-cta-btn">Join Us</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
   <section class="eagle-hero">
     <div class="container">
       <h1>T99 Eagles</h1>
@@ -249,146 +275,147 @@
 
   <footer class="footer">
     <p>Troop 99 Scouts · Newtown, PA · Est. 1999</p>
+    <p style="margin-top: 0.5rem;"><a href="mailto:troop99admin@gmail.com" style="color: #d4af37; text-decoration: none;">troop99admin@gmail.com</a></p>
   </footer>
 
   <script>
     // Eagle Scout data from EagleHonorRollReport - 136 unique names
     const eagleData = [
-      {name:"Joseph Brick", year:2004},
-      {name:"Robert Lawton", year:2005},
-      {name:"Michael Coyle", year:2005},
-      {name:"Ryan Doherty", year:2005},
-      {name:"Josh Henkin", year:2005},
-      {name:"Stephen Blumenthal", year:2005},
-      {name:"Timothy Sugrue", year:2006},
-      {name:"Jason Mahoney", year:2006},
-      {name:"Joseph Luizzi", year:2006},
-      {name:"Patrick Lawton", year:2006},
-      {name:"Andrew Huber", year:2006},
-      {name:"Matthew Barrett", year:2006},
-      {name:"Dominick Cardarelli", year:2007},
-      {name:"Brian Lawton", year:2007},
-      {name:"Keith Vanderbrooke", year:2008},
-      {name:"Alan Carey", year:2008},
-      {name:"Tyler Dunn", year:2008},
-      {name:"Corey McConeghy", year:2008},
-      {name:"Matthew Piette", year:2008},
-      {name:"Gary Krichten", year:2008},
-      {name:"Sean MacGahan", year:2008},
-      {name:"Perry Lawton", year:2009},
-      {name:"Christopher Faust", year:2009},
-      {name:"James McCarron", year:2009},
-      {name:"Jesse Johnson", year:2009},
-      {name:"Ray Reinard", year:2009},
-      {name:"Joshua Lemonick", year:2009},
-      {name:"Ian Tillotson", year:2010},
-      {name:"Thomas Caputi", year:2010},
-      {name:"Alexander Jarin", year:2010},
-      {name:"Andrew Pitts", year:2010},
-      {name:"Scott Perkins", year:2010},
-      {name:"Jacob Bauer", year:2011},
-      {name:"Alexander Chernicoff", year:2011},
-      {name:"Jacob Grudberg", year:2011},
-      {name:"James Barlow", year:2011},
-      {name:"Garrison Lovely", year:2011},
-      {name:"Kyle McConeghy", year:2011},
-      {name:"Andrew Rosse", year:2011},
-      {name:"George Stockburger", year:2011},
-      {name:"Oliver Shortridge", year:2011},
-      {name:"Christopher Davis", year:2011},
-      {name:"Ryan Varian", year:2011},
-      {name:"Alexander Wessner", year:2011},
-      {name:"Andrew Carey", year:2011},
-      {name:"Andrew Sabol", year:2011},
-      {name:"Kyle Roberts", year:2011},
-      {name:"Ben Lasner", year:2011},
-      {name:"Andrew Kraft", year:2012},
-      {name:"Joshua Matz", year:2012},
-      {name:"Geoffrey Matz", year:2012},
-      {name:"Christopher Mangogna", year:2012},
-      {name:"Matthew Reilly", year:2012},
-      {name:"Matthew Micciolo", year:2012},
-      {name:"Jack Kelly", year:2012},
-      {name:"Michael Fritzinger", year:2012},
-      {name:"Michael Wu", year:2012},
-      {name:"Theodore Caputi", year:2012},
-      {name:"Russell Bauer", year:2013},
-      {name:"Zachary Sabol", year:2014},
-      {name:"Anthony Mooradian", year:2014},
-      {name:"Brandon Fricker", year:2014},
-      {name:"Lee Kownurko", year:2014},
-      {name:"Grant Thorburn", year:2014},
-      {name:"Ryan DeKorte", year:2014},
-      {name:"Alexander Perkins", year:2014},
-      {name:"Matthew Stockburger", year:2016},
-      {name:"Andrew Cabo", year:2016},
-      {name:"Roger Yu", year:2016},
-      {name:"Kyle Jaggard", year:2016},
-      {name:"Kenneth Moore", year:2016},
-      {name:"Evan Kownurko", year:2016},
-      {name:"Joshua Griffin", year:2016},
-      {name:"Brandon Heese", year:2016},
-      {name:"Jordan Koseski", year:2016},
-      {name:"Matthew Haleman", year:2017},
-      {name:"Chantz Kouveras", year:2017},
-      {name:"Brandon Cerami", year:2017},
-      {name:"Tyler DeKorte", year:2017},
-      {name:"Kenny Thorburn", year:2017},
-      {name:"Cameron Pursel", year:2017},
-      {name:"Stephen Jayne", year:2017},
-      {name:"Ryan Heese", year:2017},
-      {name:"Finn Thompson", year:2017},
-      {name:"Jakob Elson", year:2018},
-      {name:"Shree Kumar", year:2018},
-      {name:"Ethan Marschean", year:2018},
-      {name:"Kurt Wessner", year:2018},
-      {name:"John Roache", year:2018},
-      {name:"Dylan Klevan", year:2019},
-      {name:"Tucker Smith", year:2019},
-      {name:"James Curtis", year:2019},
-      {name:"Alexander Fiore", year:2019},
-      {name:"Anthony Gambescia", year:2019},
-      {name:"Christopher Farese", year:2020},
-      {name:"Cole Sheppeck", year:2020},
-      {name:"Colin Chaar", year:2020},
-      {name:"Christopher Stockburger", year:2020},
-      {name:"Aaron Schurman", year:2020},
-      {name:"Tristin Kilgore", year:2020},
-      {name:"Maxwell Ondik", year:2020},
-      {name:"David Slavtcheff", year:2020},
-      {name:"Henry Polli", year:2020},
-      {name:"James Chapek", year:2020},
-      {name:"Hope Evanko", year:2021},
-      {name:"Sarah Hogan", year:2021},
-      {name:"Jacob Dumack", year:2021},
-      {name:"Matthew Rampe", year:2022},
-      {name:"Brady Ott", year:2022},
-      {name:"Michael Wysnewski", year:2022},
-      {name:"Matthew Mannino", year:2022},
-      {name:"Samuel Howe", year:2022},
-      {name:"Tanmay Samm", year:2023},
-      {name:"Gavin Kohler", year:2023},
-      {name:"Khushi Upadhyay", year:2023},
-      {name:"Mahin Hardaway", year:2023},
-      {name:"Kelci Sonnon", year:2023},
-      {name:"Bryce Kilgore", year:2023},
-      {name:"Jesse Sippl", year:2023},
-      {name:"Jack Schaefer", year:2023},
-      {name:"Evan Zeits", year:2024},
-      {name:"Molly Chaar", year:2024},
-      {name:"Michael Mehnert", year:2024},
-      {name:"Maxwell Dumack", year:2024},
-      {name:"John Vath", year:2024},
-      {name:"Thaddeus Abraham", year:2025},
-      {name:"John Osbeck", year:2025},
-      {name:"Walter Moore", year:2025},
-      {name:"William Cabo", year:2025},
-      {name:"Benjamin Ferrenz", year:2025},
-      {name:"Benjamin Eayre", year:2025},
-      {name:"Yannick Ramanujam", year:2025},
-      {name:"Ottavio Silvestri", year:2026},
-      {name:"Grace Zhang", year:2026},
-      {name:"Aarav Upadhyay", year:2026}
+      {name:"Joseph Brick", display:"Joseph B.", year:2004},
+      {name:"Robert Lawton", display:"Robert L.", year:2005},
+      {name:"Michael Coyle", display:"Michael C.", year:2005},
+      {name:"Ryan Doherty", display:"Ryan D.", year:2005},
+      {name:"Josh Henkin", display:"Josh H.", year:2005},
+      {name:"Stephen Blumenthal", display:"Stephen B.", year:2005},
+      {name:"Timothy Sugrue", display:"Timothy S.", year:2006},
+      {name:"Jason Mahoney", display:"Jason M.", year:2006},
+      {name:"Joseph Luizzi", display:"Joseph L.", year:2006},
+      {name:"Patrick Lawton", display:"Patrick L.", year:2006},
+      {name:"Andrew Huber", display:"Andrew H.", year:2006},
+      {name:"Matthew Barrett", display:"Matthew B.", year:2006},
+      {name:"Dominick Cardarelli", display:"Dominick C.", year:2007},
+      {name:"Brian Lawton", display:"Brian L.", year:2007},
+      {name:"Keith Vanderbrooke", display:"Keith V.", year:2008},
+      {name:"Alan Carey", display:"Alan C.", year:2008},
+      {name:"Tyler Dunn", display:"Tyler D.", year:2008},
+      {name:"Corey McConeghy", display:"Corey M.", year:2008},
+      {name:"Matthew Piette", display:"Matthew P.", year:2008},
+      {name:"Gary Krichten", display:"Gary K.", year:2008},
+      {name:"Sean MacGahan", display:"Sean M.", year:2008},
+      {name:"Perry Lawton", display:"Perry L.", year:2009},
+      {name:"Christopher Faust", display:"Christopher F.", year:2009},
+      {name:"James McCarron", display:"James M.", year:2009},
+      {name:"Jesse Johnson", display:"Jesse J.", year:2009},
+      {name:"Ray Reinard", display:"Ray R.", year:2009},
+      {name:"Joshua Lemonick", display:"Joshua L.", year:2009},
+      {name:"Ian Tillotson", display:"Ian T.", year:2010},
+      {name:"Thomas Caputi", display:"Thomas C.", year:2010},
+      {name:"Alexander Jarin", display:"Alexander J.", year:2010},
+      {name:"Andrew Pitts", display:"Andrew P.", year:2010},
+      {name:"Scott Perkins", display:"Scott P.", year:2010},
+      {name:"Jacob Bauer", display:"Jacob B.", year:2011},
+      {name:"Alexander Chernicoff", display:"Alexander C.", year:2011},
+      {name:"Jacob Grudberg", display:"Jacob G.", year:2011},
+      {name:"James Barlow", display:"James B.", year:2011},
+      {name:"Garrison Lovely", display:"Garrison L.", year:2011},
+      {name:"Kyle McConeghy", display:"Kyle M.", year:2011},
+      {name:"Andrew Rosse", display:"Andrew R.", year:2011},
+      {name:"George Stockburger", display:"George S.", year:2011},
+      {name:"Oliver Shortridge", display:"Oliver S.", year:2011},
+      {name:"Christopher Davis", display:"Christopher D.", year:2011},
+      {name:"Ryan Varian", display:"Ryan V.", year:2011},
+      {name:"Alexander Wessner", display:"Alexander W.", year:2011},
+      {name:"Andrew Carey", display:"Andrew C.", year:2011},
+      {name:"Andrew Sabol", display:"Andrew S.", year:2011},
+      {name:"Kyle Roberts", display:"Kyle R.", year:2011},
+      {name:"Ben Lasner", display:"Ben L.", year:2011},
+      {name:"Andrew Kraft", display:"Andrew K.", year:2012},
+      {name:"Joshua Matz", display:"Joshua M.", year:2012},
+      {name:"Geoffrey Matz", display:"Geoffrey M.", year:2012},
+      {name:"Christopher Mangogna", display:"Christopher M.", year:2012},
+      {name:"Matthew Reilly", display:"Matthew R.", year:2012},
+      {name:"Matthew Micciolo", display:"Matthew M.", year:2012},
+      {name:"Jack Kelly", display:"Jack K.", year:2012},
+      {name:"Michael Fritzinger", display:"Michael F.", year:2012},
+      {name:"Michael Wu", display:"Michael W.", year:2012},
+      {name:"Theodore Caputi", display:"Theodore C.", year:2012},
+      {name:"Russell Bauer", display:"Russell B.", year:2013},
+      {name:"Zachary Sabol", display:"Zachary S.", year:2014},
+      {name:"Anthony Mooradian", display:"Anthony M.", year:2014},
+      {name:"Brandon Fricker", display:"Brandon F.", year:2014},
+      {name:"Lee Kownurko", display:"Lee K.", year:2014},
+      {name:"Grant Thorburn", display:"Grant T.", year:2014},
+      {name:"Ryan DeKorte", display:"Ryan D.", year:2014},
+      {name:"Alexander Perkins", display:"Alexander P.", year:2014},
+      {name:"Matthew Stockburger", display:"Matthew S.", year:2016},
+      {name:"Andrew Cabo", display:"Andrew C.", year:2016},
+      {name:"Roger Yu", display:"Roger Y.", year:2016},
+      {name:"Kyle Jaggard", display:"Kyle J.", year:2016},
+      {name:"Kenneth Moore", display:"Kenneth M.", year:2016},
+      {name:"Evan Kownurko", display:"Evan K.", year:2016},
+      {name:"Joshua Griffin", display:"Joshua G.", year:2016},
+      {name:"Brandon Heese", display:"Brandon H.", year:2016},
+      {name:"Jordan Koseski", display:"Jordan K.", year:2016},
+      {name:"Matthew Haleman", display:"Matthew H.", year:2017},
+      {name:"Chantz Kouveras", display:"Chantz K.", year:2017},
+      {name:"Brandon Cerami", display:"Brandon C.", year:2017},
+      {name:"Tyler DeKorte", display:"Tyler D.", year:2017},
+      {name:"Kenny Thorburn", display:"Kenny T.", year:2017},
+      {name:"Cameron Pursel", display:"Cameron P.", year:2017},
+      {name:"Stephen Jayne", display:"Stephen J.", year:2017},
+      {name:"Ryan Heese", display:"Ryan H.", year:2017},
+      {name:"Finn Thompson", display:"Finn T.", year:2017},
+      {name:"Jakob Elson", display:"Jakob E.", year:2018},
+      {name:"Shree Kumar", display:"Shree K.", year:2018},
+      {name:"Ethan Marschean", display:"Ethan M.", year:2018},
+      {name:"Kurt Wessner", display:"Kurt W.", year:2018},
+      {name:"John Roache", display:"John R.", year:2018},
+      {name:"Dylan Klevan", display:"Dylan K.", year:2019},
+      {name:"Tucker Smith", display:"Tucker S.", year:2019},
+      {name:"James Curtis", display:"James C.", year:2019},
+      {name:"Alexander Fiore", display:"Alexander F.", year:2019},
+      {name:"Anthony Gambescia", display:"Anthony G.", year:2019},
+      {name:"Christopher Farese", display:"Christopher F.", year:2020},
+      {name:"Cole Sheppeck", display:"Cole S.", year:2020},
+      {name:"Colin Chaar", display:"Colin C.", year:2020},
+      {name:"Christopher Stockburger", display:"Christopher S.", year:2020},
+      {name:"Aaron Schurman", display:"Aaron S.", year:2020},
+      {name:"Tristin Kilgore", display:"Tristin K.", year:2020},
+      {name:"Maxwell Ondik", display:"Maxwell O.", year:2020},
+      {name:"David Slavtcheff", display:"David S.", year:2020},
+      {name:"Henry Polli", display:"Henry P.", year:2020},
+      {name:"James Chapek", display:"James C.", year:2020},
+      {name:"Hope Evanko", display:"Hope E.", year:2021},
+      {name:"Sarah Hogan", display:"Sarah H.", year:2021},
+      {name:"Jacob Dumack", display:"Jacob D.", year:2021},
+      {name:"Matthew Rampe", display:"Matthew R.", year:2022},
+      {name:"Brady Ott", display:"Brady O.", year:2022},
+      {name:"Michael Wysnewski", display:"Michael W.", year:2022},
+      {name:"Matthew Mannino", display:"Matthew M.", year:2022},
+      {name:"Samuel Howe", display:"Samuel H.", year:2022},
+      {name:"Tanmay Samm", display:"Tanmay S.", year:2023},
+      {name:"Gavin Kohler", display:"Gavin K.", year:2023},
+      {name:"Khushi Upadhyay", display:"Khushi U.", year:2023},
+      {name:"Mahin Hardaway", display:"Mahin H.", year:2023},
+      {name:"Kelci Sonnon", display:"Kelci S.", year:2023},
+      {name:"Bryce Kilgore", display:"Bryce K.", year:2023},
+      {name:"Jesse Sippl", display:"Jesse S.", year:2023},
+      {name:"Jack Schaefer", display:"Jack S.", year:2023},
+      {name:"Evan Zeits", display:"Evan Z.", year:2024},
+      {name:"Molly Chaar", display:"Molly C.", year:2024},
+      {name:"Michael Mehnert", display:"Michael M.", year:2024},
+      {name:"Maxwell Dumack", display:"Maxwell D.", year:2024},
+      {name:"John Vath", display:"John V.", year:2024},
+      {name:"Thaddeus Abraham", display:"Thaddeus A.", year:2025},
+      {name:"John Osbeck", display:"John O.", year:2025},
+      {name:"Walter Moore", display:"Walter M.", year:2025},
+      {name:"William Cabo", display:"William C.", year:2025},
+      {name:"Benjamin Ferrenz", display:"Benjamin F.", year:2025},
+      {name:"Benjamin Eayre", display:"Benjamin E.", year:2025},
+      {name:"Yannick Ramanujam", display:"Yannick R.", year:2025},
+      {name:"Ottavio Silvestri", display:"Ottavio S.", year:2026},
+      {name:"Grace Zhang", display:"Grace Z.", year:2026},
+      {name:"Aarav Upadhyay", display:"Aarav U.", year:2026}
     ];
     
     // Group by year
@@ -431,7 +458,7 @@
       
       years.forEach(year => {
         const filtered = byYear[year].filter(e => 
-          filter === '' || e.name.toLowerCase().includes(filter.toLowerCase())
+          filter === '' || e.display.toLowerCase().includes(filter.toLowerCase())
         );
         
         if (filtered.length === 0) return;
@@ -455,7 +482,7 @@
           const card = document.createElement('div');
           card.className = 'eagle-card';
           card.innerHTML = `
-            <div class="eagle-name">${e.name}</div>
+            <div class="eagle-name">${e.display}</div>
             <div class="eagle-date">Class of ${year}</div>
             <span class="eagle-ribbon">Eagle Scout</span>
           `;
@@ -475,5 +502,13 @@
     // Initial render
     renderRoster();
   </script>
+
+  <!-- Mobile Sticky Bottom Bar -->
+  <div class="mobile-register-bar" id="mobileRegisterBar">
+    <span class="bar-text">Join Troop 99 Today</span>
+    <a href="https://my.scouting.org/VES/OnlineReg/1.0.0/?tu=UF-MB-777taa0099" target="_blank" rel="noopener" class="bar-btn">Register with T99</a>
+  </div>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
