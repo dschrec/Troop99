@@ -46,41 +46,27 @@
 
   <section class="section">
     <div class="container">
-      <div class="event-list">
-        <div class="event-item">
-          <div class="event-date">
-            <span class="event-date-label">Mon</span>
-            <span class="event-date-value">Every Monday</span>
-          </div>
-          <div class="event-details">
-            <h3>Troop Meeting</h3>
-            <p>Monday evenings at 7:00 PM at American Legion Post 440, Newtown, PA</p>
-          </div>
-        </div>
-        <div class="event-item">
-          <div class="event-date">
-            <span class="event-date-label">Summer</span>
-            <span class="event-date-value">June-August</span>
-          </div>
-          <div class="event-details">
-            <h3>Summer Camp</h3>
-            <p>Our annual summer camp adventure - details coming soon</p>
-          </div>
-        </div>
-        <div class="event-item">
-          <div class="event-date">
-            <span class="event-date-label">TBA</span>
-            <span class="event-date-value">2026</span>
-          </div>
-          <div class="event-details">
-            <h3>Community Service Events</h3>
-            <p>Regular service projects throughout the year</p>
-          </div>
-        </div>
+      <!-- TroopMaster Calendar Integration -->
+      <div class="section-header section-header--center">
+        <span class="section-eyebrow">Live Calendar</span>
+        <h2 class="section-heading">Upcoming Troop Events</h2>
+        <p class="section-subtitle">Automatically synced from TroopMaster — always up-to-date</p>
       </div>
+      
+      <div id="troopmaster-calendar" class="calendar-container">
+        <div class="calendar-loading">Loading calendar...</div>
+      </div>
+      
       <div class="text-center" style="margin-top: var(--space-3xl);">
-        <p style="font-size: var(--size-lg); color: var(--gray-600); margin-bottom: var(--space-xl);">For the most up-to-date calendar, please contact us directly or check our TroopMaster page.</p>
-        <a href="contact.html" class="btn btn-primary">Contact Us for Details</a>
+        <p style="font-size: var(--size-lg); color: var(--gray-600); margin-bottom: var(--space-xl);">
+          Subscribe to our calendar in Google Calendar, Apple Calendar, or Outlook.
+        </p>
+        <a href="https://tmweb.troopmaster.com/activitymanagement/icalendar/?id=wQRANP~NO&timezone=Eastern_Standard_Time" target="_blank" class="btn btn-primary" style="margin-right: var(--space-md);">
+          📥 Subscribe to Calendar
+        </a>
+        <a href="https://tmweb.troopmaster.com/Website/Home#" target="_blank" class="btn btn-secondary">
+          View Full Calendar on TroopMaster
+        </a>
       </div>
     </div>
   </section>
@@ -148,6 +134,7 @@
   </footer>
 
   <script src="js/script.js"></script>
+  <script src="js/calendar-sync.js"></script>
   <!-- Mobile Sticky Bottom Bar -->
   <div class="mobile-register-bar" id="mobileRegisterBar">
     <span class="bar-text">Join Troop 99 Today</span>
