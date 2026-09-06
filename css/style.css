@@ -12,11 +12,16 @@
   --font-heading: 'Playfair Display', Georgia, serif;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --max-width: 1280px;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
   --space-lg: 2rem;
   --space-xl: 3rem;
   --space-2xl: 4.5rem;
   --space-3xl: 6rem;
   --space-4xl: 8rem;
+  --border-radius: 12px;
+  --border-radius-sm: 8px;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -1413,7 +1418,9 @@ ul { list-style: none; }
 .event-detail-description {
   color: var(--gray-600);
   font-size: 0.9rem;
-  line-height: 1.5;
+  line-height: 1.6;
+  white-space: normal;
+  word-wrap: break-word;
 }
 
 .calendar-error {
@@ -1430,28 +1437,98 @@ ul { list-style: none; }
 /* Responsive */
 @media (max-width: 768px) {
   .calendar-container {
-    padding: var(--space-md);
+    padding: var(--space-sm);
+    margin: var(--space-md) 0;
+  }
+  
+  .calendar-header {
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    justify-content: center;
+  }
+  
+  .calendar-month-year {
+    font-size: 1.2rem;
+    order: -1;
+    width: 100%;
+    text-align: center;
+    margin-bottom: var(--space-xs);
+  }
+  
+  .calendar-nav {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.8rem;
+  }
+  
+  .day-label {
+    font-size: 0.7rem;
+    padding: 0.35rem 0;
   }
   
   .calendar-day {
-    min-height: 60px;
+    min-height: 50px;
     padding: 0.25rem;
   }
   
   .day-number {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
+    margin-bottom: 0;
   }
   
   .month-event {
-    font-size: 0.65rem;
+    font-size: 0.6rem;
+    padding: 1px 3px;
+  }
+  
+  .event-time {
+    font-size: 0.55rem;
+  }
+  
+  .event-name {
+    font-size: 0.55rem;
+  }
+  
+  .calendar-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-md);
+  }
+  
+  .calendar-subscribe .btn {
+    width: 100%;
+    text-align: center;
+    padding: 0.6rem 1rem;
+  }
+  
+  .day-events-detail {
+    padding: var(--space-md);
+  }
+  
+  .day-events-detail h3 {
+    font-size: 1.1rem;
+    margin-bottom: var(--space-md);
   }
   
   .event-detail-card {
     flex-direction: column;
     gap: var(--space-sm);
+    padding: var(--space-md);
   }
   
   .event-detail-time {
     min-width: auto;
+    font-size: 0.85rem;
+    padding-bottom: 0.25rem;
+    border-bottom: 1px solid var(--gray-100);
+  }
+  
+  .event-detail-title {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .event-detail-location,
+  .event-detail-description {
+    font-size: 0.85rem;
   }
 }
