@@ -39,36 +39,35 @@ document.addEventListener('DOMContentLoaded', function() {
       if (xhr.status === 200) {
         try {
           var events = JSON.parse(xhr.responseText);
-          allEvents = events.map(function(e) {
-            return {
-              summary: decodeICalText(e.summary),
-              description: decodeICalText(e.description),
-              location: decodeICalText(e.location),
-              startDate: new Date(e.startDate.replace(/T/, 'T')),
-              endDate: e.endDate ? new Date(e.endDate.replace(/T/, 'T')) : null
-            };
-          });
-          // Fix dates: parse "20260907T190000" properly
-          allEvents.forEach(function(e) {
-            var ds = e.startDate;
-            var raw = e.startDate;
-            if (raw && typeof raw === 'string') {
-              var y = parseInt(raw.substring(0, 4));
-              var m = parseInt(raw.substring(4, 6)) - 1;
-              var d = parseInt(raw.substring(6, 8));
-              var h = raw.length > 8 ? parseInt(raw.substring(9, 11)) : 0;
-              var mi = raw.length > 11 ? parseInt(raw.substring(11, 13)) : 0;
+          // Decode text and parse dates properly
+          events.forEach(function(e) {
+            e.summary = decodeICalText(e.summary);
+            e.description = decodeICalText(e.description);
+            e.location = decodeICalText(e.location);
+            // Parse "20260907T190000" into a proper Date
+            if (e.startDate) {
+              var s = e.startDate;
+              var y = parseInt(s.substring(0, 4));
+              var m = parseInt(s.substring(4, 6)) - 1;
+              var d = parseInt(s.substring(6, 8));
+              var h = s.length > 8 ? parseInt(s.substring(9, 11)) : 0;
+              var mi = s.length > 11 ? parseInt(s.substring(11, 13)) : 0;
               e.startDate = new Date(y, m, d, h, mi);
             }
-            if (e.endDate && typeof e.endDate === 'string') {
-              var y2 = parseInt(e.endDate.substring(0, 4));
-              var m2 = parseInt(e.endDate.substring(4, 6)) - 1;
-              var d2 = parseInt(e.endDate.substring(6, 8));
-              var h2 = e.endDate.length > 8 ? parseInt(e.endDate.substring(9, 11)) : 0;
-              var mi2 = e.endDate.length > 11 ? parseInt(e.endDate.substring(11, 13)) : 0;
+            if (e.endDate) {
+              var s2 = e.endDate;
+              var y2 = parseInt(s2.substring(0, 4));
+              var m2 = parseInt(s2.substring(4, 6)) - 1;
+              var d2 = parseInt(s2.substring(6, 8));
+              var h2 = s2.length > 8 ? parseInt(s2.substring(9, 11)) : 0;
+              var mi2 = s2.length > 11 ? parseInt(s2.substring(11, 13)) : 0;
               e.endDate = new Date(y2, m2, d2, h2, mi2);
             }
+            // Remove the raw date strings
+            delete e.startDateRaw;
+            delete e.endDateRaw;
           });
+          allEvents = events;
           allEvents.sort(function(a, b) { return a.startDate - b.startDate; });
           console.log('Calendar loaded from local file: ' + allEvents.length + ' events');
           renderCalendarView();
