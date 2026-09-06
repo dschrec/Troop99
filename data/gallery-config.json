@@ -1,0 +1,186 @@
+[
+  {
+    "title": "OSR Summer Camp 2026",
+    "slug": "july-osr-summer-camp",
+    "year": 2026,
+    "month": 7,
+    "status": "published",
+    "description": "A week of adventure, friendship, and scouting excellence"
+  },
+  {
+    "title": "Constitution Center",
+    "slug": "constitution-center",
+    "year": 2026,
+    "month": 2,
+    "status": "published",
+    "description": "Visiting Independence Hall and the National Archives"
+  },
+  {
+    "title": "May Memorial Day Parade",
+    "slug": "may-memorial-day-parade",
+    "year": 2026,
+    "month": 5,
+    "status": "published",
+    "description": "Honoring our fallen heroes in Newtown"
+  },
+  {
+    "title": "Neshaminy Canoe Trip",
+    "slug": "august-2026-neshaminy-canoe-trip",
+    "year": 2026,
+    "month": 8,
+    "status": "draft",
+    "description": "Summer canoeing adventure"
+  },
+  {
+    "title": "Morrell-Smith Ave Dedication",
+    "slug": "morrell-smith-avenue-dedication",
+    "year": 2026,
+    "month": 6,
+    "status": "draft",
+    "description": "Community dedication ceremony"
+  },
+  {
+    "title": "Helicopter Museum",
+    "slug": "helicopter-museum",
+    "year": 2026,
+    "month": 7,
+    "status": "draft",
+    "description": "Night at the Helicopter Museum"
+  },
+  {
+    "title": "West Point Camporee",
+    "slug": "april-west-point-camporee",
+    "year": 2026,
+    "month": 4,
+    "status": "draft",
+    "description": "April camporee at West Point"
+  },
+  {
+    "title": "Whitewater Rafting",
+    "slug": "may-whitewater-rafting",
+    "year": 2026,
+    "month": 5,
+    "status": "draft",
+    "description": "Whitewater rafting adventure"
+  },
+  {
+    "title": "Valley Forge Campout",
+    "slug": "march-valley-forge-campout",
+    "year": 2026,
+    "month": 3,
+    "status": "draft",
+    "description": "March camping at Valley Forge"
+  },
+  {
+    "title": "MLK Service Project",
+    "slug": "january-mlk-service-project",
+    "year": 2026,
+    "month": 1,
+    "status": "draft",
+    "description": "Martin Luther King Day of Service"
+  },
+  {
+    "title": "Klondike Derby",
+    "slug": "klondike-derby",
+    "year": 2026,
+    "month": 1,
+    "status": "draft",
+    "description": "OSR Klondike Derby competition"
+  },
+  {
+    "title": "Holiday Party",
+    "slug": "december-holiday-party",
+    "year": 2025,
+    "month": 12,
+    "status": "draft",
+    "description": "December troop holiday celebration"
+  },
+  {
+    "title": "Feastival at Roosevelt",
+    "slug": "november-feastival",
+    "year": 2025,
+    "month": 11,
+    "status": "draft",
+    "description": "November Feastival at Roosevelt"
+  },
+  {
+    "title": "Games Campout",
+    "slug": "games-campout",
+    "year": 2025,
+    "month": 11,
+    "status": "draft",
+    "description": "Games campout at Hidden Valley"
+  },
+  {
+    "title": "Six Flags Camporee",
+    "slug": "six-flags-camporee",
+    "year": 2025,
+    "month": 10,
+    "status": "draft",
+    "description": "Six Flags camporee"
+  },
+  {
+    "title": "Bike Campout",
+    "slug": "bike-campout",
+    "year": 2025,
+    "month": 9,
+    "status": "draft",
+    "description": "Summer bike campout"
+  },
+  {
+    "title": "Delaware Canoe Trip",
+    "slug": "august-delaware-canoe-trip",
+    "year": 2025,
+    "month": 8,
+    "status": "draft",
+    "description": "August canoe trip on the Delaware"
+  },
+  {
+    "title": "Resica Falls Summer Camp",
+    "slug": "resica-falls-summer-camp",
+    "year": 2025,
+    "month": 7,
+    "status": "draft",
+    "description": "Summer camp at Resica Falls"
+  },
+  {
+    "title": "Seaside Heights Camp",
+    "slug": "june-seaside-heights",
+    "year": 2025,
+    "month": 6,
+    "status": "draft",
+    "description": "June camp at Seaside Heights"
+  },
+  {
+    "title": "Crossover at Lake Towhee",
+    "slug": "may-crossover",
+    "year": 2025,
+    "month": 5,
+    "status": "draft",
+    "description": "May crossover ceremony at Lake Towhee"
+  },
+  {
+    "title": "Backpacking - Sunfish Pond",
+    "slug": "april-backpacking",
+    "year": 2025,
+    "month": 4,
+    "status": "draft",
+    "description": "April backpacking trip to Sunfish Pond"
+  },
+  {
+    "title": "Hunter Mountain Ski Trip",
+    "slug": "hunter-mountain-ski-trip",
+    "year": 2025,
+    "month": 1,
+    "status": "draft",
+    "description": "January ski trip to Hunter Mountain"
+  },
+  {
+    "title": "Holiday Parade",
+    "slug": "newtown-holiday-parade",
+    "year": 2025,
+    "month": 12,
+    "status": "draft",
+    "description": "Newtown holiday parade"
+  }
+]

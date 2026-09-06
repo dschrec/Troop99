@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo Gallery - Troop 99 Scouts</title>
+  <meta name="description" content="Browse photos from Troop 99's adventures: summer camp, outdoor trips, service projects, and more.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css?v=20260905">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="https://newtownscouts.org/index.html" class="nav-logo">
+        <span class="logo-mark">99</span>
+        <span class="logo-text">Troop 99 Newtown</span>
+      </a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="https://newtownscouts.org/index.html" class="nav-link">Home</a></li>
+        <li><a href="https://newtownscouts.org/about.html" class="nav-link">About</a></li>
+        <li><a href="https://newtownscouts.org/activities.html" class="nav-link">Activities</a></li>
+        <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
+        <li><a href="https://newtownscouts.org/calendar.html" class="nav-link">Calendar</a></li>
+        <li><a href="https://newtownscouts.org/eagle-scouts.html" class="nav-link">Eagle Scout</a></li>
+        <li><a href="https://newtownscouts.org/eagle-roster.html" class="nav-link">T99 Eagles</a></li>
+        <li><a href="https://newtownscouts.org/contact.html" class="nav-link">Contact</a></li>
+        <li><a href="https://my.scouting.org/VES/OnlineReg/1.0.0/?tu=UF-MB-777taa0099" target="_blank" rel="noopener" class="nav-link nav-cta-btn">Join Us</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <section class="page-header" style="background-image: url('../images/summer-camp-hero.jpg');">
+    <div class="page-header-content">
+      <div class="container">
+        <h1>Photo Gallery</h1>
+        <p>Real photos from our scouts' real adventures</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Event Index -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header section-header--center">
+        <span class="section-eyebrow">Our Adventures</span>
+        <h2 class="section-heading">Browse by Event</h2>
+        <p class="section-subtitle">Click on any event to see all the photos from that day.</p>
+      </div>
+
+      <!-- Dynamic content will be injected here -->
+      <div id="event-years-container"></div>
+
+      <!-- Archive Link -->
+      <div class="text-center" style="margin-top: var(--space-2xl);">
+        <a href="_archive/index.html" style="color: var(--gray-500); font-size: var(--size-sm); text-decoration: underline;">View archived event galleries →</a>
+      </div>
+      <!-- Footer Text -->
+      <div class="text-center" style="margin-top: var(--space-2xl);">
+        <p style="font-size: var(--size-lg); color: var(--gray-600); margin-bottom: var(--space-lg);">Photos from our scouts' adventures throughout the year.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="https://newtownscouts.org/index.html" class="footer-logo">
+            <span class="footer-logo-mark">99</span>
+            <span class="footer-logo-text">Troop 99</span>
+          </a>
+          <p class="footer-tagline">Building leaders through adventure, service, and friendship.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="https://newtownscouts.org/about.html">About Us</a></li>
+            <li><a href="https://newtownscouts.org/activities.html">Activities</a></li>
+            <li><a href="https://newtownscouts.org/calendar.html">Calendar</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Get Involved</h4>
+          <ul>
+            <li><a href="https://newtownscouts.org/eagle-scouts.html">Eagle Scouts</a></li>
+            <li><a href="https://newtownscouts.org/join.html">Join Us</a></li>
+            <li><a href="https://newtownscouts.org/contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+          <ul>
+            <li><a href="https://instagram.com/troop99newtownpa" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://facebook.com/troop99" target="_blank" rel="noopener">Facebook</a></li>
+            <li><a href="https://www.scouting.org" target="_blank" rel="noopener">BSA National</a></li>
+            <li><a href="https://www.wccscouting.org" target="_blank" rel="noopener">Our Council</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <ul>
+            <li><a href="mailto:troop99admin@gmail.com">troop99admin@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Troop 99 Scouts, Newtown PA. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/script.js"></script>
+  
+  <!-- Gallery Index Script -->
+  <script>
+    (function() {
+      // Load gallery config and render events
+      fetch('../../data/gallery-config.json')
+        .then(res => res.json())
+        .then(events => {
+           // Group ALL events by year (published + draft)
+           const byYear = {};
+           events.forEach(ev => {
+             if (!byYear[ev.year]) byYear[ev.year] = [];
+             byYear[ev.year].push(ev);
+           });
+          
+           // Sort years descending
+           const years = Object.keys(byYear).sort((a, b) => b - a);
+           const container = document.getElementById('event-years-container');
+          
+           years.forEach(year => {
+             // Sort events within year by month (newest first), published first
+             const yearEvents = byYear[year].sort((a, b) => {
+               // Published first
+               if (a.status === 'published' && b.status !== 'published') return -1;
+               if (a.status !== 'published' && b.status === 'published') return 1;
+               // Then by month
+               return (b.month || 0) - (a.month || 0);
+             });
+            
+             // Create year header
+             const yearHeader = document.createElement('h3');
+             yearHeader.style.cssText = 'font-size: var(--size-xl); font-weight: 700; color: var(--gray-700); margin-bottom: var(--space-lg); margin-top: var(--space-2xl);';
+             yearHeader.textContent = year;
+            
+             const yearSection = document.createElement('div');
+             yearSection.appendChild(yearHeader);
+            
+             const grid = document.createElement('div');
+             grid.className = 'event-grid';
+            
+             yearEvents.forEach(ev => {
+               const isPublished = ev.status === 'published';
+               const isDraft = ev.status === 'draft';
+              
+               // Map event titles to image filenames
+               const imgMap = {
+                 'OSR Summer Camp 2026': 'july-osr-summer-camp.jpg',
+                 'Constitution Center': 'philadelphiaindepencehallgroupphoto.jpg',
+                 'May Memorial Day Parade': 'may-memorial-day-parade.jpg',
+                 'Neshaminy Canoe Trip': 'august-2026-neshaminy-canoe-trip.jpg',
+                 'Morrell-Smith Ave Dedication': 'morrell-smith-ave-dedication.jpg',
+                 'Helicopter Museum': 'helicopter-museum.jpg',
+                 'West Point Camporee': 'west-point-camporee.jpg',
+                 'Whitewater Rafting': 'may-whitewater-rafting.jpg',
+                 'Valley Forge Campout': 'march-valley-forge.jpg',
+                 'MLK Service Project': 'january-mlk-service-project.jpg',
+                 'Klondike Derby': 'klondike-derby---osr.jpg',
+                 'December Holiday Party': 'december-holiday-party.jpg',
+                 'Feastival at Roosevelt': 'november-festival---roosevelt.jpg',
+                 'Games Campout': 'games-campout---hidden-valley.jpg',
+                 'Six Flags Camporee': 'six-flags-camporee.jpg',
+                 'Bike Campout': 'bike-campout.jpg',
+                 'Delaware Canoe Trip': 'august-delaware-canoe-trip.jpg',
+                 'Resica Falls Summer Camp': 'resica-falls-summer-camp.jpg',
+                 'Seaside Heights Camp': 'june-seaside-heights-camp.jpg',
+                 'Crossover at Lake Towhee': 'may-crossover---lake-towhee.jpg',
+                 'Backpacking - Sunfish Pond': 'april-backpacking-trip---sunfish-pond.jpg',
+                 'Hunter Mountain Ski Trip': 'hunter-mountain-ski-trip.jpg',
+                 'Holiday Parade': 'newtown-holiday-parade.jpg'
+               };
+              
+               const imgFile = imgMap[ev.title] || 'hero-morrell-smith.jpg';
+               const photoCount = ev.photoCount || 1;
+               const monthNames = ['','January','February','March','April','May','June','July','August','September','October','November','December'];
+               const monthStr = ev.month ? monthNames[ev.month] : '';
+              
+               const card = document.createElement('div');
+               const cardClasses = ['event-card'];
+               if (isDraft) cardClasses.push('event-card--draft');
+               card.className = cardClasses.join(' ');
+              
+               card.innerHTML = `
+                 ${isDraft ? '<div class="draft-badge">Coming Soon</div>' : ''}
+                 <div class="event-card-image">
+                   <img src="../images/${imgFile}" alt="${ev.title}" loading="lazy">
+                 </div>
+                 <div class="event-card-body">
+                   <div class="event-card-year">${monthStr} ${ev.year}</div>
+                   <h3 class="event-card-title">${ev.title}</h3>
+                 </div>
+               `;
+              
+               // Only make published cards clickable links
+               if (isPublished) {
+                 card.classList.remove('event-card');
+                 card.classList.add('event-card');
+                 card.style.cursor = 'pointer';
+                 const wrapper = document.createElement('a');
+                 wrapper.href = `gallery/${ev.slug}.html`;
+                 wrapper.className = card.className;
+                 wrapper.style.cssText = 'text-decoration: none; color: inherit; display: block;';
+                 card.className = 'event-card';
+                 wrapper.innerHTML = card.innerHTML;
+                 grid.appendChild(wrapper);
+               } else {
+                 grid.appendChild(card);
+               }
+             });
+            
+             yearSection.appendChild(grid);
+             container.appendChild(yearSection);
+           });
+         })
+        .catch(err => {
+          console.error('Failed to load gallery config:', err);
+          document.getElementById('event-years-container').innerHTML = '<p style="color: red; padding: 20px;">Failed to load gallery data.</p>';
+        });
+    })();
+  </script>
+  
+  <!-- Mobile Sticky Bottom Bar -->
+  <div class="mobile-register-bar" id="mobileRegisterBar">
+    <span class="bar-text">Join Troop 99 Today</span>
+    <a href="https://my.scouting.org/VES/OnlineReg/1.0.0/?tu=UF-MB-777taa0099" target="_blank" rel="noopener" class="bar-btn">Register with T99</a>
+  </div>
+</body>
+</html>
