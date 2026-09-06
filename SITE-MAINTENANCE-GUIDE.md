@@ -7,6 +7,7 @@
 
 ## Table of Contents
 - [Overview](#overview)
+- [How the Site Works](#how-the-site-works)
 - [Adding a New Event](#adding-a-new-event)
 - [Uploading Photos](#uploading-photos)
 - [Publishing a Draft Event](#publishing-a-draft-event)
@@ -18,7 +19,9 @@
 
 ## Overview
 
-The Troop 99 website has a new **event-based gallery system**:
+The Troop 99 website uses a **static, event-based gallery system**. All pages are plain HTML/CSS/JavaScript with no database or backend.
+
+**Event gallery types:**
 - **Published events** appear on the main gallery page and are clickable
 - **Draft events** show as "Coming Soon" on the gallery page (non-clickable)
 - **Archived events** are removed from the gallery index but remain accessible via direct link
@@ -28,6 +31,26 @@ The Troop 99 website has a new **event-based gallery system**:
 2. Event metadata is managed in `/data/gallery-config.json`
 3. JavaScript reads the JSON and renders the gallery dynamically
 4. No manual HTML editing required for the gallery index
+5. No database, no backend — just static files
+
+---
+
+## How the Site Works
+
+**Important:** This website runs entirely on GitHub Pages. It's a **static site** — no admin panel, no database, no server-side code. Everything is just HTML, CSS, and JavaScript files.
+
+**What this means for maintenance:**
+- No web interface for adding photos (no admin panel)
+- No drag-and-drop upload system
+- Changes are made by editing files directly (JSON + HTML)
+- All changes are tracked via Git — you can always revert
+
+**The maintenance workflow:**
+1. Photos are stored in `/images/` directory
+2. Event metadata is managed in `/data/gallery-config.json`
+3. JavaScript reads the JSON and renders the gallery dynamically
+4. No manual HTML editing required for the gallery index
+5. No database, no backend — just static files
 
 ---
 

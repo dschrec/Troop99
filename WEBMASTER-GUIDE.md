@@ -195,7 +195,7 @@ The site styling is controlled by `css/style.css`. Only change this if you know 
 - Fonts: Look for `font-family` declarations
 - Layout: Look for `display: flex`, `padding`, `margin`
 
-**Recommendation:** Ask Dennis before making CSS changes — small mistakes can break the entire site layout.
+**Recommendation:** Ask Mr. Schrecengost before making CSS changes — small mistakes can break the entire site layout.
 
 ---
 
@@ -243,7 +243,7 @@ ls -la /home/shared/troop99/V6/images/
 ### "The whole page looks broken!"
 1. Did you edit a file you shouldn't have? (like `style.css` or the navigation)
 2. Check GitHub's "History" tab to restore a previous version
-3. Contact Dennis for help
+3. Contact Mr. Schrecengost for help
 
 ### "I made a mistake — how do I undo?"
 1. Go to your commit on GitHub
@@ -270,6 +270,6 @@ ls -la /home/shared/troop99/V6/images/
 
 ## Need Help?
 
-Contact Dennis at: **troop99admin@gmail.com**
+Contact Mr. Schrecengost at: **troop99admin@gmail.com**
 
 **Remember:** When in doubt, ask before making changes. It's always better to check first!
