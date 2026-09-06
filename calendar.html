@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate, max-age=0">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
   <title>Calendar & Events - Troop 99 Scouts</title>
@@ -137,7 +137,9 @@
   </footer>
 
   <script src="js/script.js"></script>
-  <script src="js/calendar-sync.js?v=202609070300"></script>
+  <script>
+    document.write('<script src="js/calendar-sync.js?' + Date.now() + '"><\/script>');
+  </script>
   <!-- Mobile Sticky Bottom Bar -->
   <div class="mobile-register-bar" id="mobileRegisterBar">
     <span class="bar-text">Join Troop 99 Today</span>
