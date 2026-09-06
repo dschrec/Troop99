@@ -13,9 +13,26 @@ document.addEventListener('DOMContentLoaded', function() {
   let currentMonth = new Date().getMonth();
   let currentYear = new Date().getFullYear();
 
+  // Helper to decode iCal escaped text
+  function decodeICalText(text) {
+    // Unfold iCal lines (remove \n followed by space/tab)
+    let decoded = text.replace(/\\r\\n[ \t]/g, '');
+    // Convert escaped newlines to HTML line breaks
+    decoded = decoded.replace(/\\\\n/g, '<br>');
+    // HTML escape to prevent XSS
+    decoded = decoded.replace(/&/g, '&amp;')
+                     .replace(/</g, '&lt;')
+                     .replace(/>/g, '&gt;')
+                     .replace(/"/g, '&quot;')
+                     .replace(/'/g, '&#039;');
+    return decoded;
+  }
+  
   // Function to parse iCal event
   function parseICalEvent(eventData) {
-    const lines = eventData.split('\n');
+    // Unfold iCal lines first (folding uses \n followed by space/tab)
+    let unfolded = eventData.replace(/\\r\\n[ \t]/g, ' ');
+    const lines = unfolded.split('\n');
     let summary = '';
     let description = '';
     let startDate = null;
@@ -68,6 +85,11 @@ document.addEventListener('DOMContentLoaded', function() {
         location = line.substring(9);
       }
     }
+    
+    // Decode text fields
+    summary = decodeICalText(summary);
+    description = decodeICalText(description);
+    location = decodeICalText(location);
     
     return {
       summary,
