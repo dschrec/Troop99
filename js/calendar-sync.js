@@ -13,25 +13,42 @@ document.addEventListener('DOMContentLoaded', function() {
   var currentYear = new Date().getFullYear();
   var monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
   var dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+  var BACKSLASH = String.fromCharCode(92); // single backslash character
 
-  // Helper to decode iCal escaped text (literal \n to <br>)
+  // Helper: replace literal backslash+n with <br> and HTML-escape
   function decodeICalText(text) {
     if (!text) return '';
-    var decoded = text;
-    var idx = decoded.indexOf('\\n');
-    while (idx !== -1) {
-      decoded = decoded.substring(0, idx) + '<br>' + decoded.substring(idx + 2);
-      idx = decoded.indexOf('\\n', idx + 4);
+    var out = '';
+    for (var i = 0; i < text.length; i++) {
+      var ch = text[i];
+      if (ch === BACKSLASH && i + 1 < text.length && text[i + 1] === 'n') {
+        out += '<br>';
+        i++;
+      } else if (ch === '&') {
+        out += '&amp;';
+      } else if (ch === '<') {
+        out += '&lt;';
+      } else if (ch === '>') {
+        out += '&gt;';
+      } else {
+        out += ch;
+      }
     }
-    decoded = decoded.replace(/&/g, '&amp;')
-                     .replace(/</g, '&lt;')
-                     .replace(/>/g, '&gt;')
-                     .replace(/"/g, '&quot;')
-                     .replace(/'/g, '&#039;');
-    return decoded;
+    return out;
   }
 
-  // Load events from local JSON file (primary)
+  // Parse "20260928T190000" into Date
+  function parseICalDate(str) {
+    if (!str) return null;
+    var y = parseInt(str.substring(0, 4));
+    var m = parseInt(str.substring(4, 6)) - 1;
+    var d = parseInt(str.substring(6, 8));
+    var h = str.length > 8 ? parseInt(str.substring(9, 11)) : 0;
+    var mi = str.length > 11 ? parseInt(str.substring(11, 13)) : 0;
+    return new Date(y, m, d, h, mi);
+  }
+
+  // Load events from local JSON
   function loadLocalEvents() {
     var xhr = new XMLHttpRequest();
     xhr.open('GET', localEventsFile, true);
@@ -39,37 +56,24 @@ document.addEventListener('DOMContentLoaded', function() {
       if (xhr.status === 200) {
         try {
           var events = JSON.parse(xhr.responseText);
-          // Decode text and parse dates properly
-          events.forEach(function(e) {
-            e.summary = decodeICalText(e.summary);
-            e.description = decodeICalText(e.description);
-            e.location = decodeICalText(e.location);
-            // Parse "20260907T190000" into a proper Date
-            if (e.startDate) {
-              var s = e.startDate;
-              var y = parseInt(s.substring(0, 4));
-              var m = parseInt(s.substring(4, 6)) - 1;
-              var d = parseInt(s.substring(6, 8));
-              var h = s.length > 8 ? parseInt(s.substring(9, 11)) : 0;
-              var mi = s.length > 11 ? parseInt(s.substring(11, 13)) : 0;
-              e.startDate = new Date(y, m, d, h, mi);
-            }
-            if (e.endDate) {
-              var s2 = e.endDate;
-              var y2 = parseInt(s2.substring(0, 4));
-              var m2 = parseInt(s2.substring(4, 6)) - 1;
-              var d2 = parseInt(s2.substring(6, 8));
-              var h2 = s2.length > 8 ? parseInt(s2.substring(9, 11)) : 0;
-              var mi2 = s2.length > 11 ? parseInt(s2.substring(11, 13)) : 0;
-              e.endDate = new Date(y2, m2, d2, h2, mi2);
-            }
-            // Remove the raw date strings
-            delete e.startDateRaw;
-            delete e.endDateRaw;
-          });
-          allEvents = events;
+          allEvents = [];
+          for (var i = 0; i < events.length; i++) {
+            var e = events[i];
+            var ev = {
+              summary: decodeICalText(e.summary),
+              description: decodeICalText(e.description),
+              location: decodeICalText(e.location),
+              startDate: parseICalDate(e.startDate),
+              endDate: e.endDate ? parseICalDate(e.endDate) : null
+            };
+            if (ev.startDate) allEvents.push(ev);
+          }
           allEvents.sort(function(a, b) { return a.startDate - b.startDate; });
-          console.log('Calendar loaded from local file: ' + allEvents.length + ' events');
+          console.log('Calendar loaded: ' + allEvents.length + ' events');
+          var count = allEvents.filter(function(ev) {
+            return ev.startDate.getMonth() === currentMonth && ev.startDate.getFullYear() === currentYear;
+          }).length;
+          console.log('Events this month: ' + count);
           renderCalendarView();
         } catch(err) {
           console.error('Error parsing local events:', err);
@@ -87,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
     xhr.send();
   }
 
-  // Fallback: try to fetch from TroopMaster
+  // Fallback: fetch from TroopMaster via CORS proxy
   function loadFromTroopMaster() {
     fetch(corsProxy + encodeURIComponent(calendarFeedURL))
       .then(function(response) {
@@ -101,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
           var block = 'BEGIN:VEVENT' + eventBlocks[i];
           if (block.includes('END:VEVENT')) {
             var eventData = block.split('END:VEVENT')[0];
-            var summary = '', description = '', location = '', dtStart = '', dtEnd = '';
+            var summary = '', description = '', location = '', dtStart = '';
             var lines = eventData.split('\n');
             for (var j = 0; j < lines.length; j++) {
               var l = lines[j].trim();
@@ -109,26 +113,16 @@ document.addEventListener('DOMContentLoaded', function() {
               else if (l.startsWith('DESCRIPTION:')) description = l.substring(12);
               else if (l.startsWith('LOCATION:')) location = l.substring(9);
               else if (l.startsWith('DTSTART')) dtStart = l.split(':')[1].trim();
-              else if (l.startsWith('DTEND')) dtEnd = l.split(':')[1].trim();
             }
             if (dtStart) {
-              var startDate;
-              if (dtStart.includes('T')) {
-                startDate = new Date(
-                  parseInt(dtStart.substring(0,4)),
-                  parseInt(dtStart.substring(4,6)) - 1,
-                  parseInt(dtStart.substring(6,8)),
-                  parseInt(dtStart.substring(9,11)),
-                  parseInt(dtStart.substring(11,13))
-                );
-              } else {
-                startDate = new Date(
-                  parseInt(dtStart.substring(0,4)),
-                  parseInt(dtStart.substring(4,6)) - 1,
-                  parseInt(dtStart.substring(6,8))
-                );
-              }
-              events.push({ summary: decodeICalText(summary), description: decodeICalText(description), location: decodeICalText(location), startDate: startDate, endDate: null });
+              var startDate = parseICalDate(dtStart);
+              events.push({
+                summary: decodeICalText(summary),
+                description: decodeICalText(description),
+                location: decodeICalText(location),
+                startDate: startDate,
+                endDate: null
+              });
             }
           }
         }
@@ -161,7 +155,6 @@ document.addEventListener('DOMContentLoaded', function() {
     var container = document.getElementById('troopmaster-calendar');
     if (!container) return;
 
-    // Get events for current month
     var monthEvents = allEvents.filter(function(ev) {
       return ev.startDate && ev.startDate.getMonth() === currentMonth && ev.startDate.getFullYear() === currentYear;
     });
