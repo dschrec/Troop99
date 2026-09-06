@@ -1,296 +1,277 @@
 /**
  * TroopMaster Calendar Sync
- * Fetches and displays calendar events from TroopMaster iCal feed
- * Shows a full interactive calendar view
+ * Loads calendar events from local JSON file
+ * Optionally fetches fresh data from TroopMaster via CORS proxy
  */
 
 document.addEventListener('DOMContentLoaded', function() {
-  // Note: Using HTTPS for TroopMaster feed (http was likely being upgraded or blocked)
-  const calendarFeedURL = 'https://tmweb.troopmaster.com/activitymanagement/icalendar/?id=wQRANP~NO&timezone=Eastern_Standard_Time';
-  // CORS proxy to bypass browser security restrictions
-  const corsProxy = 'https://api.allorigins.win/raw?url=';
-  let allEvents = [];
-  let currentMonth = new Date().getMonth();
-  let currentYear = new Date().getFullYear();
+  var calendarFeedURL = 'https://tmweb.troopmaster.com/activitymanagement/icalendar/?id=wQRANP~NO&timezone=Eastern_Standard_Time';
+  var corsProxy = 'https://api.allorigins.win/raw?url=';
+  var localEventsFile = 'data/calendar-events.json';
+  var allEvents = [];
+  var currentMonth = new Date().getMonth();
+  var currentYear = new Date().getFullYear();
+  var monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  var dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
-  // Function to parse iCal event
-  function parseICalEvent(eventData) {
-    const lines = eventData.split('\n');
-    let summary = '';
-    let description = '';
-    let startDate = null;
-    let endDate = null;
-    let location = '';
-    
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i].trim();
-      
-      if (line.startsWith('SUMMARY:')) {
-        summary = line.substring(8);
-      } else if (line.startsWith('DESCRIPTION:')) {
-        description = line.substring(12);
-      } else if (line.startsWith('DTSTART')) {
-        const dateStr = line.split(':')[1];
-        // Parse iCal date format (20240915T190000 or 20240915)
-        if (dateStr.includes('T')) {
-          startDate = new Date(
-            parseInt(dateStr.substring(0, 4)),
-            parseInt(dateStr.substring(4, 6)) - 1,
-            parseInt(dateStr.substring(6, 8)),
-            dateStr.length > 8 ? parseInt(dateStr.substring(9, 11)) : 0,
-            dateStr.length > 11 ? parseInt(dateStr.substring(11, 13)) : 0
-          );
-        } else {
-          startDate = new Date(
-            parseInt(dateStr.substring(0, 4)),
-            parseInt(dateStr.substring(4, 6)) - 1,
-            parseInt(dateStr.substring(6, 8))
-          );
-        }
-      } else if (line.startsWith('DTEND')) {
-        const dateStr = line.split(':')[1];
-        if (dateStr.includes('T')) {
-          endDate = new Date(
-            parseInt(dateStr.substring(0, 4)),
-            parseInt(dateStr.substring(4, 6)) - 1,
-            parseInt(dateStr.substring(6, 8)),
-            dateStr.length > 8 ? parseInt(dateStr.substring(9, 11)) : 0,
-            dateStr.length > 11 ? parseInt(dateStr.substring(11, 13)) : 0
-          );
-        } else {
-          endDate = new Date(
-            parseInt(dateStr.substring(0, 4)),
-            parseInt(dateStr.substring(4, 6)) - 1,
-            parseInt(dateStr.substring(6, 8))
-          );
-        }
-      } else if (line.startsWith('LOCATION:')) {
-        location = line.substring(9);
-      }
+  // Helper to decode iCal escaped text (literal \n to <br>)
+  function decodeICalText(text) {
+    if (!text) return '';
+    var decoded = text;
+    var idx = decoded.indexOf('\\n');
+    while (idx !== -1) {
+      decoded = decoded.substring(0, idx) + '<br>' + decoded.substring(idx + 2);
+      idx = decoded.indexOf('\\n', idx + 4);
     }
-    
-    return {
-      summary,
-      description,
-      startDate,
-      endDate,
-      location
-    };
+    decoded = decoded.replace(/&/g, '&amp;')
+                     .replace(/</g, '&lt;')
+                     .replace(/>/g, '&gt;')
+                     .replace(/"/g, '&quot;')
+                     .replace(/'/g, '&#039;');
+    return decoded;
   }
 
-  // Function to fetch and parse all events
-  function loadAllCalendarEvents() {
+  // Load events from local JSON file (primary)
+  function loadLocalEvents() {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', localEventsFile, true);
+    xhr.onload = function() {
+      if (xhr.status === 200) {
+        try {
+          var events = JSON.parse(xhr.responseText);
+          allEvents = events.map(function(e) {
+            return {
+              summary: decodeICalText(e.summary),
+              description: decodeICalText(e.description),
+              location: decodeICalText(e.location),
+              startDate: new Date(e.startDate.replace(/T/, 'T')),
+              endDate: e.endDate ? new Date(e.endDate.replace(/T/, 'T')) : null
+            };
+          });
+          // Fix dates: parse "20260907T190000" properly
+          allEvents.forEach(function(e) {
+            var ds = e.startDate;
+            var raw = e.startDate;
+            if (raw && typeof raw === 'string') {
+              var y = parseInt(raw.substring(0, 4));
+              var m = parseInt(raw.substring(4, 6)) - 1;
+              var d = parseInt(raw.substring(6, 8));
+              var h = raw.length > 8 ? parseInt(raw.substring(9, 11)) : 0;
+              var mi = raw.length > 11 ? parseInt(raw.substring(11, 13)) : 0;
+              e.startDate = new Date(y, m, d, h, mi);
+            }
+            if (e.endDate && typeof e.endDate === 'string') {
+              var y2 = parseInt(e.endDate.substring(0, 4));
+              var m2 = parseInt(e.endDate.substring(4, 6)) - 1;
+              var d2 = parseInt(e.endDate.substring(6, 8));
+              var h2 = e.endDate.length > 8 ? parseInt(e.endDate.substring(9, 11)) : 0;
+              var mi2 = e.endDate.length > 11 ? parseInt(e.endDate.substring(11, 13)) : 0;
+              e.endDate = new Date(y2, m2, d2, h2, mi2);
+            }
+          });
+          allEvents.sort(function(a, b) { return a.startDate - b.startDate; });
+          console.log('Calendar loaded from local file: ' + allEvents.length + ' events');
+          renderCalendarView();
+        } catch(err) {
+          console.error('Error parsing local events:', err);
+          loadFromTroopMaster();
+        }
+      } else {
+        console.log('Local file not found, trying TroopMaster...');
+        loadFromTroopMaster();
+      }
+    };
+    xhr.onerror = function() {
+      console.log('Local file error, trying TroopMaster...');
+      loadFromTroopMaster();
+    };
+    xhr.send();
+  }
+
+  // Fallback: try to fetch from TroopMaster
+  function loadFromTroopMaster() {
     fetch(corsProxy + encodeURIComponent(calendarFeedURL))
-      .then(response => response.text())
-      .then(icalData => {
-        allEvents = [];
-        const eventBlocks = icalData.split('BEGIN:VEVENT');
-        
-        for (let i = 1; i < eventBlocks.length; i++) {
-          const eventBlock = 'BEGIN:VEVENT' + eventBlocks[i];
-          if (eventBlock.includes('END:VEVENT')) {
-            const eventData = eventBlock.split('END:VEVENT')[0];
-            const event = parseICalEvent(eventData);
-            if (event.startDate) {
-              allEvents.push(event);
+      .then(function(response) {
+        if (!response.ok) throw new Error('Network error: ' + response.status);
+        return response.text();
+      })
+      .then(function(icalData) {
+        var events = [];
+        var eventBlocks = icalData.split('BEGIN:VEVENT');
+        for (var i = 1; i < eventBlocks.length; i++) {
+          var block = 'BEGIN:VEVENT' + eventBlocks[i];
+          if (block.includes('END:VEVENT')) {
+            var eventData = block.split('END:VEVENT')[0];
+            var summary = '', description = '', location = '', dtStart = '', dtEnd = '';
+            var lines = eventData.split('\n');
+            for (var j = 0; j < lines.length; j++) {
+              var l = lines[j].trim();
+              if (l.startsWith('SUMMARY:')) summary = l.substring(8);
+              else if (l.startsWith('DESCRIPTION:')) description = l.substring(12);
+              else if (l.startsWith('LOCATION:')) location = l.substring(9);
+              else if (l.startsWith('DTSTART')) dtStart = l.split(':')[1].trim();
+              else if (l.startsWith('DTEND')) dtEnd = l.split(':')[1].trim();
+            }
+            if (dtStart) {
+              var startDate;
+              if (dtStart.includes('T')) {
+                startDate = new Date(
+                  parseInt(dtStart.substring(0,4)),
+                  parseInt(dtStart.substring(4,6)) - 1,
+                  parseInt(dtStart.substring(6,8)),
+                  parseInt(dtStart.substring(9,11)),
+                  parseInt(dtStart.substring(11,13))
+                );
+              } else {
+                startDate = new Date(
+                  parseInt(dtStart.substring(0,4)),
+                  parseInt(dtStart.substring(4,6)) - 1,
+                  parseInt(dtStart.substring(6,8))
+                );
+              }
+              events.push({ summary: decodeICalText(summary), description: decodeICalText(description), location: decodeICalText(location), startDate: startDate, endDate: null });
             }
           }
         }
-        
-        // Sort events by date
-        allEvents.sort((a, b) => a.startDate - b.startDate);
-        
-        // Render calendar view
+        allEvents = events.sort(function(a, b) { return a.startDate - b.startDate; });
+        console.log('Calendar loaded from TroopMaster: ' + allEvents.length + ' events');
         renderCalendarView();
-        
-        // Add subscribe link
-        const subscribeLink = document.getElementById('calendar-subscribe');
-        if (subscribeLink) {
-          subscribeLink.href = calendarFeedURL;
-        }
       })
-      .catch(error => {
-        console.error('Error loading calendar:', error);
-        const calendarContainer = document.getElementById('troopmaster-calendar');
-        if (calendarContainer) {
-          calendarContainer.innerHTML = `
-            <p class="calendar-error">Unable to load calendar. Please try again later.</p>
-            <a href="${calendarFeedURL}" target="_blank" class="btn btn-secondary">View Full Calendar</a>
-          `;
-        }
+      .catch(function(err) {
+        console.error('Error loading from TroopMaster:', err);
+        showFallback();
       });
   }
 
-  // Function to render the full calendar view
+  // Show fallback if nothing loads
+  function showFallback() {
+    var container = document.getElementById('troopmaster-calendar');
+    if (container) {
+      container.innerHTML =
+        '<div class="calendar-error">' +
+          '<p>Unable to load calendar events.</p>' +
+          '<p style="margin-top:1rem;">View the full calendar:</p>' +
+          '<a href="' + calendarFeedURL + '" target="_blank" class="btn btn-secondary" style="margin-top:1rem;">Subscribe to Calendar</a>' +
+          '<a href="https://tmweb.troopmaster.com/Website/Home#" target="_blank" class="btn btn-secondary" style="margin-top:1rem;margin-left:0.5rem;">View on TroopMaster</a>' +
+        '</div>';
+    }
+  }
+
+  // Render the calendar
   function renderCalendarView() {
-    const calendarContainer = document.getElementById('troopmaster-calendar');
-    if (!calendarContainer) return;
+    var container = document.getElementById('troopmaster-calendar');
+    if (!container) return;
 
-    const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-    const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-
-    // Get first and last day of month
-    const firstDay = new Date(currentYear, currentMonth, 1);
-    const lastDay = new Date(currentYear, currentMonth + 1, 0);
-    const startDayOfWeek = firstDay.getDay();
-    const daysInMonth = lastDay.getDate();
-
-    // Get events for this month
-    const monthEvents = allEvents.filter(event => {
-      return event.startDate.getMonth() === currentMonth && 
-             event.startDate.getFullYear() === currentYear;
+    // Get events for current month
+    var monthEvents = allEvents.filter(function(ev) {
+      return ev.startDate && ev.startDate.getMonth() === currentMonth && ev.startDate.getFullYear() === currentYear;
     });
 
-    // Build calendar grid
-    let calendarHTML = `
-      <div class="calendar-header">
-        <button class="calendar-nav prev-month" onclick="window.calendarApp.prevMonth()">← Prev</button>
-        <h2 class="calendar-month-year">${monthNames[currentMonth]} ${currentYear}</h2>
-        <button class="calendar-nav next-month" onclick="window.calendarApp.nextMonth()">Next →</button>
-      </div>
-      
-      <div class="calendar-days-of-week">
-        ${dayNames.map(day => `<div class="day-label">${day}</div>`).join('')}
-      </div>
-      
-      <div class="calendar-grid">
-    `;
+    var firstDay = new Date(currentYear, currentMonth, 1);
+    var lastDay = new Date(currentYear, currentMonth + 1, 0);
+    var startDayOfWeek = firstDay.getDay();
+    var daysInMonth = lastDay.getDate();
 
-    // Add empty cells for days before start of month
-    for (let i = 0; i < startDayOfWeek; i++) {
-      calendarHTML += `<div class="calendar-day empty"></div>`;
+    var html = '<div class="calendar-header">' +
+      '<button class="calendar-nav prev-month" id="prevMonthBtn">\u2190 Prev</button>' +
+      '<h2 class="calendar-month-year">' + monthNames[currentMonth] + ' ' + currentYear + '</h2>' +
+      '<button class="calendar-nav next-month" id="nextMonthBtn">Next \u2192</button>' +
+      '</div>' +
+      '<div class="calendar-days-of-week">' +
+        dayNames.map(function(d) { return '<div class="day-label">' + d + '</div>'; }).join('') +
+      '</div>' +
+      '<div class="calendar-grid">';
+
+    for (var i = 0; i < startDayOfWeek; i++) {
+      html += '<div class="calendar-day empty"></div>';
     }
 
-    // Add days of the month
-    for (let day = 1; day <= daysInMonth; day++) {
-      const currentDate = new Date(currentYear, currentMonth, day);
-      const dayEvents = monthEvents.filter(event => 
-        event.startDate.getDate() === day
-      );
-      
-      const isToday = currentDate.toDateString() === new Date().toDateString();
-      
-      calendarHTML += `<div class="calendar-day ${isToday ? 'today' : ''}">`;
-      calendarHTML += `<div class="day-number">${day}</div>`;
-      
-      if (dayEvents.length > 0) {
-        calendarHTML += '<div class="day-events">';
-        dayEvents.forEach(event => {
-          calendarHTML += `<div class="month-event" title="${event.summary}">`;
-          calendarHTML += `<div class="event-time">${event.startDate.toLocaleTimeString('en-US', {hour: 'numeric', minute: '2-digit'})}</div>`;
-          calendarHTML += `<div class="event-name">${event.summary}</div>`;
-          calendarHTML += '</div>';
+    for (var day = 1; day <= daysInMonth; day++) {
+      var currentDate = new Date(currentYear, currentMonth, day);
+      var dayEvts = monthEvents.filter(function(e) { return e.startDate.getDate() === day; });
+      var isToday = currentDate.toDateString() === new Date().toDateString();
+
+      html += '<div class="calendar-day' + (isToday ? ' today' : '') + '" data-day="' + day + '">' +
+        '<div class="day-number">' + day + '</div>';
+
+      if (dayEvts.length > 0) {
+        html += '<div class="day-events">';
+        dayEvts.forEach(function(ev) {
+          var time = ev.startDate.toLocaleTimeString('en-US', {hour: 'numeric', minute: '2-digit'});
+          html += '<div class="month-event" title="' + ev.summary + '">' +
+            '<div class="event-time">' + time + '</div>' +
+            '<div class="event-name">' + ev.summary + '</div>' +
+          '</div>';
         });
-        calendarHTML += '</div>';
+        html += '</div>';
       }
-      
-      calendarHTML += '</div>';
+
+      html += '</div>';
     }
 
-    calendarHTML += '</div>';
+    html += '</div>' +
+      '<div class="calendar-footer">' +
+        '<div class="calendar-legend"><span class="legend-item">\uD83D\uDDD5\uFE0F = Today</span></div>' +
+        '<div class="calendar-subscribe">' +
+          '<a href="' + calendarFeedURL + '" target="_blank" class="btn btn-secondary">\uD83D\uDCE5 Subscribe to Calendar</a>' +
+          '<a href="https://tmweb.troopmaster.com/Website/Home#" target="_blank" class="btn btn-secondary" style="margin-left:0.5rem;">View on TroopMaster</a>' +
+        '</div>' +
+      '</div>';
 
-    // Add legend and subscribe info
-    calendarHTML += `
-      <div class="calendar-footer">
-        <div class="calendar-legend">
-          <span class="legend-item">📅 = Today</span>
-        </div>
-        <div class="calendar-subscribe">
-          <a href="${calendarFeedURL}" target="_blank" class="btn btn-secondary">
-            📥 Subscribe to Full Calendar
-          </a>
-        </div>
-      </div>
-    `;
+    container.innerHTML = html;
 
-    calendarContainer.innerHTML = calendarHTML;
-
-    // Add click handlers to days
-    document.querySelectorAll('.calendar-day:not(.empty)').forEach(dayEl => {
-      dayEl.addEventListener('click', function() {
-        const dayNumber = parseInt(this.querySelector('.day-number').textContent);
-        const dayEvents = monthEvents.filter(event => 
-          event.startDate.getDate() === dayNumber
-        );
-        
-        if (dayEvents.length > 0) {
-          showDayEvents(dayNumber, dayEvents);
-        }
+    // Click handlers for days
+    var dayEls = container.querySelectorAll('.calendar-day:not(.empty)');
+    for (var d = 0; d < dayEls.length; d++) {
+      dayEls[d].addEventListener('click', function() {
+        var dayNum = parseInt(this.getAttribute('data-day'));
+        var dayEvts = monthEvents.filter(function(e) { return e.startDate.getDate() === dayNum; });
+        if (dayEvts.length > 0) showDayEvents(dayNum, dayEvts);
       });
+    }
+
+    // Nav buttons
+    document.getElementById('prevMonthBtn').addEventListener('click', function() {
+      if (currentMonth === 0) { currentMonth = 11; currentYear--; } else { currentMonth--; }
+      var detail = document.querySelector('.day-events-detail');
+      if (detail) detail.remove();
+      renderCalendarView();
+    });
+
+    document.getElementById('nextMonthBtn').addEventListener('click', function() {
+      if (currentMonth === 11) { currentMonth = 0; currentYear++; } else { currentMonth++; }
+      var detail = document.querySelector('.day-events-detail');
+      if (detail) detail.remove();
+      renderCalendarView();
     });
   }
 
-  // Helper function to convert \n escapes to HTML line breaks
-  function decodeICalText(text) {
-    if (!text) return '';
-    // Replace literal \n (backslash + n) with <br> tags
-    return text.replace(/\\n/g, '<br>');
-  }
-
-  // Function to show events for a specific day
+  // Show day details
   function showDayEvents(day, dayEvents) {
-    const calendarContainer = document.getElementById('troopmaster-calendar');
-    
-    const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-    
-    let detailsHTML = `
-      <div class="day-events-detail">
-        <h3>Events for ${day} ${monthNames[currentMonth]}</h3>
-        <div class="events-list">
-    `;
-    
-    dayEvents.forEach(event => {
-      const time = event.startDate.toLocaleTimeString('en-US', {
-        hour: 'numeric',
-        minute: '2-digit',
-        hour12: true
-      });
-      
-      const decodedLocation = decodeICalText(event.location);
-      const decodedDescription = decodeICalText(event.description);
-      
-      detailsHTML += `
-        <div class="event-detail-card">
-          <div class="event-detail-time">${time}</div>
-          <div class="event-detail-content">
-            <h4 class="event-detail-title">${event.summary}</h4>
-            ${decodedLocation ? `<p class="event-detail-location">📍 ${decodedLocation}</p>` : ''}
-            ${decodedDescription ? `<p class="event-detail-description">${decodedDescription}</p>` : ''}
-          </div>
-        </div>
-      `;
+    var container = document.getElementById('troopmaster-calendar');
+    var html = '<div class="day-events-detail">' +
+      '<h3>Events for ' + day + ' ' + monthNames[currentMonth] + '</h3>' +
+      '<div class="events-list">';
+
+    dayEvents.forEach(function(ev) {
+      var time = ev.startDate.toLocaleTimeString('en-US', {hour: 'numeric', minute: '2-digit', hour12: true});
+      html += '<div class="event-detail-card">' +
+        '<div class="event-detail-time">' + time + '</div>' +
+        '<div class="event-detail-content">' +
+          '<h4 class="event-detail-title">' + ev.summary + '</h4>' +
+          (ev.location ? '<p class="event-detail-location">\uD83D\uDCCD ' + ev.location + '</p>' : '') +
+          (ev.description ? '<p class="event-detail-description">' + ev.description + '</p>' : '') +
+        '</div>' +
+      '</div>';
     });
-    
-    detailsHTML += '</div></div>';
-    
-    // Insert after the calendar grid
-    const calendarGrid = calendarContainer.querySelector('.calendar-grid');
-    calendarGrid.insertAdjacentHTML('afterend', detailsHTML);
+
+    html += '</div></div>';
+    var existing = document.querySelector('.day-events-detail');
+    if (existing) existing.remove();
+    var grid = container.querySelector('.calendar-grid');
+    if (grid) grid.insertAdjacentHTML('afterend', html);
   }
 
-  // Month navigation functions
-  window.calendarApp = {
-    prevMonth: function() {
-      if (currentMonth === 0) {
-        currentMonth = 11;
-        currentYear--;
-      } else {
-        currentMonth--;
-      }
-      renderCalendarView();
-    },
-    
-    nextMonth: function() {
-      if (currentMonth === 11) {
-        currentMonth = 0;
-        currentYear++;
-      } else {
-        currentMonth++;
-      }
-      renderCalendarView();
-    }
-  };
-
-  // Load events and render calendar
-  loadAllCalendarEvents();
+  // Load events (try local first, fall back to TroopMaster)
+  loadLocalEvents();
 });
