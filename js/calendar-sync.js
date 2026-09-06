@@ -5,7 +5,10 @@
  */
 
 document.addEventListener('DOMContentLoaded', function() {
-  const calendarFeedURL = 'http://tmweb.troopmaster.com/activitymanagement/icalendar/?id=wQRANP~NO&timezone=Eastern_Standard_Time';
+  // Note: Using HTTPS for TroopMaster feed (http was likely being upgraded or blocked)
+  const calendarFeedURL = 'https://tmweb.troopmaster.com/activitymanagement/icalendar/?id=wQRANP~NO&timezone=Eastern_Standard_Time';
+  // CORS proxy to bypass browser security restrictions
+  const corsProxy = 'https://api.allorigins.win/raw?url=';
   let allEvents = [];
   let currentMonth = new Date().getMonth();
   let currentYear = new Date().getFullYear();
@@ -77,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Function to fetch and parse all events
   function loadAllCalendarEvents() {
-    fetch(calendarFeedURL)
+    fetch(corsProxy + encodeURIComponent(calendarFeedURL))
       .then(response => response.text())
       .then(icalData => {
         allEvents = [];
