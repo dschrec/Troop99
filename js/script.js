@@ -306,12 +306,7 @@ document.addEventListener('DOMContentLoaded', function() {
          date: new Date().toLocaleString()
        };
 
-       // Load existing messages, append, save
-       var data = JSON.parse(localStorage.getItem('troop99_admin_data') || '{"messages":[]}');
-       data.messages = data.messages || [];
-       data.messages.unshift(msg);
-       localStorage.setItem('troop99_admin_data', JSON.stringify(data));
-
+       // Note: Contact form is mailto-only; no data is stored locally.
        // Show confirmation
        contactForm.reset();
        alert('Message sent! We will get back to you soon.');
