@@ -19,6 +19,7 @@ jobs:
         with:
           ref: feature/gallery-backend
           token: ${{ secrets.TOKEN }}
+          persist-credentials: true
 
       - name: Fetch TroopMaster iCal feed
         run: |
@@ -95,3 +96,5 @@ jobs:
             git commit -m "Update calendar events from TroopMaster iCal feed"
             git push origin feature/gallery-backend
           fi
+        env:
+          GH_TOKEN: ${{ secrets.TOKEN }}
