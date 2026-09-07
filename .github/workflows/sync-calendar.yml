@@ -5,11 +5,13 @@ on:
     - cron: '0 10 * * *'
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   sync:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -86,6 +88,7 @@ jobs:
         run: |
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
+          git remote set-url origin https://github.com/dschrec/Troop99.git
           git add data/calendar-events.json
           if git diff --cached --quiet; then
             echo "No changes — calendar is up to date"
