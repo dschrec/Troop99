@@ -11,7 +11,96 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=202609070300">
+  <style>
+    /* Force 7-column grid on all viewport sizes — overrides external CSS */
+    #troopmaster-calendar .calendar-grid {
+      grid-template-columns: repeat(7, 1fr) !important;
+    }
+    @media (max-width: 768px) {
+      #troopmaster-calendar .calendar-grid {
+        grid-template-columns: repeat(7, 1fr) !important;
+      }
+      #troopmaster-calendar .calendar-day {
+        min-height: 50px !important;
+        padding: 0.2rem !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        overflow: hidden !important;
+      }
+      #troopmaster-calendar .day-events {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 1px !important;
+      }
+      #troopmaster-calendar .month-event {
+        font-size: 0.5rem !important;
+        padding: 1px 2px !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+      }
+    }
+    /* Detail popup styles — ensure full text display */
+    #troopmaster-calendar .day-events-detail {
+      margin: 0.75rem 0 !important;
+      padding: 0.75rem !important;
+      background: var(--off-white);
+      border-radius: var(--border-radius);
+    }
+    #troopmaster-calendar .events-list {
+      display: block !important;
+      width: 100% !important;
+      max-width: none !important;
+    }
+    #troopmaster-calendar .event-detail-card {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 0.5rem !important;
+      padding: 0.75rem !important;
+      background: var(--white) !important;
+      border-radius: var(--border-radius) !important;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05) !important;
+      margin-bottom: 0.5rem !important;
+      width: 100% !important;
+      overflow: visible !important;
+    }
+    #troopmaster-calendar .event-detail-content {
+      width: 100% !important;
+      overflow: visible !important;
+    }
+    #troopmaster-calendar .event-detail-description {
+      color: var(--gray-600) !important;
+      font-size: 0.9rem !important;
+      line-height: 1.6 !important;
+      white-space: normal !important;
+      word-wrap: break-word !important;
+      word-break: break-word !important;
+      overflow: visible !important;
+      max-width: none !important;
+    }
+    #troopmaster-calendar .event-detail-title {
+      color: var(--navy) !important;
+      font-size: 1rem !important;
+      margin-bottom: 0.25rem !important;
+      margin-top: 0 !important;
+    }
+    #troopmaster-calendar .event-detail-time {
+      font-weight: 700 !important;
+      font-size: 0.85rem !important;
+      color: var(--navy) !important;
+      padding-bottom: 0.25rem !important;
+      border-bottom: 1px solid var(--gray-100) !important;
+    }
+    #troopmaster-calendar .event-detail-location {
+      color: var(--gray-600) !important;
+      font-size: 0.85rem !important;
+      margin-bottom: 0.25rem !important;
+    }
+  </style>
+  <script>
+    document.write('<link rel="stylesheet" href="css/style.css?' + Date.now() + '">');
+  </script>
 </head>
 <body>
   <nav class="navbar" id="navbar">

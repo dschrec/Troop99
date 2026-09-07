@@ -70,6 +70,8 @@ document.addEventListener('DOMContentLoaded', function() {
           }
           allEvents.sort(function(a, b) { return a.startDate - b.startDate; });
           console.log('Calendar loaded: ' + allEvents.length + ' events');
+          console.log('First event description: ' + JSON.stringify(allEvents[0].description));
+          console.log('First event has <br>: ' + allEvents[0].description.includes('<br>'));
           var count = allEvents.filter(function(ev) {
             return ev.startDate.getMonth() === currentMonth && ev.startDate.getFullYear() === currentYear;
           }).length;
