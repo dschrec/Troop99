@@ -6,7 +6,6 @@
 
 document.addEventListener('DOMContentLoaded', function() {
   var calendarFeedURL = 'https://tmweb.troopmaster.com/activitymanagement/icalendar/?id=wQRANP~NO&timezone=Eastern_Standard_Time';
-  var corsProxy = 'https://api.allorigins.win/raw?url=';
   var localEventsFile = 'data/calendar-events.json';
   var allEvents = [];
   var currentMonth = new Date().getMonth();
@@ -38,7 +37,6 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // Parse "20260928T190000" into Date
-  // Uses local timezone to avoid midnight UTC shifting to previous day
   function parseICalDate(str) {
     if (!str) return null;
     var y = parseInt(str.substring(0, 4));
@@ -46,8 +44,6 @@ document.addEventListener('DOMContentLoaded', function() {
     var d = parseInt(str.substring(6, 8));
     var h = str.length > 8 ? parseInt(str.substring(9, 11)) : 0;
     var mi = str.length > 11 ? parseInt(str.substring(11, 13)) : 0;
-    // Use Date.UTC to create date in UTC, then get local values to create local date
-    // This avoids midnight UTC shifting to previous day in Eastern time
     return new Date(y, m, d, h, mi, 0, 0);
   }
 
@@ -59,18 +55,17 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // Check if an event is active on a given day
-  // iCal uses exclusive end dates: DTEND is the day AFTER the event ends
-  // Uses floor-to-midnight comparison so events starting at 6PM still show on their start day
+  // Floors start date to midnight so PM events still show on their start day
+  // Keeps original end time so events ending during a day still show that day
   function eventIsOnDay(event, day) {
     if (!event.startDate || !day) return false;
-    // Floor both dates to midnight for day-level comparison
     var evDay = new Date(event.startDate.getFullYear(), event.startDate.getMonth(), event.startDate.getDate());
     var inputDay = new Date(day.getFullYear(), day.getMonth(), day.getDate());
-    var evEnd = event.endDate ? new Date(event.endDate.getFullYear(), event.endDate.getMonth(), event.endDate.getDate()) : evDay;
+    var evEnd = event.endDate || event.startDate;
     return inputDay >= evDay && inputDay < evEnd;
   }
 
-  // Load events from local JSON
+  // Load events from local JSON only
   function loadLocalEvents() {
     var xhr = new XMLHttpRequest();
     xhr.open('GET', localEventsFile, true);
@@ -95,63 +90,19 @@ document.addEventListener('DOMContentLoaded', function() {
           renderCalendarView();
         } catch(err) {
           console.error('Error parsing local events:', err);
-          loadFromTroopMaster();
+          showFallback();
         }
       } else {
-        loadFromTroopMaster();
+        showFallback();
       }
     };
     xhr.onerror = function() {
-      loadFromTroopMaster();
+      showFallback();
     };
     xhr.send();
   }
 
-  // Fallback: fetch from TroopMaster via CORS proxy
-  function loadFromTroopMaster() {
-    fetch(corsProxy + encodeURIComponent(calendarFeedURL))
-      .then(function(response) {
-        if (!response.ok) throw new Error('Network error: ' + response.status);
-        return response.text();
-      })
-      .then(function(icalData) {
-        var events = [];
-        var eventBlocks = icalData.split('BEGIN:VEVENT');
-        for (var i = 1; i < eventBlocks.length; i++) {
-          var block = 'BEGIN:VEVENT' + eventBlocks[i];
-          if (block.includes('END:VEVENT')) {
-            var eventData = block.split('END:VEVENT')[0];
-            var summary = '', description = '', location = '', dtStart = '', dtEnd = '';
-            var lines = eventData.split('\n');
-            for (var j = 0; j < lines.length; j++) {
-              var l = lines[j].trim();
-              if (l.startsWith('SUMMARY:')) summary = l.substring(8);
-              else if (l.startsWith('DESCRIPTION:')) description = l.substring(12);
-              else if (l.startsWith('LOCATION:')) location = l.substring(9);
-              else if (l.startsWith('DTSTART')) dtStart = l.split(':')[1].trim();
-              else if (l.startsWith('DTEND')) dtEnd = l.split(':')[1].trim();
-            }
-            if (dtStart) {
-              events.push({
-                summary: decodeICalText(summary),
-                description: decodeICalText(description),
-                location: decodeICalText(location),
-                startDate: parseICalDate(dtStart),
-                endDate: dtEnd ? parseICalDate(dtEnd) : null
-              });
-            }
-          }
-        }
-        allEvents = events.sort(function(a, b) { return a.startDate - b.startDate; });
-        renderCalendarView();
-      })
-      .catch(function(err) {
-        console.error('Error loading from TroopMaster:', err);
-        showFallback();
-      });
-  }
-
-  // Show fallback if nothing loads
+  // Show fallback if local JSON fails
   function showFallback() {
     var container = document.getElementById('troopmaster-calendar');
     if (container) {
@@ -175,9 +126,10 @@ document.addEventListener('DOMContentLoaded', function() {
     var startDayOfWeek = firstDay.getDay();
     var daysInMonth = lastDay.getDate();
 
-    // Filter events: include those that START this month OR span into this month
+    // Filter events: include those that span into or overlap this month
     var monthEvents = allEvents.filter(function(ev) {
-      return ev.startDate && ev.startDate <= lastDay && (!ev.endDate || ev.endDate >= firstDay);
+      var evStartFloor = new Date(ev.startDate.getFullYear(), ev.startDate.getMonth(), ev.startDate.getDate());
+      return evStartFloor <= lastDay && (!ev.endDate || ev.endDate >= firstDay);
     });
 
     var html = '<div class="calendar-header">' +
@@ -218,7 +170,7 @@ document.addEventListener('DOMContentLoaded', function() {
           var label = isContinuing ? ev.summary + ' (continuing)' : ev.summary;
           html += '<div class="month-event" title="' + ev.summary + '">' +
             (showTime ? '<div class="event-time">' + time + '</div>' : '') +
-            '<div class="event-name">' + (isContinuing ? '… ' : '') + ev.summary + '</div>' +
+            '<div class="event-name">' + (isContinuing ? '\u2026 ' : '') + ev.summary + '</div>' +
             '</div>';
         });
         html += '</div>';
@@ -283,7 +235,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var startDate = ev.startDate;
         var endDate = ev.endDate;
         dateRange = '<p class="event-detail-multiday"><strong>Multi-day event:</strong> ' +
-          startDate.toLocaleDateString('en-US', {month: 'short', day: 'numeric'}) + ' – ' +
+          startDate.toLocaleDateString('en-US', {month: 'short', day: 'numeric'}) + ' \u2013 ' +
           endDate.toLocaleDateString('en-US', {month: 'short', day: 'numeric', year: 'numeric'}) + '</p>';
       }
       html += '<div class="event-detail-card">' +
@@ -304,6 +256,6 @@ document.addEventListener('DOMContentLoaded', function() {
     if (grid) grid.insertAdjacentHTML('afterend', html);
   }
 
-  // Load events (try local first, fall back to TroopMaster)
+  // Load events from local JSON
   loadLocalEvents();
 });
