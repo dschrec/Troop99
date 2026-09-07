@@ -4,7 +4,7 @@ on:
   schedule:
     # Every day at 10:00 UTC = 6:00 AM EDT
     - cron: '0 10 * * *'
-  workflow_dispatch:  # Manual trigger button in GitHub UI
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -19,7 +19,6 @@ jobs:
         with:
           ref: feature/gallery-backend
           token: ${{ secrets.TOKEN }}
-          persist-credentials: true
 
       - name: Fetch TroopMaster iCal feed
         run: |
@@ -89,6 +88,7 @@ jobs:
         run: |
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
+          git remote set-url origin https://x-access-token:${{ secrets.TOKEN }}@github.com/dschrec/Troop99.git
           git add data/calendar-events.json
           if git diff --cached --quiet; then
             echo "No changes — calendar is up to date"
@@ -96,5 +96,3 @@ jobs:
             git commit -m "Update calendar events from TroopMaster iCal feed"
             git push origin feature/gallery-backend
           fi
-        env:
-          GH_TOKEN: ${{ secrets.TOKEN }}
