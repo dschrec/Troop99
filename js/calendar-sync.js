@@ -60,9 +60,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Check if an event is active on a given day
   // iCal uses exclusive end dates: DTEND is the day AFTER the event ends
+  // Uses floor-to-midnight comparison so events starting at 6PM still show on their start day
   function eventIsOnDay(event, day) {
     if (!event.startDate || !day) return false;
-    return day >= event.startDate && day < (event.endDate || event.startDate);
+    // Floor both dates to midnight for day-level comparison
+    var evDay = new Date(event.startDate.getFullYear(), event.startDate.getMonth(), event.startDate.getDate());
+    var inputDay = new Date(day.getFullYear(), day.getMonth(), day.getDate());
+    var evEnd = event.endDate ? new Date(event.endDate.getFullYear(), event.endDate.getMonth(), event.endDate.getDate()) : evDay;
+    return inputDay >= evDay && inputDay < evEnd;
   }
 
   // Load events from local JSON
