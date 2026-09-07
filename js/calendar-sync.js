@@ -38,6 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // Parse "20260928T190000" into Date
+  // Uses local timezone to avoid midnight UTC shifting to previous day
   function parseICalDate(str) {
     if (!str) return null;
     var y = parseInt(str.substring(0, 4));
@@ -45,7 +46,9 @@ document.addEventListener('DOMContentLoaded', function() {
     var d = parseInt(str.substring(6, 8));
     var h = str.length > 8 ? parseInt(str.substring(9, 11)) : 0;
     var mi = str.length > 11 ? parseInt(str.substring(11, 13)) : 0;
-    return new Date(y, m, d, h, mi);
+    // Use Date.UTC to create date in UTC, then get local values to create local date
+    // This avoids midnight UTC shifting to previous day in Eastern time
+    return new Date(y, m, d, h, mi, 0, 0);
   }
 
   // Check if two dates are the same day (ignoring time)
@@ -56,9 +59,10 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // Check if an event is active on a given day
+  // iCal uses exclusive end dates: DTEND is the day AFTER the event ends
   function eventIsOnDay(event, day) {
     if (!event.startDate || !day) return false;
-    return day >= event.startDate && day <= (event.endDate || event.startDate);
+    return day >= event.startDate && day < (event.endDate || event.startDate);
   }
 
   // Load events from local JSON
