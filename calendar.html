@@ -97,6 +97,11 @@
       font-size: 0.85rem !important;
       margin-bottom: 0.25rem !important;
     }
+    /* Compact section: reduce gap between hero and calendar */
+    .section--compact {
+      padding-top: 1rem !important;
+      padding-bottom: 4rem !important;
+    }
   </style>
   <script>
     document.write('<link rel="stylesheet" href="css/style.css?' + Date.now() + '">');
@@ -136,13 +141,8 @@
     </div>
   </section>
 
-  <section class="section">
+  <section class="section section--compact">
     <div class="container">
-      <!-- TroopMaster Calendar Integration -->
-      <div class="section-header section-header--center">
-        <span class="section-eyebrow">Live Calendar</span>
-      </div>
-      
       <div id="troopmaster-calendar" class="calendar-container">
         <div class="calendar-loading">Loading calendar...</div>
       </div>
