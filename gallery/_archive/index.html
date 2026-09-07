@@ -4,31 +4,58 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Archived Events - Troop 99 Scouts</title>
-  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/style.css?v=202607241655">
   <link rel="stylesheet" href="../css/style.css">
   <style>
     .archive-list { list-style: none; padding: 0; max-width: 600px; margin: 0 auto; }
     .archive-list li { margin-bottom: 1rem; }
-    .archive-list a { color: var(--text-primary); text-decoration: none; font-size: 1.1rem; }
-    .archive-list a:hover { color: var(--accent-blue); }
-    .archive-note { max-width: 600px; margin: 2rem auto; color: var(--gray-600); font-size: 0.95rem; line-height: 1.6; }
+    .archive-list a { color: var(--navy); text-decoration: none; font-size: 1.1rem; font-weight: 500; transition: color 0.2s; }
+    .archive-list a:hover { color: var(--gold); }
+    .archive-note { max-width: 600px; margin: 0 auto 2rem; color: var(--gray-600); font-size: 0.95rem; line-height: 1.6; text-align: center; }
   </style>
 </head>
 <body>
   <nav class="navbar" id="navbar">
     <div class="nav-container">
-      <a href="https://newtownscouts.org/index.html" class="nav-logo">
+      <a href="../../index.html" class="nav-logo">
         <span class="logo-mark">99</span>
         <span class="logo-text">Troop 99 Newtown</span>
       </a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="../../index.html" class="nav-link">Home</a></li>
+        <li><a href="../../about.html" class="nav-link">About</a></li>
+        <li><a href="../../activities.html" class="nav-link">Activities</a></li>
+        <li><a href="../gallery.html" class="nav-link active">Gallery</a></li>
+        <li><a href="../../calendar.html" class="nav-link">Calendar</a></li>
+        <li><a href="../../eagle-scouts.html" class="nav-link">Eagle Scout</a></li>
+        <li><a href="../../eagle-roster.html" class="nav-link">T99 Eagles</a></li>
+        <li><a href="../../contact.html" class="nav-link">Contact</a></li>
+        <li><a href="https://my.scouting.org/VES/OnlineReg/1.0.0/?tu=UF-MB-777taa0099" target="_blank" rel="noopener" class="nav-link nav-cta-btn">Join Us</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </nav>
+
+  <section class="page-header" style="background-image: url('../../images/summer-camp-hero.jpg');">
+    <div class="page-header-content">
+      <div class="container">
+        <h1>Archived Events</h1>
+        <p>Past event galleries for historical reference</p>
+      </div>
+    </div>
+  </section>
 
   <section class="section">
     <div class="container">
       <div class="section-header section-header--center">
-        <span class="section-eyebrow">Archived Events</span>
-        <h2 class="section-heading">Past Event Galleries</h2>
+        <span class="section-eyebrow">Past Galleries</span>
+        <h2 class="section-heading">Event Archives</h2>
       </div>
 
       <p class="archive-note">These event galleries have been archived and removed from the main gallery index. They remain accessible via direct link for historical reference.</p>
@@ -37,22 +64,64 @@
     </div>
   </section>
 
-  <a href="../gallery.html" class="event-back-link" style="display: inline-flex; margin-top: 2rem;">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-    Back to Gallery
-  </a>
-
   <footer class="footer">
     <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../../index.html" class="footer-logo">
+            <span class="footer-logo-mark">99</span>
+            <span class="footer-logo-text">Troop 99</span>
+          </a>
+          <p class="footer-tagline">Building leaders through adventure, service, and friendship.</p>
+          <p class="footer-address">
+            American Legion Post 440<br>
+            Newtown, PA 18940<br>
+            Chartered by American Legion Post 440<br>
+            Washington Crossing Council · Tamanend District
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="../../about.html">About Us</a></li>
+            <li><a href="../../activities.html">Activities</a></li>
+            <li><a href="../../calendar.html">Calendar</a></li>
+            <li><a href="../gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Get Involved</h4>
+          <ul>
+            <li><a href="../../eagle-scouts.html">Eagle Scouts</a></li>
+            <li><a href="../../join.html">Join Us</a></li>
+            <li><a href="../../contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+          <ul>
+            <li><a href="https://instagram.com/troop99newtownpa" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://facebook.com/troop99" target="_blank" rel="noopener">Facebook</a></li>
+            <li><a href="https://www.scouting.org" target="_blank" rel="noopener">BSA National</a></li>
+            <li><a href="https://www.wccscouting.org" target="_blank" rel="noopener">Our Council</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <ul>
+            <li><a href="mailto:troop99admin@gmail.com">troop99admin@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
       <div class="footer-bottom">
         <p>&copy; 2026 Troop 99 Scouts, Newtown PA. All rights reserved.</p>
       </div>
     </div>
   </footer>
 
+  <script src="../../js/script.js"></script>
   <script>
     (function() {
-      // Load gallery config to build archive list
       fetch('../../data/gallery-config.json')
         .then(res => res.json())
         .then(events => {
