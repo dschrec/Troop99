@@ -1,0 +1,97 @@
+name: Sync TroopMaster Calendar
+
+on:
+  schedule:
+    # Every day at 10:00 UTC = 6:00 AM EDT
+    - cron: '0 10 * * *'
+  workflow_dispatch:  # Manual trigger button in GitHub UI
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          ref: feature/gallery-backend
+          token: ${{ secrets.TOKEN }}
+
+      - name: Fetch TroopMaster iCal feed
+        run: |
+          curl -s -o TroopMaster.ics \
+            "http://tmweb.troopmaster.com/activitymanagement/icalendar/?id=wQRANP~NO&timezone=Eastern_Standard_Time"
+
+      - name: Parse iCal to JSON
+        run: |
+          python3 << 'PYEOF'
+          import json
+
+          with open('TroopMaster.ics', 'r') as f:
+              ical = f.read()
+
+          events = ical.split('BEGIN:VEVENT')
+          parsed = []
+
+          for block in events[1:]:
+              if 'END:VEVENT' not in block:
+                  continue
+              full = 'BEGIN:VEVENT' + block
+              raw_lines = full.split('\r\n') if '\r\n' in full else full.split('\n')
+
+              unfolded = []
+              for line in raw_lines:
+                  if line.startswith(' ') and unfolded:
+                      unfolded[-1] += line[1:]
+                  else:
+                      stripped = line.strip()
+                      if stripped:
+                          unfolded.append(stripped)
+
+              summary = description = location = dtstart = dtend = ''
+              for line in unfolded:
+                  if line.startswith('SUMMARY:'):
+                      summary = line[8:]
+                  elif line.startswith('DESCRIPTION:'):
+                      description = line[12:]
+                  elif line.startswith('LOCATION:'):
+                      location = line[9:]
+                  elif line.startswith('DTSTART'):
+                      parts = line.split(':')
+                      dtstart = parts[1].strip() if len(parts) > 1 else ''
+                  elif line.startswith('DTEND'):
+                      parts = line.split(':')
+                      dtend = parts[1].strip() if len(parts) > 1 else ''
+
+              if dtstart:
+                  parsed.append({
+                      'summary': summary,
+                      'description': description,
+                      'location': location,
+                      'startDate': dtstart,
+                      'endDate': dtend if dtend else ''
+                  })
+
+          parsed.sort(key=lambda e: e['startDate'])
+
+          with open('data/calendar-events.json', 'w') as f:
+              json.dump(parsed, f, indent=2, ensure_ascii=False)
+              f.write('\n')
+
+          print(f'Wrote {len(parsed)} events')
+          PYEOF
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add data/calendar-events.json
+          if git diff --cached --quiet; then
+            echo "No changes — calendar is up to date"
+          else
+            git commit -m "Update calendar events from TroopMaster iCal feed"
+            git push origin feature/gallery-backend
+          fi
