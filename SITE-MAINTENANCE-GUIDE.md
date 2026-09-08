@@ -22,8 +22,8 @@
 The Troop 99 website uses a **static, event-based gallery system**. All pages are plain HTML/CSS/JavaScript with no database or backend.
 
 **Event gallery types:**
-- **Published events** appear on the main gallery page and are clickable
-- **Draft events** show as "Coming Soon" on the gallery page (non-clickable)
+- **Published events** appear on the main gallery page, are clickable, and show a camera icon overlay
+- **Draft events** are visible on the gallery page but not clickable (no camera icon) — they look just like published cards but you can't drill into them
 - **Archived events** are removed from the gallery index but remain accessible via direct link
 
 **How it works:**
@@ -92,14 +92,14 @@ Open `data/gallery-config.json` and add a new entry at the top of the events arr
 ```
 
 **Key fields:**
-| Field | Description |
-|-------|-------------|
-| `title` | Event display name |
-| `slug` | URL-friendly name (matches the HTML filename, lowercase with hyphens) |
-| `year` | Event year |
-| `month` | Event month number (1=January, 12=December) |
-| `status` | `"draft"` = not visible on gallery, `"published"` = visible and clickable |
-| `description` | Short description shown on the event page |
+|| Field | Description |
+||-------|-------------|
+|| `title` | Event display name |
+|| `slug` | URL-friendly name (matches the HTML filename, lowercase with hyphens) |
+|| `year` | Event year |
+|| `month` | Event month number (1=January, 12=December) |
+|| `status` | `"draft"` = visible on gallery but not clickable (no camera icon), `"published"` = visible, clickable, and shows a white camera icon overlay |
+|| `description` | Short description shown on the event page |
 
 ### Step 4: Save and Test
 

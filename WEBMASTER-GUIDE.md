@@ -117,15 +117,15 @@ The homepage slideshow data lives in `data/data.json`. To update it:
 The gallery uses a **JSON-driven event system**. Events are organized by year, with each event having its own page.
 
 **Two card styles:**
-- **Published** = clickable, drill into event page
-- **Draft** = "Coming Soon" badge, non-clickable
+- **Published** = clickable, drill into event page, shows a white camera icon overlay (top-right corner)
+- **Draft** = not clickable, no camera icon — looks like a regular card but you can't drill into it
 
 **How to manage events:**
 
 1. **Add a photo** → Upload to `images/` folder (Part 1)
 2. **Create event page** → Copy an existing event HTML from `gallery/gallery/`
 3. **Add to config** → Add entry to `data/gallery-config.json`
-4. **Set status** → `"draft"` = not live, `"published"` = visible and clickable
+4. **Set status** → `"draft"` = visible on gallery but not clickable (no camera icon), `"published"` = visible, clickable, and shows a white camera icon overlay
 
 See `SITE-MAINTENANCE-GUIDE.md` for detailed steps on creating and managing event galleries.
 
