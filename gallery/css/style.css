@@ -24,7 +24,8 @@
 }
 
 .event-card-image {
-  height: 200px;
+  position: relative;
+  height: 240px;
   overflow: hidden;
 }
 
@@ -35,13 +36,24 @@
   display: block;
 }
 
-.event-card-body {
-  padding: var(--space-md);
+.event-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.2) 40%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: var(--space-lg);
+}
+
+.event-card-text {
+  color: white;
+  z-index: 1;
 }
 
 .event-card-year {
   font-size: var(--size-sm);
-  color: var(--gray-500);
+  color: rgba(255, 255, 255, 0.8);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -51,7 +63,34 @@
   font-size: var(--size-lg);
   font-weight: 700;
   margin-top: var(--space-xs);
-  color: var(--text-primary);
+  color: white;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.camera-icon {
+  position: absolute;
+  top: var(--space-md);
+  right: var(--space-md);
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.event-card--clickable .camera-icon:hover {
+  background: rgba(255, 255, 255, 0.35);
+  transform: scale(1.1);
+}
+
+.camera-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: white;
 }
 
 .event-card-count {
@@ -174,45 +213,12 @@
   position: relative;
 }
 
-.event-card.event-card--draft .event-card-image {
-  position: relative;
-}
-
 .event-card.event-card--draft .event-card-image img {
   /* Image stays full color — no gray filter */
 }
 
-.event-card.event-card--draft .event-card-body {
-  position: relative;
-  z-index: 2;
-}
-
-/* Camera icon overlay for draft events */
-.draft-overlay {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(0, 0, 0, 0.35);
-  z-index: 2;
-  opacity: 0;
-  transition: opacity 0.2s ease;
-}
-
-.event-card:hover .draft-overlay {
-  opacity: 1;
-}
-
-.draft-overlay svg {
-  width: 40px;
-  height: 40px;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
-  transition: transform 0.2s ease;
-}
-
-.event-card:hover .draft-overlay svg {
-  transform: scale(1.1);
+.event-card.event-card--draft .event-card-overlay {
+  opacity: 0.85;
 }
 
 /* Responsive */
