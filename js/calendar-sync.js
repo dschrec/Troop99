@@ -186,7 +186,7 @@ function renderCalendarView() {
       '<div class="calendar-subscribe">' +
         '<a href="' + calendarFeedURL + '" target="_blank" class="btn btn-primary">\uD83D\uDCE5 Subscribe to Calendar</a>' +
       '</div>' +
-    '</div>' +
+    '</div>';
   container.innerHTML = html;
 
   // Click handlers for days
