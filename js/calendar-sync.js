@@ -183,12 +183,10 @@ function renderCalendarView() {
 
   html += '</div>' +
     '<div class="calendar-footer">' +
-      '<div class="calendar-legend"><span class="legend-item">\uD83D\uDDD5\uFE0F = Today</span></div>' +
       '<div class="calendar-subscribe">' +
         '<a href="' + calendarFeedURL + '" target="_blank" class="btn btn-primary">\uD83D\uDCE5 Subscribe to Calendar</a>' +
       '</div>' +
-    '</div>';
-
+    '</div>' +
   container.innerHTML = html;
 
   // Click handlers for days

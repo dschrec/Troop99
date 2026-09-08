@@ -1333,7 +1333,7 @@ ul { list-style: none; }
 .calendar-footer {
   margin-top: var(--space-xl);
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: var(--space-md);
@@ -1529,7 +1529,7 @@ ul { list-style: none; }
   
   .calendar-footer {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: var(--space-md);
   }
   
