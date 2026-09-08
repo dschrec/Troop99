@@ -1,5 +1,16 @@
 /* Gallery System Styles */
 
+/* ===== Gallery Section Spacing ===== */
+/* Tighten gap between hero and content (overrides main .section padding-top) */
+.section {
+  padding-top: 1rem !important;
+}
+
+/* Tighter spacing between year groups */
+#event-years-container > div {
+  margin-bottom: 3rem;
+}
+
 /* ===== Event Grid (same as live site's .gallery-preview) ===== */
 .gallery-preview {
   display: grid;
@@ -58,41 +69,26 @@
   right: var(--space-md);
   width: 40px;
   height: 40px;
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(4px);
+  background: #fff;
   border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.2s ease, transform 0.2s ease;
+  transition: transform 0.2s ease;
 }
 
 .gallery-item:hover .camera-icon {
-  background: rgba(255, 255, 255, 0.35);
   transform: scale(1.1);
 }
 
 .camera-icon svg {
   width: 20px;
   height: 20px;
-  stroke: white;
+  stroke: #333;
 }
 
-/* Draft badge */
-.draft-badge {
-  position: absolute;
-  top: var(--space-md);
-  right: var(--space-md);
-  background: rgba(255, 193, 7, 0.9);
-  color: #333;
-  font-weight: 600;
-  font-size: 0.75rem;
-  padding: 0.35rem 0.75rem;
-  border-radius: 999px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  z-index: 2;
-}
+
 
 /* Year headers */
 #event-years-container h3 {
