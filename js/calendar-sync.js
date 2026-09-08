@@ -208,14 +208,14 @@ function renderCalendarView() {
   }
 
   // Nav buttons
-  document.getElementById('prev-month-btn').addEventListener('click', function() {
-    if (currentMonth === 0) { currentMonth = 11; currentYear--; } else { currentMonth--; }
-    var detail = document.querySelector('.day-events-detail');
-    if (detail) detail.remove();
-    renderCalendarView();
-  });
+  document.getElementById('prevMonthBtn').addEventListener('click', function() {
+     if (currentMonth === 0) { currentMonth = 11; currentYear--; } else { currentMonth--; }
+     var detail = document.querySelector('.day-events-detail');
+     if (detail) detail.remove();
+     renderCalendarView();
+   });
 
-  document.getElementById('next-month-btn').addEventListener('click', function() {
+   document.getElementById('next-month-btn').addEventListener('click', function() {
     if (currentMonth === 11) { currentMonth = 0; currentYear++; } else { currentMonth++; }
     var detail = document.querySelector('.day-events-detail');
     if (detail) detail.remove();
