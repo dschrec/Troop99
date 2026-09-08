@@ -91,8 +91,7 @@ function showFallback() {
       '<div class="calendar-error">' +
         '<p>Unable to load calendar events.</p>' +
         '<p style="margin-top:1rem;">View the full calendar:</p>' +
-        '<a href="' + calendarFeedURL + '" target="_blank" class="btn btn-secondary" style="margin-top:1rem;">Subscribe to Calendar</a>' +
-        '<a href="https://tmweb.troopmaster.com/Website/Home#" target="_blank" class="btn btn-secondary" style="margin-top:1rem;margin-left:0.5rem;">View on TroopMaster</a>' +
+        '<a href="' + calendarFeedURL + '" target="_blank" class="btn btn-primary" style="margin-top:1rem;">📥 Subscribe to Calendar</a>' +
       '</div>';
   }
 }
@@ -186,8 +185,7 @@ function renderCalendarView() {
     '<div class="calendar-footer">' +
       '<div class="calendar-legend"><span class="legend-item">\uD83D\uDDD5\uFE0F = Today</span></div>' +
       '<div class="calendar-subscribe">' +
-        '<a href="' + calendarFeedURL + '" target="_blank" class="btn btn-secondary">\uD83D\uDCE5 Subscribe to Calendar</a>' +
-        '<a href="https://tmweb.troopmaster.com/Website/Home#" target="_blank" class="btn btn-secondary" style="margin-left:0.5rem;">View on TroopMaster</a>' +
+        '<a href="' + calendarFeedURL + '" target="_blank" class="btn btn-primary">\uD83D\uDCE5 Subscribe to Calendar</a>' +
       '</div>' +
     '</div>';
 
