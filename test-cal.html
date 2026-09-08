@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Calendar Test</title>
+</head>
+<body>
+<h1>Calendar Test Page</h1>
+<pre id="log"></pre>
+
+<div id="troopmaster-calendar" style="border:2px solid red; padding:20px; margin:20px 0;">
+  <p>Original content should be replaced</p>
+</div>
+
+<script src="js/calendar-sync.js?v=2"></script>
+
+<script>
+var log = document.getElementById('log');
+function msg(t) { log.innerHTML += t + '\n'; }
+
+// After a short delay, check what happened
+setTimeout(function() {
+  var cal = document.getElementById('troopmaster-calendar');
+  msg('=== CHECK ===');
+  msg('Calendar div exists: ' + !!cal);
+  msg('Calendar innerHTML length: ' + (cal ? cal.innerHTML.length : 'null'));
+  msg('Has calendar-header: ' + (cal ? cal.innerHTML.includes('calendar-header') : false));
+  msg('Has calendar-grid: ' + (cal ? cal.innerHTML.includes('calendar-grid') : false));
+  msg('Has Bike: ' + (cal ? cal.innerHTML.includes('Bike') : false));
+  msg('Has events: ' + (cal && cal.innerHTML.length > 100 ? 'YES' : 'NO'));
+}, 2000);
+</script>
+</body>
+</html>

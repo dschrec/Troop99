@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html><body>
+<h1>Network Test Page</h1>
+<div id="results" style="white-space:pre; font-family:monospace;"></div>
+<script>
+var log = document.getElementById('results');
+function m(t) { log.innerHTML += t + '\n'; }
+
+// Test 1: Can we reach the JSON file?
+var xhr1 = new XMLHttpRequest();
+xhr1.open('GET', 'data/calendar-events.json', true);
+xhr1.onload = function() {
+  m('JSON fetch: status=' + xhr1.status + ' length=' + xhr1.responseText.length);
+  if (xhr1.status === 200) {
+    try {
+      var data = JSON.parse(xhr1.responseText);
+      m('JSON parse: OK (' + data.length + ' events)');
+    } catch(e) {
+      m('JSON parse: ERROR - ' + e.message);
+    }
+  }
+  
+  // Test 2: Can we reach the JS file?
+  var xhr2 = new XMLHttpRequest();
+  xhr2.open('GET', 'js/calendar-sync.js', true);
+  xhr2.onload = function() {
+    m('JS fetch: status=' + xhr2.status + ' length=' + xhr2.responseText.length);
+    m('JS has readyState check: ' + (xhr2.responseText.includes('readyState')));
+    m('JS has loadLocalEvents: ' + (xhr2.responseText.includes('loadLocalEvents')));
+    m('JS has document.write call: ' + (xhr2.responseText.includes('document.write(')));
+    
+    // Test 3: Try loading the actual calendar page
+    var xhr3 = new XMLHttpRequest();
+    xhr3.open('GET', 'calendar.html', true);
+    xhr3.onload = function() {
+      m('Calendar HTML: status=' + xhr3.status + ' length=' + xhr3.responseText.length);
+      m('HTML has script tag: ' + (xhr3.responseText.includes('calendar-sync.js')));
+      m('HTML has div: ' + (xhr3.responseText.includes('troopmaster-calendar')));
+      
+      m('\n=== ALL TESTS COMPLETE ===');
+    };
+    xhr3.send();
+  };
+  xhr2.send();
+};
+xhr1.send();
+</script></body></html>

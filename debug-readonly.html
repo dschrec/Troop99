@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ready State Debug</title>
+</head>
+<body>
+<h1>ReadyState Test</h1>
+<div id="output"></div>
+<script>
+  var output = document.getElementById('output');
+  function log(msg) {
+    output.innerHTML += msg + '<br>';
+    console.log(msg);
+  }
+  
+  // This simulates what calendar.html does
+  log('Before document.write, readyState: ' + document.readyState);
+  
+  document.write('<script src="debug-ready.js?' + Date.now() + '"><\/script>');
+  
+  // Code AFTER document.write runs after the external script loads
+  log('After document.write, readyState: ' + document.readyState);
+</script>
+</body>
+</html>
