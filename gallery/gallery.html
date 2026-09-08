@@ -162,51 +162,56 @@
              grid.className = 'event-grid';
             
              yearEvents.forEach(ev => {
-               const isPublished = ev.status === 'published';
-               const isDraft = ev.status === 'draft';
+                const isPublished = ev.status === 'published';
+                const isDraft = ev.status === 'draft';
+             
+                // Map event titles to image filenames
+                const imgMap = {
+                  'OSR Summer Camp 2026': 'july-osr-summer-camp.jpg',
+                  'Constitution Center': 'philadelphiaindepencehallgroupphoto.jpg',
+                  'May Memorial Day Parade': 'may-memorial-day-parade.jpg',
+                  'Neshaminy Canoe Trip': 'august-2026-neshaminy-canoe-trip.jpg',
+                  'Morrell-Smith Ave Dedication': 'morrell-smith-ave-dedication.jpg',
+                  'Helicopter Museum': 'helicopter-museum.jpg',
+                  'West Point Camporee': 'west-point-camporee.jpg',
+                  'Whitewater Rafting': 'may-whitewater-rafting.jpg',
+                  'Valley Forge Campout': 'march-valley-forge.jpg',
+                  'MLK Service Project': 'january-mlk-service-project.jpg',
+                  'Klondike Derby': 'klondike-derby---osr.jpg',
+                  'December Holiday Party': 'december-holiday-party.jpg',
+                  'Feastival at Roosevelt': 'november-festival---roosevelt.jpg',
+                  'Games Campout': 'games-campout---hidden-valley.jpg',
+                  'Six Flags Camporee': 'six-flags-camporee.jpg',
+                  'Bike Campout': 'bike-campout.jpg',
+                  'Delaware Canoe Trip': 'august-delaware-canoe-trip.jpg',
+                  'Resica Falls Summer Camp': 'resica-falls-summer-camp.jpg',
+                  'Seaside Heights Camp': 'june-seaside-heights-camp.jpg',
+                  'Crossover at Lake Towhee': 'may-crossover---lake-towhee.jpg',
+                  'Backpacking - Sunfish Pond': 'april-backpacking-trip---sunfish-pond.jpg',
+                  'Hunter Mountain Ski Trip': 'hunter-mountain-ski-trip.jpg',
+                  'Holiday Parade': 'newtown-holiday-parade.jpg'
+                };
+             
+                const imgFile = imgMap[ev.title] || 'hero-morrell-smith.jpg';
+                const photoCount = ev.photoCount || 1;
+                const monthNames = ['','January','February','March','April','May','June','July','August','September','October','November','December'];
+                const monthStr = ev.month ? monthNames[ev.month] : '';
+             
+                const card = document.createElement('div');
+                const cardClasses = ['event-card'];
+                if (isDraft) cardClasses.push('event-card--draft');
+                card.className = cardClasses.join(' ');
               
-               // Map event titles to image filenames
-               const imgMap = {
-                 'OSR Summer Camp 2026': 'july-osr-summer-camp.jpg',
-                 'Constitution Center': 'philadelphiaindepencehallgroupphoto.jpg',
-                 'May Memorial Day Parade': 'may-memorial-day-parade.jpg',
-                 'Neshaminy Canoe Trip': 'august-2026-neshaminy-canoe-trip.jpg',
-                 'Morrell-Smith Ave Dedication': 'morrell-smith-ave-dedication.jpg',
-                 'Helicopter Museum': 'helicopter-museum.jpg',
-                 'West Point Camporee': 'west-point-camporee.jpg',
-                 'Whitewater Rafting': 'may-whitewater-rafting.jpg',
-                 'Valley Forge Campout': 'march-valley-forge.jpg',
-                 'MLK Service Project': 'january-mlk-service-project.jpg',
-                 'Klondike Derby': 'klondike-derby---osr.jpg',
-                 'December Holiday Party': 'december-holiday-party.jpg',
-                 'Feastival at Roosevelt': 'november-festival---roosevelt.jpg',
-                 'Games Campout': 'games-campout---hidden-valley.jpg',
-                 'Six Flags Camporee': 'six-flags-camporee.jpg',
-                 'Bike Campout': 'bike-campout.jpg',
-                 'Delaware Canoe Trip': 'august-delaware-canoe-trip.jpg',
-                 'Resica Falls Summer Camp': 'resica-falls-summer-camp.jpg',
-                 'Seaside Heights Camp': 'june-seaside-heights-camp.jpg',
-                 'Crossover at Lake Towhee': 'may-crossover---lake-towhee.jpg',
-                 'Backpacking - Sunfish Pond': 'april-backpacking-trip---sunfish-pond.jpg',
-                 'Hunter Mountain Ski Trip': 'hunter-mountain-ski-trip.jpg',
-                 'Holiday Parade': 'newtown-holiday-parade.jpg'
-               };
-              
-               const imgFile = imgMap[ev.title] || 'hero-morrell-smith.jpg';
-               const photoCount = ev.photoCount || 1;
-               const monthNames = ['','January','February','March','April','May','June','July','August','September','October','November','December'];
-               const monthStr = ev.month ? monthNames[ev.month] : '';
-              
-               const card = document.createElement('div');
-               const cardClasses = ['event-card'];
-               if (isDraft) cardClasses.push('event-card--draft');
-               card.className = cardClasses.join(' ');
-              
-               card.innerHTML = `
-                 ${isDraft ? '<div class="draft-badge">Coming Soon</div>' : ''}
-                 <div class="event-card-image">
-                   <img src="../images/${imgFile}" alt="${ev.title}" loading="lazy">
-                 </div>
+                card.innerHTML = `
+                  <div class="event-card-image">
+                    <img src="../images/${imgFile}" alt="${ev.title}" loading="lazy">
+                    ${isDraft ? `<div class="draft-overlay" title="Photos coming soon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+                        <circle cx="12" cy="13" r="4"/>
+                      </svg>
+                    </div>` : ''}
+                  </div>
                  <div class="event-card-body">
                    <div class="event-card-year">${monthStr} ${ev.year}</div>
                    <h3 class="event-card-title">${ev.title}</h3>
