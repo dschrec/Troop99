@@ -1,78 +1,63 @@
 /* Gallery System Styles */
 
-/* Event Index Page */
-.event-grid {
+/* ===== Event Grid (same as live site's .gallery-preview) ===== */
+.gallery-preview {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: var(--space-lg);
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto auto;
+  gap: 1rem;
 }
 
-.event-card {
-  border-radius: var(--border-radius);
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  cursor: pointer;
-  text-decoration: none;
-  color: inherit;
-  display: block;
-}
-
-.event-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-}
-
-.event-card-image {
+.gallery-item {
   position: relative;
-  height: 240px;
+  border-radius: 12px;
   overflow: hidden;
+  transition: transform 0.3s ease;
 }
 
-.event-card-image img {
+.gallery-item:hover {
+  transform: scale(1.03);
+}
+
+.gallery-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
 
-.event-card-overlay {
+/* Variable sizing for visual variety */
+.gallery-item--large {
+  grid-column: span 2;
+  grid-row: span 1;
+  min-height: 300px;
+}
+
+.gallery-item--tall {
+  grid-row: span 2;
+  min-height: 400px;
+}
+
+/* Caption at bottom of image (white text on gradient) */
+.gallery-item-caption {
   position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.2) 40%, transparent 100%);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: var(--space-lg);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  background: linear-gradient(transparent, #00000099);
+  color: var(--white);
+  font-weight: 500;
+  font-size: 0.875rem;
 }
 
-.event-card-text {
-  color: white;
-  z-index: 1;
-}
-
-.event-card-year {
-  font-size: var(--size-sm);
-  color: rgba(255, 255, 255, 0.8);
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-.event-card-title {
-  font-size: var(--size-lg);
-  font-weight: 700;
-  margin-top: var(--space-xs);
-  color: white;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-}
-
+/* Camera icon overlay (top-right on published items) */
 .camera-icon {
   position: absolute;
   top: var(--space-md);
   right: var(--space-md);
-  width: 48px;
-  height: 48px;
+  width: 40px;
+  height: 40px;
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(4px);
   border-radius: 50%;
@@ -82,24 +67,43 @@
   transition: background 0.2s ease, transform 0.2s ease;
 }
 
-.event-card--clickable .camera-icon:hover {
+.gallery-item:hover .camera-icon {
   background: rgba(255, 255, 255, 0.35);
   transform: scale(1.1);
 }
 
 .camera-icon svg {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   stroke: white;
 }
 
-.event-card-count {
-  font-size: var(--size-sm);
-  color: var(--gray-600);
-  margin-top: var(--space-2xs);
+/* Draft badge */
+.draft-badge {
+  position: absolute;
+  top: var(--space-md);
+  right: var(--space-md);
+  background: rgba(255, 193, 7, 0.9);
+  color: #333;
+  font-weight: 600;
+  font-size: 0.75rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  z-index: 2;
 }
 
-/* Event Detail Page */
+/* Year headers */
+#event-years-container h3 {
+  font-size: var(--size-xl);
+  font-weight: 700;
+  color: var(--gray-700);
+  margin-bottom: var(--space-lg);
+  margin-top: var(--space-2xl);
+}
+
+/* ===== Event Detail Page ===== */
 .event-header {
   position: relative;
   height: 400px;
@@ -207,25 +211,15 @@
   background: var(--gray-50);
 }
 
-/* Draft event card styles */
-.event-card.event-card--draft {
-  cursor: default;
-  position: relative;
-}
-
-.event-card.event-card--draft .event-card-image img {
-  /* Image stays full color — no gray filter */
-}
-
-.event-card.event-card--draft .event-card-overlay {
-  opacity: 0.85;
-}
-
 /* Responsive */
 @media (max-width: 768px) {
-  .event-grid {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  .gallery-preview {
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--space-md);
+  }
+  
+  .gallery-item--large {
+    grid-column: span 1;
   }
   
   .event-header {
@@ -237,7 +231,7 @@
   }
   
   .photo-grid {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--space-sm);
     padding: var(--space-md);
   }

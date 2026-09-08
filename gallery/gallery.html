@@ -50,12 +50,6 @@
   <!-- Event Index -->
   <section class="section">
     <div class="container">
-      <div class="section-header section-header--center">
-        <span class="section-eyebrow">Our Adventures</span>
-        <h2 class="section-heading">Browse by Event</h2>
-        <p class="section-subtitle">Click on any event to see all the photos from that day.</p>
-      </div>
-
       <!-- Dynamic content will be injected here -->
       <div id="event-years-container"></div>
 
@@ -140,108 +134,132 @@
            const years = Object.keys(byYear).sort((a, b) => b - a);
            const container = document.getElementById('event-years-container');
           
-           years.forEach(year => {
-             // Sort events within year by month (newest first), published first
-             const yearEvents = byYear[year].sort((a, b) => {
-               // Published first
-               if (a.status === 'published' && b.status !== 'published') return -1;
-               if (a.status !== 'published' && b.status === 'published') return 1;
-               // Then by month
-               return (b.month || 0) - (a.month || 0);
-             });
-            
-             // Create year header
-             const yearHeader = document.createElement('h3');
-             yearHeader.style.cssText = 'font-size: var(--size-xl); font-weight: 700; color: var(--gray-700); margin-bottom: var(--space-lg); margin-top: var(--space-2xl);';
-             yearHeader.textContent = year;
-            
-             const yearSection = document.createElement('div');
-             yearSection.appendChild(yearHeader);
-            
-             const grid = document.createElement('div');
-             grid.className = 'event-grid';
-            
-             yearEvents.forEach(ev => {
-                 const isPublished = ev.status === 'published';
-                 const isDraft = ev.status === 'draft';
-             
-                 // Map event titles to image filenames
-                 const imgMap = {
-                   'OSR Summer Camp 2026': 'july-osr-summer-camp.jpg',
-                   'Constitution Center': 'philadelphiaindepencehallgroupphoto.jpg',
-                   'May Memorial Day Parade': 'may-memorial-day-parade.jpg',
-                   'Neshaminy Canoe Trip': 'august-2026-neshaminy-canoe-trip.jpg',
-                   'Morrell-Smith Ave Dedication': 'morrell-smith-ave-dedication.jpg',
-                   'Helicopter Museum': 'helicopter-museum.jpg',
-                   'West Point Camporee': 'west-point-camporee.jpg',
-                   'Whitewater Rafting': 'may-whitewater-rafting.jpg',
-                   'Valley Forge Campout': 'march-valley-forge.jpg',
-                   'MLK Service Project': 'january-mlk-service-project.jpg',
-                   'Klondike Derby': 'klondike-derby---osr.jpg',
-                   'December Holiday Party': 'december-holiday-party.jpg',
-                   'Feastival at Roosevelt': 'november-festival---roosevelt.jpg',
-                   'Games Campout': 'games-campout---hidden-valley.jpg',
-                   'Six Flags Camporee': 'six-flags-camporee.jpg',
-                   'Bike Campout': 'bike-campout.jpg',
-                   'Delaware Canoe Trip': 'august-delaware-canoe-trip.jpg',
-                   'Resica Falls Summer Camp': 'resica-falls-summer-camp.jpg',
-                   'Seaside Heights Camp': 'june-seaside-heights-camp.jpg',
-                   'Crossover at Lake Towhee': 'may-crossover---lake-towhee.jpg',
-                   'Backpacking - Sunfish Pond': 'april-backpacking-trip---sunfish-pond.jpg',
-                   'Hunter Mountain Ski Trip': 'hunter-mountain-ski-trip.jpg',
-                   'Holiday Parade': 'newtown-holiday-parade.jpg'
-                 };
-             
-                 const imgFile = imgMap[ev.title] || 'hero-morrell-smith.jpg';
-                 const photoCount = ev.photoCount || 1;
-                 const monthNames = ['','January','February','March','April','May','June','July','August','September','October','November','December'];
-                 const monthStr = ev.month ? monthNames[ev.month] : '';
-             
-                 const card = document.createElement('div');
-                 const cardClasses = ['event-card'];
-                 if (isDraft) cardClasses.push('event-card--draft');
-                 card.className = cardClasses.join(' ');
-              
-                 card.innerHTML = `
-                   <div class="event-card-image">
-                     <img src="../images/${imgFile}" alt="${ev.title}" loading="lazy">
-                     <div class="event-card-overlay">
-                       <div class="event-card-text">
-                         <span class="event-card-year">${monthStr} ${ev.year}</span>
-                         <h3 class="event-card-title">${ev.title}</h3>
-                       </div>
-                       ${isPublished ? `
-                       <div class="camera-icon" title="View photos">
-                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                           <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
-                           <circle cx="12" cy="13" r="4"/>
-                         </svg>
-                       </div>` : ''}
-                       ${isDraft ? `<div class="draft-badge">Coming Soon</div>` : ''}
-                     </div>
-                   </div>
-                 `;
-              
-                 if (isPublished) {
-                   card.classList.remove('event-card');
-                   card.classList.add('event-card', 'event-card--clickable');
-                   card.style.cursor = 'pointer';
-                   const wrapper = document.createElement('a');
-                   wrapper.href = `gallery/${ev.slug}.html`;
-                   wrapper.className = card.className;
-                   wrapper.style.cssText = 'text-decoration: none; color: inherit; display: block;';
-                   card.className = 'event-card';
-                   wrapper.innerHTML = card.innerHTML;
-                   grid.appendChild(wrapper);
-                 } else {
-                   grid.appendChild(card);
-                 }
-             });
-            
-             yearSection.appendChild(grid);
-             container.appendChild(yearSection);
-           });
-         })
+          // Image filename map
+          const imgMap = {
+            'OSR Summer Camp 2026': 'july-osr-summer-camp.jpg',
+            'Constitution Center': 'philadelphiaindepencehallgroupphoto.jpg',
+            'May Memorial Day Parade': 'may-memorial-day-parade.jpg',
+            'Neshaminy Canoe Trip': 'august-2026-neshaminy-canoe-trip.jpg',
+            'Morrell-Smith Ave Dedication': 'morrell-smith-ave-dedication.jpg',
+            'Helicopter Museum': 'helicopter-museum.jpg',
+            'West Point Camporee': 'west-point-camporee.jpg',
+            'Whitewater Rafting': 'may-whitewater-rafting.jpg',
+            'Valley Forge Campout': 'march-valley-forge.jpg',
+            'MLK Service Project': 'january-mlk-service-project.jpg',
+            'Klondike Derby': 'klondike-derby---osr.jpg',
+            'December Holiday Party': 'december-holiday-party.jpg',
+            'Feastival at Roosevelt': 'november-festival---roosevelt.jpg',
+            'Games Campout': 'games-campout---hidden-valley.jpg',
+            'Six Flags Camporee': 'six-flags-camporee.jpg',
+            'Bike Campout': 'bike-campout.jpg',
+            'Delaware Canoe Trip': 'august-delaware-canoe-trip.jpg',
+            'Resica Falls Summer Camp': 'resica-falls-summer-camp.jpg',
+            'Seaside Heights Camp': 'june-seaside-heights-camp.jpg',
+            'Crossover at Lake Towhee': 'may-crossover---lake-towhee.jpg',
+            'Backpacking - Sunfish Pond': 'april-backpacking-trip---sunfish-pond.jpg',
+            'Hunter Mountain Ski Trip': 'hunter-mountain-ski-trip.jpg',
+            'Holiday Parade': 'newtown-holiday-parade.jpg'
+          };
+
+          // Size assignment for visual variety (mimics live site)
+          // Published events get large/tall for featured events
+          const sizeMap = {
+            'OSR Summer Camp 2026': 'gallery-item--large',
+            'Constitution Center': '',
+            'May Memorial Day Parade': 'gallery-item--tall',
+            'Neshaminy Canoe Trip': 'gallery-item--large',
+            'Morrell-Smith Ave Dedication': 'gallery-item--tall',
+            'Helicopter Museum': '',
+            'West Point Camporee': '',
+            'Whitewater Rafting': 'gallery-item--large',
+            'Valley Forge Campout': 'gallery-item--tall',
+            'MLK Service Project': '',
+            'Klondike Derby': '',
+            'December Holiday Party': 'gallery-item--large',
+            'Feastival at Roosevelt': 'gallery-item--tall',
+            'Games Campout': '',
+            'Six Flags Camporee': '',
+            'Bike Campout': 'gallery-item--large',
+            'Delaware Canoe Trip': '',
+            'Resica Falls Summer Camp': 'gallery-item--tall',
+            'Seaside Heights Camp': '',
+            'Crossover at Lake Towhee': '',
+            'Backpacking - Sunfish Pond': 'gallery-item--large',
+            'Hunter Mountain Ski Trip': 'gallery-item--tall',
+            'Holiday Parade': ''
+          };
+          
+          years.forEach(year => {
+            // Sort events within year by month (newest first), published first
+            const yearEvents = byYear[year].sort((a, b) => {
+              // Published first
+              if (a.status === 'published' && b.status !== 'published') return -1;
+              if (a.status !== 'published' && b.status === 'published') return 1;
+              // Then by month
+              return (b.month || 0) - (a.month || 0);
+            });
+         
+            // Create year header
+            const yearHeader = document.createElement('h3');
+            yearHeader.style.cssText = 'font-size: var(--size-xl); font-weight: 700; color: var(--gray-700); margin-bottom: var(--space-lg); margin-top: var(--space-2xl);';
+            yearHeader.textContent = year;
+         
+            const yearSection = document.createElement('div');
+            yearSection.appendChild(yearHeader);
+         
+            // Use same grid class as live site: .gallery-preview (4-col, variable sizing)
+            const grid = document.createElement('div');
+            grid.className = 'gallery-preview';
+         
+            yearEvents.forEach(ev => {
+              const isPublished = ev.status === 'published';
+              const isDraft = ev.status === 'draft';
+          
+              const imgFile = imgMap[ev.title] || 'hero-morrell-smith.jpg';
+              const sizeClass = sizeMap[ev.title] || '';
+          
+              const item = document.createElement('div');
+              const itemClasses = ['gallery-item'];
+              if (sizeClass) itemClasses.push(sizeClass);
+              item.className = itemClasses.join(' ');
+          
+              // Build caption HTML (same as live site: white text at bottom on gradient)
+              const caption = ev.title;
+          
+              // For published items, wrap in anchor link
+              if (isPublished) {
+                const wrapper = document.createElement('a');
+                wrapper.href = `gallery/${ev.slug}.html`;
+                wrapper.className = item.className;
+                wrapper.style.textDecoration = 'none';
+                wrapper.style.color = 'inherit';
+          
+                wrapper.innerHTML = `
+                  <img src="../images/${imgFile}" alt="${ev.title}" loading="lazy">
+                  <div class="gallery-item-caption">${caption}</div>
+                  <div class="camera-icon" title="View photos">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+                      <circle cx="12" cy="13" r="4"/>
+                    </svg>
+                  </div>
+                `;
+                grid.appendChild(wrapper);
+              } else {
+                // Draft: no link, show "Coming Soon" badge instead
+                item.innerHTML = `
+                  <img src="../images/${imgFile}" alt="${ev.title}" loading="lazy">
+                  <div class="gallery-item-caption">${caption}</div>
+                  <div class="draft-badge">Coming Soon</div>
+                `;
+                grid.appendChild(item);
+              }
+            });
+          
+            yearSection.appendChild(grid);
+            container.appendChild(yearSection);
+          });
+        })
         .catch(err => {
           console.error('Failed to load gallery config:', err);
           document.getElementById('event-years-container').innerHTML = '<p style="color: red; padding: 20px;">Failed to load gallery data.</p>';
