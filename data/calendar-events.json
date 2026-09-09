@@ -1,12 +1,5 @@
 [
   {
-    "summary": "Meeting",
-    "description": "Remarks: \\nDescription: We will be kicking off the new schoolyear preparing for the Biking + Camping trip at Hickory Run State Park! To prepare for the trip\\, our first two meetings will be cycling themed.  We'll focus on Bike Maintenance & Repair\\, Laws & Safety and Riding techniques. \\n\\nIf you have a Bike (pedal only\\, no electrics…)\\, please bring it to the next two meetings\\, along with your helmet.   \\n\\nWe will have tools and instructions to help teach you to tune up your own bike\\, practice fixing flats and other requirements for Cycling Merit Badge. We will also be doing normal camping preparations and meal planning for the camping trip. Note\\, that this trip can then count toward one of the required rides for Cycling or one of the camping experiences needed for Camping Merit Badge.  \\n\\nIn preparation\\, please read through the Cycling Merit Badge Book:  https://filestore.scouting.org/filestore/Merit_Badge_ReqandRes/Pamphlets/Cycling_2025.pdf\\n\\n___________________________\\n\\nNow that school has started\\, we're moving back to our regular weekly meeting schedule and Class A shirts are expected for all Scouts attending!\\n\\nAll Scouts below First Class Rank (this includes ALL of our new Scouts) are expected to bring their book and a pen to all meetings. This is so their Patrol Leaders and Troop Guides can work with them on Advancement (signing off on completed and discussing outstanding requirements)",
-    "location": "American Legion",
-    "startDate": "20250908T190000",
-    "endDate": "20250908T203000"
-  },
-  {
     "summary": "Meeting (Scouts & Parent)",
     "description": "Remarks: \\nDescription: Both Scouts and parents should plan on attending this meeting!  \\n\\nScouts will prepare for the Biking + Camping trip at Hickory Run State Park!  We will continue our discussion of cycling topics do our normal camping and meal prep for the trip. \\n\\nParents will meet to review the Troop calendar for the Scouting year including upcoming events\\, fundraising\\, advancement and ways for you to get involved.  Going forward\\, we'll be holding parent meetings as part of most Scout meetings to help the Troop run more efficiently and effectively.  Looking forward to seeing everyone!\\n\\nAdditional Notes: \\n-- This trip counts toward one of the required rides for Cycling OR one of the camping experiences needed for Camping Merit Badge \\n-- Please bring your bike and helmet to the meeting (pedal only\\, no electrics\\, no BMx or 1-speed bikes)\\n-- Cycling Merit Badge Book: https://filestore.scouting.org/filestore/Merit_Badge_ReqandRes/Pamphlets/Cycling_2025.pdf\\n_____________________________________________________\\n\\nAll Scouts below First Class Rank (this includes ALL of our new Scouts) are expected to bring their book and a pen to all meetings. This is so their Patrol Leaders and Troop Guides can work with them on Advancement (signing off on completed and discussing outstanding requirements)",
     "location": "American Legion",
@@ -707,8 +700,8 @@
     "endDate": "20260908"
   },
   {
-    "summary": "Family Potluck and bike campout prep",
-    "description": "Remarks: \\nDescription: We will be kicking off the new scouting year with a family potluck meal and also prep for our Lehigh Valley Gorge bike camping trip.",
+    "summary": "Bike Safety and Bike Check",
+    "description": "Remarks: Scouts attending biking campout must bring their bikes to get checked \\nDescription: All scouts are encouraged to bring their bikes to this meeting. All scouts attending the biking campout are required to bring their bikes.",
     "location": "American Legion",
     "startDate": "20260914T190000",
     "endDate": "20260914T203000"
@@ -721,11 +714,11 @@
     "endDate": "20260921T203000"
   },
   {
-    "summary": "Lehigh Valley Gorge Bike Campout",
-    "description": "Type: Camping\\nLocation: Mauch Chunk Lake Park \\n",
+    "summary": "September Bike Camp out!",
+    "description": "Remarks: 🚴‍♂️⛺️ Troop 99 Cycling & Camping Trip ⛺️🚴‍♀️\\nDescription: Location: Lehigh Valley Gorge Bike Trail + Mauch Chunk Lake Park\\, PA\\nFriday\\, September 25th - Sunday\\, September 27th.\\n\\nDescription: Troop 99 is heading north for two nights of adventure — biking through the stunning Lehigh Valley Gorge Bike Trail\\, camping at Mauch Chunk Lake Park\\, and making memories under the stars!\\n\\nThis trip is BYOB (Bring Your Own Bike) — no outfitter needed\\, just your wheels and your gear. We'll be riding 25 miles on the gorge trail from White Haven all the way to Jim Thorpe.  Along the way we'll cook a trail lunch\\,  take plenty of pictures and probably grab ice cream at the end of the ride in JT.  Though it's a long ride\\, it's downhill the whole way (no out and back this year!) \\n\\nWe'll be setting up camp by the lake\\, cooking up some great food together\\, and enjoying the campfire at the Mauch Chunk Lake Park.  There may also be an opportunity to do some fishing in the lake after our ride.\\n\\nImportant: Helmets are REQUIRED for this trip. Safety is a priority — we'll be using the buddy system and taking regular water breaks throughout our rides.\\n\\nIf you have any immediate questions\\, please feel free to reach out to me.\\n\\nYours in Scouting\\,\\n\\nMr. Schrecengost",
     "location": "Mauch Chunk Lake Park",
-    "startDate": "20260925T180000",
-    "endDate": "20260927T120000"
+    "startDate": "20260925",
+    "endDate": "20260928"
   },
   {
     "summary": "Meeting",
