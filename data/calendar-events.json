@@ -1,12 +1,5 @@
 [
   {
-    "summary": "Cycling/Biking",
-    "description": "Remarks: \\nDescription: Cycling miles.",
-    "location": "",
-    "startDate": "20250920",
-    "endDate": "20250921"
-  },
-  {
     "summary": "PLC Only - No Regular Mtg",
     "description": "Remarks: \\nDescription: PLC only",
     "location": "American Legion",
@@ -698,6 +691,13 @@
     "location": "",
     "startDate": "20260921T190000",
     "endDate": "20260921T203000"
+  },
+  {
+    "summary": "Pre trip Trailer Loading",
+    "description": "Remarks: Bike and Gear Loading\\nDescription: For Scouts and parents who are attending the Biking / Camping trip\\, we'll be loading  the trailer with bikes and gear on Thursday night so that we can hit the road as early as possible on Friday. Please bring your bikes on Thursday night at 7:00.",
+    "location": "American Legion",
+    "startDate": "20260924T190000",
+    "endDate": "20260924T200000"
   },
   {
     "summary": "September Bike Camp out!",
