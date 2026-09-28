@@ -700,9 +700,9 @@
     "endDate": "20260928"
   },
   {
-    "summary": "Meeting",
-    "description": "Type: Meeting\\nLocation: American Legion\\n",
-    "location": "American Legion",
+    "summary": "No meeting",
+    "description": "Type: Meeting\\nLocation: \\n",
+    "location": "",
     "startDate": "20260928T190000",
     "endDate": "20260928T203000"
   },
