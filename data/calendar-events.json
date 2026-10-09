@@ -728,6 +728,27 @@
     "endDate": "20261026T203000"
   },
   {
+    "summary": "Meeting",
+    "description": "Type: Meeting\\nLocation: American Legion\\n",
+    "location": "American Legion",
+    "startDate": "20261102T190000",
+    "endDate": "20261102T203000"
+  },
+  {
+    "summary": "Meeting",
+    "description": "Type: Meeting\\nLocation: American Legion\\n",
+    "location": "American Legion",
+    "startDate": "20261109T190000",
+    "endDate": "20261109T203000"
+  },
+  {
+    "summary": "Troop Committee Meeting",
+    "description": "Remarks: \\nDescription: Troop Committee Meeting - Agenda to Follow",
+    "location": "Zoom",
+    "startDate": "20261112T190000",
+    "endDate": "20261112T200000"
+  },
+  {
     "summary": "Feastival!",
     "description": "Remarks: \\nDescription: Our annual Feastival! Fun and delicious food for all who attend! We will be cabin camping with optional tent camping for those who may need camping nights or just want to sleep outdoors.",
     "location": "Camp Roosevelt\\, Elmer NJ",
@@ -735,10 +756,66 @@
     "endDate": "20261115T120000"
   },
   {
+    "summary": "PLC Only - No Regular Meeting",
+    "description": "Type: Meeting\\nLocation: \\n",
+    "location": "",
+    "startDate": "20261116",
+    "endDate": "20261117"
+  },
+  {
+    "summary": "Court of Honor! (& Parent Mtg)",
+    "description": "Type: Court of Honor\\nLocation: American Legion\\n",
+    "location": "American Legion",
+    "startDate": "20261123",
+    "endDate": "20261124"
+  },
+  {
+    "summary": "Meeting",
+    "description": "Remarks: \\nDescription: Prep  for Games Campout",
+    "location": "American Legion",
+    "startDate": "20261130T190000",
+    "endDate": "20261130T203000"
+  },
+  {
     "summary": "Games Campout",
     "description": "Type: Cabin Camping\\nLocation: Castle at Camp Tuckahoe\\n",
     "location": "Castle at Camp Tuckahoe",
     "startDate": "20261204T180000",
     "endDate": "20261206T120000"
+  },
+  {
+    "summary": "PLC Only - No Meeting",
+    "description": "Type: Meeting\\nLocation: \\n",
+    "location": "",
+    "startDate": "20261207",
+    "endDate": "20261208"
+  },
+  {
+    "summary": "Troop Committee Meeting",
+    "description": "Remarks: \\nDescription: Troop Committee Meeting - Agenda to Follow",
+    "location": "Zoom",
+    "startDate": "20261210T190000",
+    "endDate": "20261210T190000"
+  },
+  {
+    "summary": "Meeting - Holiday Party",
+    "description": "Type: Meeting\\nLocation: \\n",
+    "location": "",
+    "startDate": "20261214",
+    "endDate": "20261215"
+  },
+  {
+    "summary": "Meeting",
+    "description": "Type: Meeting\\nLocation: American Legion\\n",
+    "location": "American Legion",
+    "startDate": "20261221",
+    "endDate": "20261222"
+  },
+  {
+    "summary": "No Meeting - President's Day",
+    "description": "Remarks: \\nDescription: No meeting - President's Day",
+    "location": "",
+    "startDate": "20270215",
+    "endDate": "20270216"
   }
 ]
