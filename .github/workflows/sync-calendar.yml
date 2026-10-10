@@ -16,7 +16,7 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
         with:
-          ref: feature/gallery-backend
+          ref: main
           persist-credentials: true
 
       - name: Fetch TroopMaster iCal feed
@@ -93,5 +93,5 @@ jobs:
             echo "No changes — calendar is up to date"
           else
             git commit -m "Update calendar events from TroopMaster iCal feed"
-            git push origin feature/gallery-backend
+            git push origin main
           fi
