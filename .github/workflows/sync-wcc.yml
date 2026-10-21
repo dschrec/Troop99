@@ -1,0 +1,36 @@
+name: Sync WCC Council Calendar
+
+on:
+  schedule:
+    - cron: '0 10 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: true
+
+      - name: Fetch WCC events and build ICS
+        run: python3 scripts/fetch-wcc.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git remote set-url origin https://github.com/dschrec/Troop99.git
+          git add data/wcc-events.ics
+          if git diff --cached --quiet; then
+            echo "No changes — WCC calendar is up to date"
+          else
+            git commit -m "Update WCC council calendar ICS"
+            git push origin main
+          fi
