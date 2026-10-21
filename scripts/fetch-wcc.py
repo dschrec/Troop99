@@ -114,6 +114,11 @@ def build_ics(events, generated):
         start = parse_dt(ev["STARTDATE"])
         end = parse_dt(ev["ENDDATE"])
         allday = ev.get("ISALLDAY") == 1
+        # WCC's API returns STARTDATE == ENDDATE for many timed events
+        # (start-only entries). Outlook rejects DTEND <= DTSTART, so give
+        # those a 1-hour default duration.
+        if not allday and end <= start:
+            end = start + timedelta(hours=1)
         url = ev.get("SHORTURL") or ""
         if url and not url.startswith("http"):
             url = SITE_URL + url
