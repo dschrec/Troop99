@@ -525,6 +525,13 @@
     "endDate": "20260719"
   },
   {
+    "summary": "Hrs for NOA",
+    "description": "Remarks: \\nDescription: Fishing MB - 5 hrs - Riley Dougherty\\nRowing MB - 5 hrs - Cathal McDermott",
+    "location": "",
+    "startDate": "20260718",
+    "endDate": "20260719"
+  },
+  {
     "summary": "No Meeting",
     "description": "Type: Meeting\\nLocation: \\n",
     "location": "",
@@ -551,6 +558,13 @@
     "location": "American Legion",
     "startDate": "20260727T200000",
     "endDate": "20260727T204500"
+  },
+  {
+    "summary": "OSR Counselors / Sea Base",
+    "description": "Remarks: \\nDescription: Credits tent camping nights for thoseTroop members who worked or volunteered at OSR. Only captures tent nights - does not include nights for any scout who slept in Adirondacks or Cabins.\\n\\nAssumes 5 tent nights / week unless otherwise reported by the Scout\\n- Josh Mann : 5.5 weeks @ 5 nights/ week = 27 nights\\n\\nAlso includes nights spent on deck at SeaBase\\n- Josh Mann:  3 nights\\n\\nNights can be counted towards the Camping National Outdoor Award (NOA). Nights do NOT count towards the Camping Merit badge.",
+    "location": "OSR",
+    "startDate": "20260731",
+    "endDate": "20260801"
   },
   {
     "summary": "No Meeting - Summer Schedule",
