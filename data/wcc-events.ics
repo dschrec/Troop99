@@ -1,0 +1,2086 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Troop99//WCC Calendar Sync//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:WCC Scouting Events
+X-WR-TIMEZONE:America/New_York
+X-WR-CALDESC:Washington Crossing Council events (synced from wccscouting.
+ org; generated 2026-10-21T00:00:00+00:00)
+BEGIN:VEVENT
+UID:wcc-blog131292@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20261014
+DTEND;VALUE=DATE:20261015
+SUMMARY:HAD Roundtable
+LOCATION:TBD
+DESCRIPTION:Details: https://www.wccscouting.org/content/131292/HAD-Round
+ table
+URL:https://www.wccscouting.org/content/131292/HAD-Roundtable
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133375@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20261014T233000Z
+DTEND:20261015T010000Z
+SUMMARY:TAM Roundtable
+LOCATION:St. John's Evangelical Lutheran Church
+DESCRIPTION:7:00pm Eagle Project Proposal Review 7:30pm Roundtable\nDetai
+ ls: https://www.wccscouting.org/content/133375/TAM-Roundtable
+URL:https://www.wccscouting.org/content/133375/TAM-Roundtable
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog136758@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20261016T213000Z
+DTEND:20261018T210000Z
+SUMMARY:NRA Rifle Instructor Course
+LOCATION:Ockanickon Scout Reservation
+DESCRIPTION:NRA Rifle Instructor Course This weekend workshop is intended
+  to develop the Knowledge\, Skills\, and Attitude necessary to plan and 
+ instruct BSA rifle\nDetails: https://www.wccscouting.org/NRA-training
+URL:https://www.wccscouting.org/NRA-training
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog136799@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20261016T220000Z
+DTEND:20261018T160000Z
+SUMMARY:OA Fall Fellowship
+LOCATION:Ockanickon Scout Reservation
+DESCRIPTION:Registration Information\nDetails: https://www.wccscouting.or
+ g/oa-fall-fellowship
+URL:https://www.wccscouting.org/oa-fall-fellowship
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog125009@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20261017
+DTEND;VALUE=DATE:20261018
+SUMMARY:Campbuilder Day
+LOCATION:Ockanickon Scout Reservation
+DESCRIPTION:Camp Builder days are the third Saturday of the month (unless
+  a conflict arises then check the facebook group) they include working o
+ n many camp\nDetails: https://www.wccscouting.org/content/125009/Campbui
+ lder-Day
+URL:https://www.wccscouting.org/content/125009/Campbuilder-Day
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133435@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20261017T140000Z
+DTEND:20261017T200000Z
+SUMMARY:Jamboree on the Air
+LOCATION:Ockanickon Scout Reservation
+DESCRIPTION:Alternate Location: Mercer County Airport DVRA Radio Club Sha
+ ck 798 Bear Tavern Road Ewing NJ\, 08628 (located at Mercer County Airpo
+ rt right next to\nDetails: https://www.wccscouting.org/content/133435/Ja
+ mboree-on-the-Air
+URL:https://www.wccscouting.org/content/133435/Jamboree-on-the-Air
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog135317@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20261021
+DTEND;VALUE=DATE:20261022
+SUMMARY:Commissioner Cabinet Meeting
+LOCATION:TBD
+DESCRIPTION:Gathering of district commissioners to coordinate commissione
+ r service throughout the council.\nDetails: https://www.wccscouting.org/
+ content/135317/Commissioner-Cabinet-Meeting
+URL:https://www.wccscouting.org/content/135317/Commissioner-Cabinet-Meeti
+ ng
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog136999@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20261024
+DTEND;VALUE=DATE:20261026
+SUMMARY:Camp Skippy
+LOCATION:Camp Skippy
+DESCRIPTION:Join us at Camp Skippy (AOL/Webelos Weekend) for an unforgett
+ able camping experience! This event is tailor-made for all Arrow of Ligh
+ t (AOL) & Webelos\nDetails: https://www.wccscouting.org/camp-skippy
+URL:https://www.wccscouting.org/camp-skippy
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-3-7663-35068@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20261024T120000Z
+DTEND:20261025T160000Z
+SUMMARY:COPE & Climbing Weekend\, COPE
+LOCATION:Ockanickon Scout Reservation
+DESCRIPTION:Details: https://www.wccscouting.org/cope-weekends
+URL:https://www.wccscouting.org/cope-weekends
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog136808@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20261024T130000Z
+DTEND:20261024T183000Z
+SUMMARY:ILST
+LOCATION:Ockanickon Scout Reservation
+DESCRIPTION:This course will give you tools to lead yourself and then lea
+ d others to reach common goals. Topics covered include Troop and organiz
+ ation\, leadership\nDetails: https://www.wccscouting.org/ilst
+URL:https://www.wccscouting.org/ilst
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog136987@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20261027T233000Z
+DTEND:20261028T003000Z
+SUMMARY:October Membership MIxer
+LOCATION:TBD
+DESCRIPTION:Details: https://www.wccscouting.org/octmemmixer
+URL:https://www.wccscouting.org/octmemmixer
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog134361@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20261028
+DTEND;VALUE=DATE:20261029
+SUMMARY:Sporting Clays Classic
+LOCATION:Lehigh Valley Sporting Clays
+DESCRIPTION:Tournament Schedule: 8:15am - Check-in & Breakfast 9:15am - S
+ afety Briefing 9:30am - Shotgun Start 1:00pm - Lunch\, Cocktail Receptio
+ n\, & Awards\nDetails: https://www.wccscouting.org/sportingclaysclassic
+URL:https://www.wccscouting.org/sportingclaysclassic
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog136992@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20261028T190000Z
+DTEND:20261028T200000Z
+SUMMARY:Scout Shop Closing at 3:00PM
+LOCATION:WCC Service Center
+DESCRIPTION:The Scout Shop is closing at 3:00.\nDetails: https://www.wccs
+ couting.org/content/136992/Scout-Shop-Closing-at-3-00PM
+URL:https://www.wccscouting.org/content/136992/Scout-Shop-Closing-at-3-00
+ PM
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133422@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20261029T230000Z
+DTEND:20261030T000000Z
+SUMMARY:OA LEC
+LOCATION:WCC Service Center
+DESCRIPTION:The executive committee of the lodge is a key group consistin
+ g of the youth serving as lodge officers (including the immediate past l
+ odge chief)\,\nDetails: https://www.wccscouting.org/content/133422/OA-LE
+ C
+URL:https://www.wccscouting.org/content/133422/OA-LEC
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133440@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20261031
+DTEND;VALUE=DATE:20261101
+SUMMARY:Halloween
+LOCATION:TBD
+DESCRIPTION:Details: https://www.wccscouting.org/content/133440/Halloween
+URL:https://www.wccscouting.org/content/133440/Halloween
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog136714@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20261101T160000Z
+DTEND:20261101T170000Z
+SUMMARY:Bee A Scout - Cub Fun Day
+LOCATION:Ockanickon Scout Reservation
+DESCRIPTION:Bee-A-Scout Cub Fun Day Buzz into Adventure with Cub Scouts! 
+ Join Washington Crossing Council for Bee-A-Scout Cub Fun Day\, a fun-fil
+ led day of outdoor\nDetails: https://www.wccscouting.org/BeeAScout
+URL:https://www.wccscouting.org/BeeAScout
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog136801@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20261101T170000Z
+DTEND:20261101T210000Z
+SUMMARY:Cub Scout Slingshot Adventure
+LOCATION:Ockanickon Scout Reservation
+DESCRIPTION:Click for Information and Registration\nDetails: https://www.
+ wccscouting.org/content/136801/Cub-Scout-Slingshot-Adventure
+URL:https://www.wccscouting.org/content/136801/Cub-Scout-Slingshot-Advent
+ ure
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133397@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20261101T173000Z
+DTEND:20261101T210000Z
+SUMMARY:Air Rifle Competition
+LOCATION:Ockanickon Scout Reservation
+DESCRIPTION:Details: https://www.wccscouting.org/content/133397/Air-Rifle
+ -Competition
+URL:https://www.wccscouting.org/content/133397/Air-Rifle-Competition
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133443@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20261102T233000Z
+DTEND:20261103T023000Z
+SUMMARY:Indoor Rally
+LOCATION:Our Lady of the Sacred Heart
+DESCRIPTION:Registration Fees\, must be completed by Unit: Youth: Regular
+ -$10\, Late-$12 Adult: $3   Open to all Scouts BSA Troops and Venturing
+  Crews. This is a\nDetails: https://www.wccscouting.org/indoor-rally
+URL:https://www.wccscouting.org/indoor-rally
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog131272@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20261103T003000Z
+DTEND:20261103T013000Z
+SUMMARY:HAD Commissioner Meeting
+LOCATION:Zoom video meeting
+DESCRIPTION:Details: https://www.wccscouting.org/content/131272/HAD-Commi
+ ssioner-Meeting
+URL:https://www.wccscouting.org/content/131272/HAD-Commissioner-Meeting
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133444@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20261103
+DTEND;VALUE=DATE:20261104
+SUMMARY:Election Day - Scout Shop Closed
+LOCATION:WCC Service Center
+DESCRIPTION:Details: https://www.wccscouting.org/content/133444/Election-
+ Day---Scout-Shop-Closed
+URL:https://www.wccscouting.org/content/133444/Election-Day---Scout-Shop-
+ Closed
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog131283@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20261104
+DTEND;VALUE=DATE:20261105
+SUMMARY:HAD District Committee
+LOCATION:TBD
+DESCRIPTION:Details: https://www.wccscouting.org/content/131283/HAD-Distr
+ ict-Committee
+URL:https://www.wccscouting.org/content/131283/HAD-District-Committee
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133243@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20261105
+DTEND;VALUE=DATE:20261106
+SUMMARY:TOH Commissioner Meeting
+LOCATION:Bucks County Intermediate Unit #22
+DESCRIPTION:Details: https://www.wccscouting.org/content/133243/TOH-Commi
+ ssioner-Meeting
+URL:https://www.wccscouting.org/content/133243/TOH-Commissioner-Meeting
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133253@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20261105
+DTEND;VALUE=DATE:20261106
+SUMMARY:TOH District Committee Meeting
+LOCATION:Bucks County Intermediate Unit #22
+DESCRIPTION:Details: https://www.wccscouting.org/content/133253/TOH-Distr
+ ict-Committee-Meeting
+URL:https://www.wccscouting.org/content/133253/TOH-District-Committee-Mee
+ ting
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133367@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20261105T230000Z
+DTEND:20261106T000000Z
+SUMMARY:TAM Commissioner
+LOCATION:Zoom video meeting
+DESCRIPTION:Scouters who want to know more about Commissioner service are
+  encouraged to attend.  6:00 PM over zoom – access link here.\nDetai
+ ls: https://www.wccscouting.org/content/133367/TAM-Commissioner
+URL:https://www.wccscouting.org/content/133367/TAM-Commissioner
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133413@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20261106T000000Z
+DTEND:20261106T020000Z
+SUMMARY:TAM District Committee
+LOCATION:Zoom video meeting
+DESCRIPTION:At least one representative from each unit key 3 is encourage
+ d to attend. 7:00 PM over zoom – access link here.\nDetails: https://
+ www.wccscouting.org/content/133413/TAM-District-Committee
+URL:https://www.wccscouting.org/content/133413/TAM-District-Committee
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog136816@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20261106T220000Z
+DTEND:20261108T213000Z
+SUMMARY:National Youth Leadership Training
+LOCATION:Ockanickon Scout Reservation
+DESCRIPTION:NYLT integrates the best of modern leadership theory with the
+  traditional strengths of the Scouting experience. Through activities\, 
+ presentations\,\nDetails: https://www.wccscouting.org/nylt
+URL:https://www.wccscouting.org/nylt
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133445@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20261110T230000Z
+DTEND:20261111T020000Z
+SUMMARY:Council Recognition Event
+LOCATION:Giuseppe's Pizza & Family Restaurant
+DESCRIPTION:Cost: $60 per Dinner Guest Registration closes November 3rd 
+   Schedule: 6:00pm Hors d'oeuvres 6:30pm Buffet Dinner & Program This i
+ s a non-uniformed\nDetails: https://www.wccscouting.org/dinner
+URL:https://www.wccscouting.org/dinner
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog131293@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20261111
+DTEND;VALUE=DATE:20261112
+SUMMARY:HAD Roundtable and AOL/Webelos Transition Faire
+LOCATION:North Hunterdon High School
+DESCRIPTION:Details: https://www.wccscouting.org/content/131293/HAD-Round
+ table-and-AOL-Webelos-Transition-Faire
+URL:https://www.wccscouting.org/content/131293/HAD-Roundtable-and-AOL-Web
+ elos-Transition-Faire
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133268@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20261112T003000Z
+DTEND:20261112T013000Z
+SUMMARY:MAD AOL/Webelos Transition Fair
+LOCATION:St. Mark's United Methodist Church
+DESCRIPTION:Details: https://www.wccscouting.org/content/133268/MAD-AOL-W
+ ebelos-Transition-Fair
+URL:https://www.wccscouting.org/content/133268/MAD-AOL-Webelos-Transition
+ -Fair
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133376@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20261112T003000Z
+DTEND:20261112T020000Z
+SUMMARY:TAM Roundtable and AOL/Webelos Transition Faire
+LOCATION:St. John's Evangelical Lutheran Church
+DESCRIPTION:7:00pm Eagle Project Proposal Review 7:30pm Roundtable\nDetai
+ ls: https://www.wccscouting.org/content/133376/TAM-Roundtable-and-AOL-We
+ belos-Transition-Faire
+URL:https://www.wccscouting.org/content/133376/TAM-Roundtable-and-AOL-Web
+ elos-Transition-Faire
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133262@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20261112
+DTEND;VALUE=DATE:20261113
+SUMMARY:TOH Roundtable and AOL/Webelos Transition Faire
+LOCATION:Bucks County Intermediate Unit #22
+DESCRIPTION:Details: https://www.wccscouting.org/content/133262/TOH-Round
+ table-and-AOL-Webelos-Transition-Faire
+URL:https://www.wccscouting.org/content/133262/TOH-Roundtable-and-AOL-Web
+ elos-Transition-Faire
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog136933@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20261112T220000Z
+DTEND:20261113T000000Z
+SUMMARY:New Jersey Good Scout Reception
+LOCATION:Trenton Country Club
+DESCRIPTION:Register for Event\nDetails: https://www.wccscouting.org/njgo
+ odscout
+URL:https://www.wccscouting.org/njgoodscout
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133273@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20261113T000000Z
+DTEND:20261113T010000Z
+SUMMARY:MAD District Committee
+LOCATION:St. Mark's United Methodist Church
+DESCRIPTION:Details: https://www.wccscouting.org/content/133273/MAD-Distr
+ ict-Committee
+URL:https://www.wccscouting.org/content/133273/MAD-District-Committee
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133441@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20261113
+DTEND;VALUE=DATE:20261116
+SUMMARY:America 250 Camporee
+LOCATION:Macclesfield Park
+DESCRIPTION:Join us for a weekend of fun & adventure in Revolutionary War
+  Reenactment. Fulfill requirements toward the Liberty in Action 250th An
+ niversary\nDetails: https://www.wccscouting.org/Camporee
+URL:https://www.wccscouting.org/Camporee
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog124990@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20261114
+DTEND;VALUE=DATE:20261115
+SUMMARY:Chainsaw Work Day
+LOCATION:Ockanickon Scout Reservation
+DESCRIPTION:Chainsaw work days are the second Saturday of the month. A ch
+ ainsaw work day has bucking\, felling\, and splitting. You will need to 
+ be BSA chainsaw\nDetails: https://www.wccscouting.org/content/124990/Cha
+ insaw-Work-Day
+URL:https://www.wccscouting.org/content/124990/Chainsaw-Work-Day
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133446@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20261114
+DTEND;VALUE=DATE:20261116
+SUMMARY:OSR Staff Interview Weekend
+LOCATION:Ockanickon Scout Reservation
+DESCRIPTION:Details: https://www.wccscouting.org/content/133446/OSR-Staff
+ -Interview-Weekend
+URL:https://www.wccscouting.org/content/133446/OSR-Staff-Interview-Weeken
+ d
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-3-7663-35069@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20261114T130000Z
+DTEND:20261115T170000Z
+SUMMARY:COPE & Climbing Weekend\, COPE
+LOCATION:Ockanickon Scout Reservation
+DESCRIPTION:Details: https://www.wccscouting.org/cope-weekends
+URL:https://www.wccscouting.org/cope-weekends
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog136478@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20261116T230000Z
+DTEND:20261117T004500Z
+SUMMARY:TAM Unit Renewal Office Hours
+LOCATION:Free Library of Northampton Township
+DESCRIPTION:During this time\, leaders from Tamanend District will be ava
+ ilable to help all unit leaders with their annual unit renewal. Stop by 
+ to get hands-on\nDetails: https://www.wccscouting.org/content/136478/TAM
+ -Unit-Renewal-Office-Hours
+URL:https://www.wccscouting.org/content/136478/TAM-Unit-Renewal-Office-Ho
+ urs
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog137004@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20261117T230000Z
+DTEND:20261118T004500Z
+SUMMARY:Tamanend District Unit Renewal Office Hours
+LOCATION:The Margaret R. Grundy Memorial Library
+DESCRIPTION:During this time\, leaders from Tamanend District will be ava
+ ilable to help all unit leaders with their annual unit renewal. Stop by 
+ to get hands-on\nDetails: https://www.wccscouting.org/content/137004/Tam
+ anend-District-Unit-Renewal-Office-Hours
+URL:https://www.wccscouting.org/content/137004/Tamanend-District-Unit-Ren
+ ewal-Office-Hours
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog135318@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20261118
+DTEND;VALUE=DATE:20261119
+SUMMARY:Commissioner Cabinet Meeting
+LOCATION:TBD
+DESCRIPTION:Gathering of district commissioners to coordinate commissione
+ r service throughout the council.\nDetails: https://www.wccscouting.org/
+ content/135318/Commissioner-Cabinet-Meeting
+URL:https://www.wccscouting.org/content/135318/Commissioner-Cabinet-Meeti
+ ng
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog136962@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20261119T130000Z
+DTEND:20261119T150000Z
+SUMMARY:Lower Bucks Breakfast
+LOCATION:Lower Bucks Hospital
+DESCRIPTION:Register Here\nDetails: https://www.wccscouting.org/content/1
+ 36962/Lower-Bucks-Breakfast
+URL:https://www.wccscouting.org/content/136962/Lower-Bucks-Breakfast
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133423@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20261120T000000Z
+DTEND:20261120T010000Z
+SUMMARY:OA LEC
+LOCATION:WCC Service Center
+DESCRIPTION:The executive committee of the lodge is a key group consistin
+ g of the youth serving as lodge officers (including the immediate past l
+ odge chief)\,\nDetails: https://www.wccscouting.org/content/133423/OA-LE
+ C
+URL:https://www.wccscouting.org/content/133423/OA-LEC
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133442@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20261120T220000Z
+DTEND:20261122T213000Z
+SUMMARY:NYLT Weekend 2
+LOCATION:Ockanickon Scout Reservation
+DESCRIPTION:2026 Fall Course Details Limited to 48 participants. Partici
+ pants are required to attend both weekends: November 6-8 AND Novembe
+ r 20-22\, 2026\nDetails: https://www.wccscouting.org/content/133442/NYLT
+ -Weekend-2
+URL:https://www.wccscouting.org/content/133442/NYLT-Weekend-2
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog125010@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20261121
+DTEND;VALUE=DATE:20261122
+SUMMARY:Campbuilder Day
+LOCATION:Ockanickon Scout Reservation
+DESCRIPTION:Camp Builder days are the third Saturday of the month (unless
+  a conflict arises then check the facebook group) they include working o
+ n many camp\nDetails: https://www.wccscouting.org/content/125010/Campbui
+ lder-Day
+URL:https://www.wccscouting.org/content/125010/Campbuilder-Day
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog137007@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20261121T130000Z
+DTEND:20261121T230000Z
+SUMMARY:NRA Range Safety Officer Training
+LOCATION:Ockanickon Scout Reservation
+DESCRIPTION:This one day workshop is intended to develop NRA Certified Ra
+ nge Safety Officers who possess the knowledge\, skills\, and attitude es
+ sential to\nDetails: https://www.wccscouting.org/content/137007/NRA-Rang
+ e-Safety-Officer-Training
+URL:https://www.wccscouting.org/content/137007/NRA-Range-Safety-Officer-T
+ raining
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog132667@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20261125T200000Z
+DTEND:20261125T210000Z
+SUMMARY:Scout Shop Closing at 3:00PM
+LOCATION:WCC Service Center
+DESCRIPTION:The Scout Shop & Council Service Center are closing at 3:00 f
+ or Thanksgiving Break.\nDetails: https://www.wccscouting.org/content/132
+ 667/Scout-Shop-Closing-at-3-00PM
+URL:https://www.wccscouting.org/content/132667/Scout-Shop-Closing-at-3-00
+ PM
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133448@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20261126
+DTEND;VALUE=DATE:20261129
+SUMMARY:Thanksgiving - Office Closed
+LOCATION:WCC Service Center
+DESCRIPTION:Details: https://www.wccscouting.org/content/133448/Thanksgiv
+ ing---Office-Closed
+URL:https://www.wccscouting.org/content/133448/Thanksgiving---Office-Clos
+ ed
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog131284@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20261202
+DTEND;VALUE=DATE:20261203
+SUMMARY:HAD District Committee
+LOCATION:TBD
+DESCRIPTION:Details: https://www.wccscouting.org/content/131284/HAD-Distr
+ ict-Committee
+URL:https://www.wccscouting.org/content/131284/HAD-District-Committee
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133244@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20261203
+DTEND;VALUE=DATE:20261204
+SUMMARY:TOH Commissioner Meeting
+LOCATION:Bucks County Intermediate Unit #22
+DESCRIPTION:Details: https://www.wccscouting.org/content/133244/TOH-Commi
+ ssioner-Meeting
+URL:https://www.wccscouting.org/content/133244/TOH-Commissioner-Meeting
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133254@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20261203
+DTEND;VALUE=DATE:20261204
+SUMMARY:TOH District Committee Meeting
+LOCATION:Bucks County Intermediate Unit #22
+DESCRIPTION:Details: https://www.wccscouting.org/content/133254/TOH-Distr
+ ict-Committee-Meeting
+URL:https://www.wccscouting.org/content/133254/TOH-District-Committee-Mee
+ ting
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133368@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20261203T230000Z
+DTEND:20261204T000000Z
+SUMMARY:TAM Commissioner
+LOCATION:Zoom video meeting
+DESCRIPTION:Scouters who want to know more about Commissioner service are
+  encouraged to attend.  6:00 PM over zoom – access link here.\nDetai
+ ls: https://www.wccscouting.org/content/133368/TAM-Commissioner
+URL:https://www.wccscouting.org/content/133368/TAM-Commissioner
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133414@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20261204T000000Z
+DTEND:20261204T020000Z
+SUMMARY:TAM District Committee
+LOCATION:Zoom video meeting
+DESCRIPTION:At least one representative from each unit key 3 is encourage
+ d to attend. 7:00 PM over zoom – access link here.\nDetails: https://
+ www.wccscouting.org/content/133414/TAM-District-Committee
+URL:https://www.wccscouting.org/content/133414/TAM-District-Committee
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133449@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20261205
+DTEND;VALUE=DATE:20261206
+SUMMARY:Science of Training Fundamentals - Part 1
+LOCATION:TBD
+DESCRIPTION:Details: https://www.wccscouting.org/content/133449/Science-o
+ f-Training-Fundamentals---Part-1
+URL:https://www.wccscouting.org/content/133449/Science-of-Training-Fundam
+ entals---Part-1
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133402@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20261206T173000Z
+DTEND:20261206T210000Z
+SUMMARY:Air Rifle Competition
+LOCATION:Ockanickon Scout Reservation
+DESCRIPTION:Details: https://www.wccscouting.org/content/133402/Air-Rifle
+ -Competition
+URL:https://www.wccscouting.org/content/133402/Air-Rifle-Competition
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog131273@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20261208T003000Z
+DTEND:20261208T013000Z
+SUMMARY:HAD Commissioner Meeting
+LOCATION:Zoom video meeting
+DESCRIPTION:Details: https://www.wccscouting.org/content/131273/HAD-Commi
+ ssioner-Meeting
+URL:https://www.wccscouting.org/content/131273/HAD-Commissioner-Meeting
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog131294@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20261209
+DTEND;VALUE=DATE:20261210
+SUMMARY:HAD Roundtable
+LOCATION:TBD
+DESCRIPTION:Details: https://www.wccscouting.org/content/131294/HAD-Round
+ table
+URL:https://www.wccscouting.org/content/131294/HAD-Roundtable
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133377@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20261210T003000Z
+DTEND:20261210T020000Z
+SUMMARY:TAM Roundtable
+LOCATION:St. John's Evangelical Lutheran Church
+DESCRIPTION:7:00pm Eagle Project Proposal Review 7:30pm Roundtable\nDetai
+ ls: https://www.wccscouting.org/content/133377/TAM-Roundtable
+URL:https://www.wccscouting.org/content/133377/TAM-Roundtable
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133263@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20261210
+DTEND;VALUE=DATE:20261211
+SUMMARY:TOH Roundtable
+LOCATION:Bucks County Intermediate Unit #22
+DESCRIPTION:Details: https://www.wccscouting.org/content/133263/TOH-Round
+ table
+URL:https://www.wccscouting.org/content/133263/TOH-Roundtable
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog124991@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20261212
+DTEND;VALUE=DATE:20261213
+SUMMARY:Chainsaw Work Day
+LOCATION:Ockanickon Scout Reservation
+DESCRIPTION:Chainsaw work days are the second Saturday of the month. A ch
+ ainsaw work day has bucking\, felling\, and splitting. You will need to 
+ be BSA chainsaw\nDetails: https://www.wccscouting.org/content/124991/Cha
+ insaw-Work-Day
+URL:https://www.wccscouting.org/content/124991/Chainsaw-Work-Day
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog135319@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20261216
+DTEND;VALUE=DATE:20261217
+SUMMARY:Commissioner Cabinet Meeting
+LOCATION:TBD
+DESCRIPTION:Gathering of district commissioners to coordinate commissione
+ r service throughout the council.\nDetails: https://www.wccscouting.org/
+ content/135319/Commissioner-Cabinet-Meeting
+URL:https://www.wccscouting.org/content/135319/Commissioner-Cabinet-Meeti
+ ng
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133424@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20261218T000000Z
+DTEND:20261218T010000Z
+SUMMARY:OA LEC
+LOCATION:WCC Service Center
+DESCRIPTION:The executive committee of the lodge is a key group consistin
+ g of the youth serving as lodge officers (including the immediate past l
+ odge chief)\,\nDetails: https://www.wccscouting.org/content/133424/OA-LE
+ C
+URL:https://www.wccscouting.org/content/133424/OA-LEC
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog125011@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20261219
+DTEND;VALUE=DATE:20261220
+SUMMARY:Campbuilder Day
+LOCATION:Ockanickon Scout Reservation
+DESCRIPTION:Camp Builder days are the third Saturday of the month (unless
+  a conflict arises then check the facebook group) they include working o
+ n many camp\nDetails: https://www.wccscouting.org/content/125011/Campbui
+ lder-Day
+URL:https://www.wccscouting.org/content/125011/Campbuilder-Day
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog136802@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20261220T170000Z
+DTEND:20261220T210000Z
+SUMMARY:Cub Scout BB Adventure
+LOCATION:Ockanickon Scout Reservation
+DESCRIPTION:Click for Information and Registration\nDetails: https://www.
+ wccscouting.org/content/136802/Cub-Scout-BB-Adventure
+URL:https://www.wccscouting.org/content/136802/Cub-Scout-BB-Adventure
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133451@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20261224
+DTEND;VALUE=DATE:20261226
+SUMMARY:Holiday Break - Office Closed
+LOCATION:WCC Service Center
+DESCRIPTION:Details: https://www.wccscouting.org/content/133451/Holiday-B
+ reak---Office-Closed
+URL:https://www.wccscouting.org/content/133451/Holiday-Break---Office-Clo
+ sed
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133450@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20261231T200000Z
+DTEND:20261231T210000Z
+SUMMARY:Scout Shop Closing at 3:00PM
+LOCATION:WCC Service Center
+DESCRIPTION:The Scout Shop &Council Service Center are closing at 3:00 fo
+ r New Year's Eve\nDetails: https://www.wccscouting.org/content/133450/Sc
+ out-Shop-Closing-at-3-00PM
+URL:https://www.wccscouting.org/content/133450/Scout-Shop-Closing-at-3-00
+ PM
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133453@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20270101
+DTEND;VALUE=DATE:20270102
+SUMMARY:New Year's Day - Office Closed
+LOCATION:WCC Service Center
+DESCRIPTION:Details: https://www.wccscouting.org/content/133453/New-Year-
+ s-Day---Office-Closed
+URL:https://www.wccscouting.org/content/133453/New-Year-s-Day---Office-Cl
+ osed
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133452@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20270102
+DTEND;VALUE=DATE:20270103
+SUMMARY:Science of Training Fundamentals - Part 2
+LOCATION:TBD
+DESCRIPTION:Details: https://www.wccscouting.org/content/133452/Science-o
+ f-Training-Fundamentals---Part-2
+URL:https://www.wccscouting.org/content/133452/Science-of-Training-Fundam
+ entals---Part-2
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133398@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20270103T173000Z
+DTEND:20270103T210000Z
+SUMMARY:Air Rifle Competition
+LOCATION:Ockanickon Scout Reservation
+DESCRIPTION:Details: https://www.wccscouting.org/content/133398/Air-Rifle
+ -Competition
+URL:https://www.wccscouting.org/content/133398/Air-Rifle-Competition
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133405@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20270105T003000Z
+DTEND:20270105T013000Z
+SUMMARY:HAD Commissioner Meeting
+LOCATION:Zoom video meeting
+DESCRIPTION:Details: https://www.wccscouting.org/content/133405/HAD-Commi
+ ssioner-Meeting
+URL:https://www.wccscouting.org/content/133405/HAD-Commissioner-Meeting
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133883@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20270106
+DTEND;VALUE=DATE:20270107
+SUMMARY:HAD District Committee
+LOCATION:TBD
+DESCRIPTION:Details: https://www.wccscouting.org/content/133883/HAD-Distr
+ ict-Committee
+URL:https://www.wccscouting.org/content/133883/HAD-District-Committee
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133889@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20270107
+DTEND;VALUE=DATE:20270108
+SUMMARY:TOH Commissioner Meeting
+LOCATION:Bucks County Intermediate Unit #22
+DESCRIPTION:Details: https://www.wccscouting.org/content/133889/TOH-Commi
+ ssioner-Meeting
+URL:https://www.wccscouting.org/content/133889/TOH-Commissioner-Meeting
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133369@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20270107T230000Z
+DTEND:20270108T000000Z
+SUMMARY:TAM Commissioner
+LOCATION:Zoom video meeting
+DESCRIPTION:Scouters who want to know more about Commissioner service are
+  encouraged to attend.  6:00 PM over zoom – access link here.\nDetai
+ ls: https://www.wccscouting.org/content/133369/TAM-Commissioner
+URL:https://www.wccscouting.org/content/133369/TAM-Commissioner
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133415@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20270108T000000Z
+DTEND:20270108T020000Z
+SUMMARY:TAM District Committee
+LOCATION:Zoom video meeting
+DESCRIPTION:At least one representative from each unit key 3 is encourage
+ d to attend. 7:00 PM over zoom – access link here.\nDetails: https://
+ www.wccscouting.org/content/133415/TAM-District-Committee
+URL:https://www.wccscouting.org/content/133415/TAM-District-Committee
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133905@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20270113
+DTEND;VALUE=DATE:20270114
+SUMMARY:HAD Roundtable
+LOCATION:TBD
+DESCRIPTION:Details: https://www.wccscouting.org/content/133905/HAD-Round
+ table
+URL:https://www.wccscouting.org/content/133905/HAD-Roundtable
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133902@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20270114T000000Z
+DTEND:20270114T010000Z
+SUMMARY:MAD District Committee
+LOCATION:St. Mark's United Methodist Church
+DESCRIPTION:Details: https://www.wccscouting.org/content/133902/MAD-Distr
+ ict-Committee
+URL:https://www.wccscouting.org/content/133902/MAD-District-Committee
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133911@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20270114T003000Z
+DTEND:20270114T013000Z
+SUMMARY:MAD Roundtable
+LOCATION:Our Lady of Sorrows
+DESCRIPTION:Details: https://www.wccscouting.org/content/133911/MAD-Round
+ table
+URL:https://www.wccscouting.org/content/133911/MAD-Roundtable
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133378@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20270114T003000Z
+DTEND:20270114T020000Z
+SUMMARY:TAM Roundtable
+LOCATION:St. John's Evangelical Lutheran Church
+DESCRIPTION:7:00pm Eagle Project Proposal Review 7:30pm Roundtable\nDetai
+ ls: https://www.wccscouting.org/content/133378/TAM-Roundtable
+URL:https://www.wccscouting.org/content/133378/TAM-Roundtable
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133896@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20270114
+DTEND;VALUE=DATE:20270115
+SUMMARY:TOH District Committee Meeting
+LOCATION:Bucks County Intermediate Unit #22
+DESCRIPTION:Details: https://www.wccscouting.org/content/133896/TOH-Distr
+ ict-Committee-Meeting
+URL:https://www.wccscouting.org/content/133896/TOH-District-Committee-Mee
+ ting
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133454@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20270118
+DTEND;VALUE=DATE:20270119
+SUMMARY:Martin Luther Day - Office Closed
+LOCATION:WCC Service Center
+DESCRIPTION:Details: https://www.wccscouting.org/content/133454/Martin-Lu
+ ther-Day---Office-Closed
+URL:https://www.wccscouting.org/content/133454/Martin-Luther-Day---Office
+ -Closed
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog124816@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20270123
+DTEND;VALUE=DATE:20270124
+SUMMARY:TOH Klondike Derby
+LOCATION:Ockanickon Scout Reservation
+DESCRIPTION:Details: https://www.wccscouting.org/content/124816/TOH-Klond
+ ike-Derby
+URL:https://www.wccscouting.org/content/124816/TOH-Klondike-Derby
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133425@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20270129T000000Z
+DTEND:20270129T010000Z
+SUMMARY:OA LEC
+LOCATION:WCC Service Center
+DESCRIPTION:The executive committee of the lodge is a key group consistin
+ g of the youth serving as lodge officers (including the immediate past l
+ odge chief)\,\nDetails: https://www.wccscouting.org/content/133425/OA-LE
+ C
+URL:https://www.wccscouting.org/content/133425/OA-LEC
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog118738@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20270129
+DTEND;VALUE=DATE:20270201
+SUMMARY:HAD Klondike Derby
+LOCATION:Lebanon Township Memorial Park
+DESCRIPTION:Details: https://www.wccscouting.org/content/118738/HAD-Klond
+ ike-Derby
+URL:https://www.wccscouting.org/content/118738/HAD-Klondike-Derby
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog116848@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20270129T230000Z
+DTEND:20270131T160000Z
+SUMMARY:MAD/TAM Klondike Derby
+LOCATION:Ockanickon Scout Reservation
+DESCRIPTION:Details: https://www.wccscouting.org/content/116848/MAD-TAM-K
+ londike-Derby
+URL:https://www.wccscouting.org/content/116848/MAD-TAM-Klondike-Derby
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133406@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20270202T003000Z
+DTEND:20270202T013000Z
+SUMMARY:HAD Commissioner Meeting
+LOCATION:Zoom video meeting
+DESCRIPTION:Details: https://www.wccscouting.org/content/133406/HAD-Commi
+ ssioner-Meeting
+URL:https://www.wccscouting.org/content/133406/HAD-Commissioner-Meeting
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133884@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20270203
+DTEND;VALUE=DATE:20270204
+SUMMARY:HAD District Committee
+LOCATION:TBD
+DESCRIPTION:Details: https://www.wccscouting.org/content/133884/HAD-Distr
+ ict-Committee
+URL:https://www.wccscouting.org/content/133884/HAD-District-Committee
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133890@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20270204
+DTEND;VALUE=DATE:20270205
+SUMMARY:TOH Commissioner Meeting
+LOCATION:Bucks County Intermediate Unit #22
+DESCRIPTION:Details: https://www.wccscouting.org/content/133890/TOH-Commi
+ ssioner-Meeting
+URL:https://www.wccscouting.org/content/133890/TOH-Commissioner-Meeting
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133897@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20270204
+DTEND;VALUE=DATE:20270205
+SUMMARY:TOH District Committee Meeting
+LOCATION:Bucks County Intermediate Unit #22
+DESCRIPTION:Details: https://www.wccscouting.org/content/133897/TOH-Distr
+ ict-Committee-Meeting
+URL:https://www.wccscouting.org/content/133897/TOH-District-Committee-Mee
+ ting
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133370@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20270204T230000Z
+DTEND:20270205T000000Z
+SUMMARY:TAM Commissioner
+LOCATION:Zoom video meeting
+DESCRIPTION:Scouters who want to know more about Commissioner service are
+  encouraged to attend.  6:00 PM over zoom – access link here.\nDetai
+ ls: https://www.wccscouting.org/content/133370/TAM-Commissioner
+URL:https://www.wccscouting.org/content/133370/TAM-Commissioner
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133416@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20270205T000000Z
+DTEND:20270205T020000Z
+SUMMARY:TAM District Committee
+LOCATION:Zoom video meeting
+DESCRIPTION:At least one representative from each unit key 3 is encourage
+ d to attend. 7:00 PM over zoom – access link here.\nDetails: https://
+ www.wccscouting.org/content/133416/TAM-District-Committee
+URL:https://www.wccscouting.org/content/133416/TAM-District-Committee
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog116850@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20270206
+DTEND;VALUE=DATE:20270207
+SUMMARY:OA Lodge Banquet
+LOCATION:Ockanickon Scout Reservation
+DESCRIPTION:Details: https://www.wccscouting.org/content/116850/OA-Lodge-
+ Banquet
+URL:https://www.wccscouting.org/content/116850/OA-Lodge-Banquet
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133399@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20270207T173000Z
+DTEND:20270207T210000Z
+SUMMARY:Air Rifle Competition
+LOCATION:Ockanickon Scout Reservation
+DESCRIPTION:Details: https://www.wccscouting.org/content/133399/Air-Rifle
+ -Competition
+URL:https://www.wccscouting.org/content/133399/Air-Rifle-Competition
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133906@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20270210
+DTEND;VALUE=DATE:20270211
+SUMMARY:HAD Roundtable
+LOCATION:TBD
+DESCRIPTION:Details: https://www.wccscouting.org/content/133906/HAD-Round
+ table
+URL:https://www.wccscouting.org/content/133906/HAD-Roundtable
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133379@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20270211T003000Z
+DTEND:20270211T020000Z
+SUMMARY:TAM Roundtable
+LOCATION:St. John's Evangelical Lutheran Church
+DESCRIPTION:7:00pm Eagle Project Proposal Review 7:30pm Roundtable\nDetai
+ ls: https://www.wccscouting.org/content/133379/TAM-Roundtable
+URL:https://www.wccscouting.org/content/133379/TAM-Roundtable
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133917@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20270213
+DTEND;VALUE=DATE:20270214
+SUMMARY:HAD Scouting for Food
+LOCATION:TBD
+DESCRIPTION:Details: https://www.wccscouting.org/content/133917/HAD-Scout
+ ing-for-Food
+URL:https://www.wccscouting.org/content/133917/HAD-Scouting-for-Food
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133916@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20270213T133000Z
+DTEND:20270213T170000Z
+SUMMARY:TOH Chess Tournament
+LOCATION:Family of God Lutheran Church
+DESCRIPTION:Details: https://www.wccscouting.org/content/133916/TOH-Chess
+ -Tournament
+URL:https://www.wccscouting.org/content/133916/TOH-Chess-Tournament
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133915@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20270215
+DTEND;VALUE=DATE:20270216
+SUMMARY:Presidents' Day - Office Closed
+LOCATION:WCC Service Center
+DESCRIPTION:Details: https://www.wccscouting.org/content/133915/President
+ s--Day---Office-Closed
+URL:https://www.wccscouting.org/content/133915/Presidents--Day---Office-C
+ losed
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133426@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20270226T000000Z
+DTEND:20270226T010000Z
+SUMMARY:OA LEC
+LOCATION:WCC Service Center
+DESCRIPTION:The executive committee of the lodge is a key group consistin
+ g of the youth serving as lodge officers (including the immediate past l
+ odge chief)\,\nDetails: https://www.wccscouting.org/content/133426/OA-LE
+ C
+URL:https://www.wccscouting.org/content/133426/OA-LEC
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog116852@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20270227
+DTEND;VALUE=DATE:20270228
+SUMMARY:University of Scouting
+LOCATION:TBD
+DESCRIPTION:Details: https://www.wccscouting.org/content/116852/Universit
+ y-of-Scouting
+URL:https://www.wccscouting.org/content/116852/University-of-Scouting
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133407@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20270302T003000Z
+DTEND:20270302T013000Z
+SUMMARY:HAD Commissioner Meeting
+LOCATION:Zoom video meeting
+DESCRIPTION:Details: https://www.wccscouting.org/content/133407/HAD-Commi
+ ssioner-Meeting
+URL:https://www.wccscouting.org/content/133407/HAD-Commissioner-Meeting
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133885@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20270303
+DTEND;VALUE=DATE:20270304
+SUMMARY:HAD District Committee
+LOCATION:TBD
+DESCRIPTION:Details: https://www.wccscouting.org/content/133885/HAD-Distr
+ ict-Committee
+URL:https://www.wccscouting.org/content/133885/HAD-District-Committee
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133891@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20270304
+DTEND;VALUE=DATE:20270305
+SUMMARY:TOH Commissioner Meeting
+LOCATION:Bucks County Intermediate Unit #22
+DESCRIPTION:Details: https://www.wccscouting.org/content/133891/TOH-Commi
+ ssioner-Meeting
+URL:https://www.wccscouting.org/content/133891/TOH-Commissioner-Meeting
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133898@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20270304
+DTEND;VALUE=DATE:20270305
+SUMMARY:TOH District Committee Meeting
+LOCATION:Bucks County Intermediate Unit #22
+DESCRIPTION:Details: https://www.wccscouting.org/content/133898/TOH-Distr
+ ict-Committee-Meeting
+URL:https://www.wccscouting.org/content/133898/TOH-District-Committee-Mee
+ ting
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133371@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20270304T230000Z
+DTEND:20270305T000000Z
+SUMMARY:TAM Commissioner
+LOCATION:Zoom video meeting
+DESCRIPTION:Scouters who want to know more about Commissioner service are
+  encouraged to attend.  6:00 PM over zoom – access link here.\nDetai
+ ls: https://www.wccscouting.org/content/133371/TAM-Commissioner
+URL:https://www.wccscouting.org/content/133371/TAM-Commissioner
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133417@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20270305T000000Z
+DTEND:20270305T020000Z
+SUMMARY:TAM District Committee
+LOCATION:Zoom video meeting
+DESCRIPTION:At least one representative from each unit key 3 is encourage
+ d to attend. 7:00 PM over zoom – access link here.\nDetails: https://
+ www.wccscouting.org/content/133417/TAM-District-Committee
+URL:https://www.wccscouting.org/content/133417/TAM-District-Committee
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog134015@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20270305T220000Z
+DTEND:20270307T213000Z
+SUMMARY:NYLT Weekend 1
+LOCATION:Ockanickon Scout Reservation
+DESCRIPTION:2027 Spring Course Details Limited to 48 participants. Parti
+ cipants are required to attend both weekends: March 5-7 AND March 19
+ -21\nDetails: https://www.wccscouting.org/content/134015/NYLT-Weekend-1
+URL:https://www.wccscouting.org/content/134015/NYLT-Weekend-1
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog134017@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20270307T180000Z
+DTEND:20270307T220000Z
+SUMMARY:HAD Yukon Trail
+LOCATION:TBD
+DESCRIPTION:The Yukon Trail is an outdoor winter event held each year com
+ memorating the Alaskan Gold Rush. The Yukon is a harsh place for individ
+ uals\, so the\nDetails: https://www.wccscouting.org/content/134017/HAD-Y
+ ukon-Trail
+URL:https://www.wccscouting.org/content/134017/HAD-Yukon-Trail
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133907@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20270310
+DTEND;VALUE=DATE:20270311
+SUMMARY:HAD Roundtable
+LOCATION:TBD
+DESCRIPTION:Details: https://www.wccscouting.org/content/133907/HAD-Round
+ table
+URL:https://www.wccscouting.org/content/133907/HAD-Roundtable
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133903@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20270311T000000Z
+DTEND:20270311T010000Z
+SUMMARY:MAD District Committee
+LOCATION:St. Mark's United Methodist Church
+DESCRIPTION:Details: https://www.wccscouting.org/content/133903/MAD-Distr
+ ict-Committee
+URL:https://www.wccscouting.org/content/133903/MAD-District-Committee
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133912@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20270311T003000Z
+DTEND:20270311T013000Z
+SUMMARY:MAD Roundtable
+LOCATION:Our Lady of Sorrows
+DESCRIPTION:Details: https://www.wccscouting.org/content/133912/MAD-Round
+ table
+URL:https://www.wccscouting.org/content/133912/MAD-Roundtable
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133380@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20270311T003000Z
+DTEND:20270311T020000Z
+SUMMARY:TAM Roundtable
+LOCATION:St. John's Evangelical Lutheran Church
+DESCRIPTION:7:00pm Eagle Project Proposal Review 7:30pm Roundtable\nDetai
+ ls: https://www.wccscouting.org/content/133380/TAM-Roundtable
+URL:https://www.wccscouting.org/content/133380/TAM-Roundtable
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog135800@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20270313
+DTEND;VALUE=DATE:20270314
+SUMMARY:Tamanend Pinewood Derby
+LOCATION:Oxford Valley Mall
+DESCRIPTION:Details: https://www.wccscouting.org/content/135800/Tamanend-
+ Pinewood-Derby
+URL:https://www.wccscouting.org/content/135800/Tamanend-Pinewood-Derby
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog134577@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20270313
+DTEND;VALUE=DATE:20270314
+SUMMARY:TOH Pinewood Derby
+LOCATION:TBD
+DESCRIPTION:Details: https://www.wccscouting.org/content/134577/TOH-Pinew
+ ood-Derby
+URL:https://www.wccscouting.org/content/134577/TOH-Pinewood-Derby
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog134022@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20270313T140000Z
+DTEND:20270313T220000Z
+SUMMARY:MAD Pinewood Derby
+LOCATION:Quaker Bridge Mall
+DESCRIPTION:Details: https://www.wccscouting.org/content/134022/MAD-Pinew
+ ood-Derby
+URL:https://www.wccscouting.org/content/134022/MAD-Pinewood-Derby
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133400@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20270314T163000Z
+DTEND:20270314T200000Z
+SUMMARY:Air Rifle Competition
+LOCATION:Ockanickon Scout Reservation
+DESCRIPTION:Details: https://www.wccscouting.org/content/133400/Air-Rifle
+ -Competition
+URL:https://www.wccscouting.org/content/133400/Air-Rifle-Competition
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133427@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20270318T230000Z
+DTEND:20270319T000000Z
+SUMMARY:OA LEC
+LOCATION:WCC Service Center
+DESCRIPTION:The executive committee of the lodge is a key group consistin
+ g of the youth serving as lodge officers (including the immediate past l
+ odge chief)\,\nDetails: https://www.wccscouting.org/content/133427/OA-LE
+ C
+URL:https://www.wccscouting.org/content/133427/OA-LEC
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog134016@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20270319T210000Z
+DTEND:20270321T203000Z
+SUMMARY:NYLT Weekend 2
+LOCATION:Ockanickon Scout Reservation
+DESCRIPTION:2027 Spring Course Details Limited to 48 participants. Parti
+ cipants are required to attend both weekends: March 5-7 AND March 19
+ -21\nDetails: https://www.wccscouting.org/content/134016/NYLT-Weekend-2
+URL:https://www.wccscouting.org/content/134016/NYLT-Weekend-2
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog134018@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20270326
+DTEND;VALUE=DATE:20270327
+SUMMARY:Good Friday - Office Closed
+LOCATION:WCC Service Center
+DESCRIPTION:Details: https://www.wccscouting.org/content/134018/Good-Frid
+ ay---Office-Closed
+URL:https://www.wccscouting.org/content/134018/Good-Friday---Office-Close
+ d
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog134020@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20270328
+DTEND;VALUE=DATE:20270329
+SUMMARY:Easter Sunday
+LOCATION:TBD
+DESCRIPTION:Details: https://www.wccscouting.org/content/134020/Easter-Su
+ nday
+URL:https://www.wccscouting.org/content/134020/Easter-Sunday
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133892@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20270401
+DTEND;VALUE=DATE:20270402
+SUMMARY:TOH Commissioner Meeting
+LOCATION:Bucks County Intermediate Unit #22
+DESCRIPTION:Details: https://www.wccscouting.org/content/133892/TOH-Commi
+ ssioner-Meeting
+URL:https://www.wccscouting.org/content/133892/TOH-Commissioner-Meeting
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133899@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20270401
+DTEND;VALUE=DATE:20270402
+SUMMARY:TOH District Committee Meeting
+LOCATION:Bucks County Intermediate Unit #22
+DESCRIPTION:Details: https://www.wccscouting.org/content/133899/TOH-Distr
+ ict-Committee-Meeting
+URL:https://www.wccscouting.org/content/133899/TOH-District-Committee-Mee
+ ting
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133372@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20270401T220000Z
+DTEND:20270401T230000Z
+SUMMARY:TAM Commissioner
+LOCATION:Zoom video meeting
+DESCRIPTION:Scouters who want to know more about Commissioner service are
+  encouraged to attend.  6:00 PM over zoom – access link here.\nDetai
+ ls: https://www.wccscouting.org/content/133372/TAM-Commissioner
+URL:https://www.wccscouting.org/content/133372/TAM-Commissioner
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133418@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20270401T230000Z
+DTEND:20270402T010000Z
+SUMMARY:TAM District Committee
+LOCATION:Zoom video meeting
+DESCRIPTION:At least one representative from each unit key 3 is encourage
+ d to attend. 7:00 PM over zoom – access link here.\nDetails: https://
+ www.wccscouting.org/content/133418/TAM-District-Committee
+URL:https://www.wccscouting.org/content/133418/TAM-District-Committee
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133401@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20270404T163000Z
+DTEND:20270404T200000Z
+SUMMARY:Air Rifle Competition
+LOCATION:Ockanickon Scout Reservation
+DESCRIPTION:Details: https://www.wccscouting.org/content/133401/Air-Rifle
+ -Competition
+URL:https://www.wccscouting.org/content/133401/Air-Rifle-Competition
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133408@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20270405T233000Z
+DTEND:20270406T003000Z
+SUMMARY:HAD Commissioner Meeting
+LOCATION:Zoom video meeting
+DESCRIPTION:Details: https://www.wccscouting.org/content/133408/HAD-Commi
+ ssioner-Meeting
+URL:https://www.wccscouting.org/content/133408/HAD-Commissioner-Meeting
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133886@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20270407
+DTEND;VALUE=DATE:20270408
+SUMMARY:HAD District Committee
+LOCATION:TBD
+DESCRIPTION:Details: https://www.wccscouting.org/content/133886/HAD-Distr
+ ict-Committee
+URL:https://www.wccscouting.org/content/133886/HAD-District-Committee
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog134024@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20270409
+DTEND;VALUE=DATE:20270410
+SUMMARY:Cubmaster Basic Training
+LOCATION:Ockanickon Scout Reservation
+DESCRIPTION:Details: https://www.wccscouting.org/content/134024/Cubmaster
+ -Basic-Training
+URL:https://www.wccscouting.org/content/134024/Cubmaster-Basic-Training
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog134023@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20270409
+DTEND;VALUE=DATE:20270410
+SUMMARY:Scoutmaster Basic Training
+LOCATION:Ockanickon Scout Reservation
+DESCRIPTION:Details: https://www.wccscouting.org/content/134023/Scoutmast
+ er-Basic-Training
+URL:https://www.wccscouting.org/content/134023/Scoutmaster-Basic-Training
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133432@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20270410T120000Z
+DTEND:20270411T150000Z
+SUMMARY:BALOO Training
+LOCATION:Ockanickon Scout Reservation
+DESCRIPTION:Details: https://www.wccscouting.org/content/133432/BALOO-Tra
+ ining
+URL:https://www.wccscouting.org/content/133432/BALOO-Training
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog134026@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20270410T120000Z
+DTEND:20270410T163000Z
+SUMMARY:Gold Rush
+LOCATION:Moravian Tile Works
+DESCRIPTION:Details: https://www.wccscouting.org/content/134026/Gold-Rush
+URL:https://www.wccscouting.org/content/134026/Gold-Rush
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133908@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20270414
+DTEND;VALUE=DATE:20270415
+SUMMARY:HAD Roundtable
+LOCATION:TBD
+DESCRIPTION:Details: https://www.wccscouting.org/content/133908/HAD-Round
+ table
+URL:https://www.wccscouting.org/content/133908/HAD-Roundtable
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133381@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20270414T233000Z
+DTEND:20270415T010000Z
+SUMMARY:TAM Roundtable
+LOCATION:St. John's Evangelical Lutheran Church
+DESCRIPTION:7:00pm Eagle Project Proposal Review 7:30pm Roundtable\nDetai
+ ls: https://www.wccscouting.org/content/133381/TAM-Roundtable
+URL:https://www.wccscouting.org/content/133381/TAM-Roundtable
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog116643@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20270416T220000Z
+DTEND:20270418T160000Z
+SUMMARY:COPE Weekend
+LOCATION:Ockanickon Scout Reservation
+DESCRIPTION:For more information visit the COPE & Climbing page HERE.\nDe
+ tails: https://www.wccscouting.org/content/116643/COPE-Weekend
+URL:https://www.wccscouting.org/content/116643/COPE-Weekend
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog116858@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20270416T220000Z
+DTEND:20270418T150000Z
+SUMMARY:OA Induction Weekend
+LOCATION:Ockanickon Scout Reservation
+DESCRIPTION:Details: https://www.wccscouting.org/content/116858/OA-Induct
+ ion-Weekend
+URL:https://www.wccscouting.org/content/116858/OA-Induction-Weekend
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133428@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20270429T230000Z
+DTEND:20270430T000000Z
+SUMMARY:OA LEC
+LOCATION:WCC Service Center
+DESCRIPTION:The executive committee of the lodge is a key group consistin
+ g of the youth serving as lodge officers (including the immediate past l
+ odge chief)\,\nDetails: https://www.wccscouting.org/content/133428/OA-LE
+ C
+URL:https://www.wccscouting.org/content/133428/OA-LEC
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog116644@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20270430T220000Z
+DTEND:20270502T160000Z
+SUMMARY:COPE Weekend
+LOCATION:Ockanickon Scout Reservation
+DESCRIPTION:For more information visit the COPE & Climbing page HERE.\nDe
+ tails: https://www.wccscouting.org/content/116644/COPE-Weekend
+URL:https://www.wccscouting.org/content/116644/COPE-Weekend
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog134025@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20270430T220000Z
+DTEND:20270502T150000Z
+SUMMARY:Spring Camporee
+LOCATION:TBD
+DESCRIPTION:Details: https://www.wccscouting.org/content/134025/Spring-Ca
+ mporee
+URL:https://www.wccscouting.org/content/134025/Spring-Camporee
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog116865@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20270501
+DTEND;VALUE=DATE:20270503
+SUMMARY:Cubarama
+LOCATION:TBD
+DESCRIPTION:Details: https://www.wccscouting.org/content/116865/Cubarama
+URL:https://www.wccscouting.org/content/116865/Cubarama
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133409@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20270503T233000Z
+DTEND:20270504T003000Z
+SUMMARY:HAD Commissioner Meeting
+LOCATION:Zoom video meeting
+DESCRIPTION:Details: https://www.wccscouting.org/content/133409/HAD-Commi
+ ssioner-Meeting
+URL:https://www.wccscouting.org/content/133409/HAD-Commissioner-Meeting
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog134027@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20270504T220000Z
+DTEND:20270505T003000Z
+SUMMARY:Adventure Con
+LOCATION:Bucks County Community College
+DESCRIPTION:AdventureCon — Discover Skills. Explore Adventure. Shape Yo
+ ur Future. AdventureCon is a hands-on Scouting expo designed to spark cu
+ riosity\, showcase\nDetails: https://www.wccscouting.org/content/134027/
+ Adventure-Con
+URL:https://www.wccscouting.org/content/134027/Adventure-Con
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133887@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20270505
+DTEND;VALUE=DATE:20270506
+SUMMARY:HAD District Committee
+LOCATION:TBD
+DESCRIPTION:Annual Business Meeting\nDetails: https://www.wccscouting.org
+ /content/133887/HAD-District-Committee
+URL:https://www.wccscouting.org/content/133887/HAD-District-Committee
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133909@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20270505
+DTEND;VALUE=DATE:20270506
+SUMMARY:HAD Roundtable
+LOCATION:TBD
+DESCRIPTION:Details: https://www.wccscouting.org/content/133909/HAD-Round
+ table
+URL:https://www.wccscouting.org/content/133909/HAD-Roundtable
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133894@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20270506
+DTEND;VALUE=DATE:20270507
+SUMMARY:TOH Commissioner Meeting
+LOCATION:Bucks County Intermediate Unit #22
+DESCRIPTION:Details: https://www.wccscouting.org/content/133894/TOH-Commi
+ ssioner-Meeting
+URL:https://www.wccscouting.org/content/133894/TOH-Commissioner-Meeting
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133900@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20270506
+DTEND;VALUE=DATE:20270507
+SUMMARY:TOH District Committee Meeting
+LOCATION:Bucks County Intermediate Unit #22
+DESCRIPTION:Details: https://www.wccscouting.org/content/133900/TOH-Distr
+ ict-Committee-Meeting
+URL:https://www.wccscouting.org/content/133900/TOH-District-Committee-Mee
+ ting
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133373@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20270506T220000Z
+DTEND:20270506T230000Z
+SUMMARY:TAM Commissioner
+LOCATION:Zoom video meeting
+DESCRIPTION:Scouters who want to know more about Commissioner service are
+  encouraged to attend.  6:00 PM over zoom – access link here.\nDetai
+ ls: https://www.wccscouting.org/content/133373/TAM-Commissioner
+URL:https://www.wccscouting.org/content/133373/TAM-Commissioner
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133419@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20270506T230000Z
+DTEND:20270507T010000Z
+SUMMARY:TAM District Committee
+LOCATION:Zoom video meeting
+DESCRIPTION:At least one representative from each unit key 3 is encourage
+ d to attend. 7:00 PM over zoom – access link here.\nDetails: https://
+ www.wccscouting.org/content/133419/TAM-District-Committee
+URL:https://www.wccscouting.org/content/133419/TAM-District-Committee
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133382@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20270506T233000Z
+DTEND:20270507T010000Z
+SUMMARY:TAM Roundtable
+LOCATION:St. John's Evangelical Lutheran Church
+DESCRIPTION:7:00pm Eagle Project Proposal Review 7:30pm Roundtable\nDetai
+ ls: https://www.wccscouting.org/content/133382/TAM-Roundtable
+URL:https://www.wccscouting.org/content/133382/TAM-Roundtable
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog116859@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20270507T220000Z
+DTEND:20270509T150000Z
+SUMMARY:OA Induction & Vigil Weekend
+LOCATION:Ockanickon Scout Reservation
+DESCRIPTION:Details: https://www.wccscouting.org/content/116859/OA-Induct
+ ion---Vigil-Weekend
+URL:https://www.wccscouting.org/content/116859/OA-Induction---Vigil-Weeke
+ nd
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog134028@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20270507T220000Z
+DTEND:20270508T020000Z
+SUMMARY:TAM District Dinner
+LOCATION:TBD
+DESCRIPTION:Join us for a night to commemorate all our district volunteer
+ s for their hard work! Registration Details: TBD Non-Uniformed Event\nDe
+ tails: https://www.wccscouting.org/content/134028/TAM-District-Dinner
+URL:https://www.wccscouting.org/content/134028/TAM-District-Dinner
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133904@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20270512T230000Z
+DTEND:20270513T000000Z
+SUMMARY:MAD District Committee
+LOCATION:St. Mark's United Methodist Church
+DESCRIPTION:Details: https://www.wccscouting.org/content/133904/MAD-Distr
+ ict-Committee
+URL:https://www.wccscouting.org/content/133904/MAD-District-Committee
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133914@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20270512T233000Z
+DTEND:20270513T003000Z
+SUMMARY:MAD Roundtable
+LOCATION:Our Lady of Sorrows
+DESCRIPTION:Details: https://www.wccscouting.org/content/133914/MAD-Round
+ table
+URL:https://www.wccscouting.org/content/133914/MAD-Roundtable
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog136633@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20270514T210000Z
+DTEND:20270516T150000Z
+SUMMARY:Fish Camp
+LOCATION:Ockanickon Scout Reservation
+DESCRIPTION:Fish Camp is a fun-filled Cub Scout camping weekend for Fish
+ ing\, at Ockanickon Scout Reservation\, set on the shores of beautiful G
+ reat Buck Lake. Cubs\nDetails: https://www.wccscouting.org/content/13663
+ 3/Fish-Camp
+URL:https://www.wccscouting.org/content/136633/Fish-Camp
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog116645@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20270514T220000Z
+DTEND:20270516T160000Z
+SUMMARY:COPE Weekend
+LOCATION:Ockanickon Scout Reservation
+DESCRIPTION:For more information visit the COPE & Climbing page HERE.\nDe
+ tails: https://www.wccscouting.org/content/116645/COPE-Weekend
+URL:https://www.wccscouting.org/content/116645/COPE-Weekend
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog134029@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20270517
+DTEND;VALUE=DATE:20270518
+SUMMARY:Council Annual Business Meeting
+LOCATION:TBD
+DESCRIPTION:Details: https://www.wccscouting.org/content/134029/Council-A
+ nnual-Business-Meeting
+URL:https://www.wccscouting.org/content/134029/Council-Annual-Business-Me
+ eting
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog128288@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20270521
+DTEND;VALUE=DATE:20270524
+SUMMARY:NJ State Police Camporee
+LOCATION:NJ State Police/National Guard Training Center
+DESCRIPTION:Details: https://www.wccscouting.org/content/128288/NJ-State-
+ Police-Camporee
+URL:https://www.wccscouting.org/content/128288/NJ-State-Police-Camporee
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog134030@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20270521T220000Z
+DTEND:20270523T200000Z
+SUMMARY:OSR Staff Training Weekend
+LOCATION:Ockanickon Scout Reservation
+DESCRIPTION:Details: https://www.wccscouting.org/content/134030/OSR-Staff
+ -Training-Weekend
+URL:https://www.wccscouting.org/content/134030/OSR-Staff-Training-Weekend
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133429@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20270527T230000Z
+DTEND:20270528T000000Z
+SUMMARY:OA LEC
+LOCATION:WCC Service Center
+DESCRIPTION:The executive committee of the lodge is a key group consistin
+ g of the youth serving as lodge officers (including the immediate past l
+ odge chief)\,\nDetails: https://www.wccscouting.org/content/133429/OA-LE
+ C
+URL:https://www.wccscouting.org/content/133429/OA-LEC
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog134032@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20270528
+DTEND;VALUE=DATE:20270601
+SUMMARY:Camp Closed
+LOCATION:Ockanickon Scout Reservation
+DESCRIPTION:Details: https://www.wccscouting.org/content/134032/Camp-Clos
+ ed
+URL:https://www.wccscouting.org/content/134032/Camp-Closed
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog134033@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20270531
+DTEND;VALUE=DATE:20270601
+SUMMARY:Memorial Day - Office Closed
+LOCATION:WCC Service Center
+DESCRIPTION:Details: https://www.wccscouting.org/content/134033/Memorial-
+ Day---Office-Closed
+URL:https://www.wccscouting.org/content/134033/Memorial-Day---Office-Clos
+ ed
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog134034@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20270601
+DTEND;VALUE=DATE:20270602
+SUMMARY:Summer Hours Begin
+LOCATION:WCC Service Center
+DESCRIPTION:Summer Hours Take Effect Memorial Day - Labor Day Mondays - C
+ LOSED Tuesdays - Thursdays 10am-4pm Fridays - 10am-3pm Select Saturdays 
+ 10am-1pm\nDetails: https://www.wccscouting.org/content/134034/Summer-Hou
+ rs-Begin
+URL:https://www.wccscouting.org/content/134034/Summer-Hours-Begin
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog134035@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20270602T230000Z
+DTEND:20270603T010000Z
+SUMMARY:HAD Recognition Night
+LOCATION:TBD
+DESCRIPTION:Details: https://www.wccscouting.org/content/134035/HAD-Recog
+ nition-Night
+URL:https://www.wccscouting.org/content/134035/HAD-Recognition-Night
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133895@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20270603
+DTEND;VALUE=DATE:20270604
+SUMMARY:TOH Commissioner Meeting
+LOCATION:Bucks County Intermediate Unit #22
+DESCRIPTION:Details: https://www.wccscouting.org/content/133895/TOH-Commi
+ ssioner-Meeting
+URL:https://www.wccscouting.org/content/133895/TOH-Commissioner-Meeting
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133901@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20270603
+DTEND;VALUE=DATE:20270604
+SUMMARY:TOH District Committee Meeting
+LOCATION:Bucks County Intermediate Unit #22
+DESCRIPTION:Details: https://www.wccscouting.org/content/133901/TOH-Distr
+ ict-Committee-Meeting
+URL:https://www.wccscouting.org/content/133901/TOH-District-Committee-Mee
+ ting
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog135651@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20270603T220000Z
+DTEND:20270603T230000Z
+SUMMARY:TAM Commissioner
+LOCATION:Zoom video meeting
+DESCRIPTION:Scouters who want to know more about Commissioner service are
+  encouraged to attend.  6:00 PM over zoom – access link here.\nDetai
+ ls: https://www.wccscouting.org/content/135651/TAM-Commissioner
+URL:https://www.wccscouting.org/content/135651/TAM-Commissioner
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog135652@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20270603T230000Z
+DTEND:20270604T010000Z
+SUMMARY:TAM District Committee
+LOCATION:Zoom video meeting
+DESCRIPTION:At least one representative from each unit key 3 is encourage
+ d to attend. 7:00 PM over zoom – access link here.\nDetails: https://
+ www.wccscouting.org/content/135652/TAM-District-Committee
+URL:https://www.wccscouting.org/content/135652/TAM-District-Committee
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog134031@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20270604T220000Z
+DTEND:20270606T200000Z
+SUMMARY:OSR Staff Training Weekend
+LOCATION:Ockanickon Scout Reservation
+DESCRIPTION:Details: https://www.wccscouting.org/content/134031/OSR-Staff
+ -Training-Weekend
+URL:https://www.wccscouting.org/content/134031/OSR-Staff-Training-Weekend
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog134036@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20270607
+DTEND;VALUE=DATE:20270612
+SUMMARY:OSR Directors Week
+LOCATION:Ockanickon Scout Reservation
+DESCRIPTION:Details: https://www.wccscouting.org/content/134036/OSR-Direc
+ tors-Week
+URL:https://www.wccscouting.org/content/134036/OSR-Directors-Week
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133410@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20270607T233000Z
+DTEND:20270608T003000Z
+SUMMARY:HAD Commissioner Meeting
+LOCATION:Zoom video meeting
+DESCRIPTION:Details: https://www.wccscouting.org/content/133410/HAD-Commi
+ ssioner-Meeting
+URL:https://www.wccscouting.org/content/133410/HAD-Commissioner-Meeting
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog133888@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20270609
+DTEND;VALUE=DATE:20270610
+SUMMARY:HAD District Committee
+LOCATION:TBD
+DESCRIPTION:Details: https://www.wccscouting.org/content/133888/HAD-Distr
+ ict-Committee
+URL:https://www.wccscouting.org/content/133888/HAD-District-Committee
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog134037@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20270609T220000Z
+DTEND:20270610T010000Z
+SUMMARY:TOH District Dinner
+LOCATION:Ockanickon Scout Reservation
+DESCRIPTION:An evening to honor Tohickon District adult awardees and enjo
+ y a great meal and camaraderie with fellow Scouters. Ticket Prices: TBA\
+ nDetails: https://www.wccscouting.org/content/134037/TOH-District-Dinner
+URL:https://www.wccscouting.org/content/134037/TOH-District-Dinner
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog135653@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20270609T233000Z
+DTEND:20270610T010000Z
+SUMMARY:TAM Roundtable
+LOCATION:St. John's Evangelical Lutheran Church
+DESCRIPTION:7:00pm Eagle Project Proposal Review 7:30pm Roundtable\nDetai
+ ls: https://www.wccscouting.org/content/135653/TAM-Roundtable
+URL:https://www.wccscouting.org/content/135653/TAM-Roundtable
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog134038@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20270614
+DTEND;VALUE=DATE:20270619
+SUMMARY:OSR Staff Week
+LOCATION:Ockanickon Scout Reservation
+DESCRIPTION:Details: https://www.wccscouting.org/content/134038/OSR-Staff
+ -Week
+URL:https://www.wccscouting.org/content/134038/OSR-Staff-Week
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog116873@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20270620T170000Z
+DTEND:20270626T140000Z
+SUMMARY:OSR Week 1
+LOCATION:Ockanickon Scout Reservation
+DESCRIPTION:Make a Deposit for 2027\nDetails: https://www.wccscouting.org
+ /content/116873/OSR-Week-1
+URL:https://www.wccscouting.org/content/116873/OSR-Week-1
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog116874@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20270627T170000Z
+DTEND:20270703T140000Z
+SUMMARY:OSR Week 2
+LOCATION:Ockanickon Scout Reservation
+DESCRIPTION:Make a Deposit for 2027\nDetails: https://www.wccscouting.org
+ /content/116874/OSR-Week-2
+URL:https://www.wccscouting.org/content/116874/OSR-Week-2
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog136842@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20270704T170000Z
+DTEND:20270710T140000Z
+SUMMARY:OSR Week 3
+LOCATION:Ockanickon Scout Reservation
+DESCRIPTION:Make a Deposit for 2027\nDetails: https://www.wccscouting.org
+ /content/136842/OSR-Week-3
+URL:https://www.wccscouting.org/content/136842/OSR-Week-3
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog136843@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20270711T170000Z
+DTEND:20270717T140000Z
+SUMMARY:OSR Week 4
+LOCATION:Ockanickon Scout Reservation
+DESCRIPTION:Make a Deposit for 2027\nDetails: https://www.wccscouting.org
+ /content/136843/OSR-Week-4
+URL:https://www.wccscouting.org/content/136843/OSR-Week-4
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog136844@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20270718T170000Z
+DTEND:20270724T140000Z
+SUMMARY:OSR Week 5
+LOCATION:Ockanickon Scout Reservation
+DESCRIPTION:Make a Deposit for 2027\nDetails: https://www.wccscouting.org
+ /content/136844/OSR-Week-5
+URL:https://www.wccscouting.org/content/136844/OSR-Week-5
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog136845@troop99
+DTSTAMP:20261021T000000Z
+DTSTART:20270725T170000Z
+DTEND:20270731T140000Z
+SUMMARY:OSR Week 6
+LOCATION:Ockanickon Scout Reservation
+DESCRIPTION:Make a Deposit for 2027\nDetails: https://www.wccscouting.org
+ /content/136845/OSR-Week-6
+URL:https://www.wccscouting.org/content/136845/OSR-Week-6
+END:VEVENT
+BEGIN:VEVENT
+UID:wcc-blog136846@troop99
+DTSTAMP:20261021T000000Z
+DTSTART;VALUE=DATE:20270726
+DTEND;VALUE=DATE:20270801
+SUMMARY:National Order of the Arrow Conference
+LOCATION:TBD
+DESCRIPTION:Details: https://www.wccscouting.org/202/noac
+URL:https://www.wccscouting.org/202/noac
+END:VEVENT
+END:VCALENDAR
