@@ -8,6 +8,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: calendar-sync-push
+  cancel-in-progress: false
+
 jobs:
   sync:
     runs-on: ubuntu-latest
@@ -32,5 +36,15 @@ jobs:
             echo "No changes — WCC calendar is up to date"
           else
             git commit -m "Update WCC council calendar ICS"
-            git push origin main
+            pushed=0
+            for attempt in 1 2 3; do
+              git pull --rebase origin main || true
+              if git push origin main; then
+                pushed=1
+                break
+              fi
+              echo "Push attempt $attempt rejected (parallel sync beat us); retrying"
+              sleep 15
+            done
+            test "$pushed" = "1"
           fi
