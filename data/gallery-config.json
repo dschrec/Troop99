@@ -43,7 +43,7 @@
     "title": "Helicopter Museum",
     "slug": "helicopter-museum",
     "year": 2026,
-    "month": 7,
+    "month": 2,
     "status": "draft",
     "description": "Night at the Helicopter Museum"
   },
@@ -190,5 +190,13 @@
     "month": 12,
     "status": "published",
     "description": "Games, food, and the Medieval Castle at Camp Tuckahoe"
+  },
+  {
+    "title": "America 250 Camporee",
+    "slug": "america-250-camporee",
+    "year": 2026,
+    "month": 11,
+    "status": "draft",
+    "description": "Celebrating America's 250th at Camp MacDonald"
   }
 ]
